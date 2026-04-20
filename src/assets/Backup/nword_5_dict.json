@@ -1,0 +1,5642 @@
+[
+  {
+    "id": "w_about",
+    "word": "about",
+    "partOfSpeech": "prep., adv.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_above",
+    "word": "above",
+    "partOfSpeech": "prep., adv.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_actor",
+    "word": "actor",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_adapt",
+    "word": "adapt",
+    "partOfSpeech": "v.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_admit",
+    "word": "admit",
+    "partOfSpeech": "v.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_adopt",
+    "word": "adopt",
+    "partOfSpeech": "v.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_adult",
+    "word": "adult",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_after",
+    "word": "after",
+    "partOfSpeech": "prep.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_again",
+    "word": "again",
+    "partOfSpeech": "adv.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_agent",
+    "word": "agent",
+    "partOfSpeech": "n.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_agree",
+    "word": "agree",
+    "partOfSpeech": "v.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_ahead",
+    "word": "ahead",
+    "partOfSpeech": "adv.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_alarm",
+    "word": "alarm",
+    "partOfSpeech": "n.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_album",
+    "word": "album",
+    "partOfSpeech": "n.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_alive",
+    "word": "alive",
+    "partOfSpeech": "adj.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_allow",
+    "word": "allow",
+    "partOfSpeech": "v.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_along",
+    "word": "along",
+    "partOfSpeech": "prep., adv.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_alter",
+    "word": "alter",
+    "partOfSpeech": "v.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_among",
+    "word": "among",
+    "partOfSpeech": "prep.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_anger",
+    "word": "anger",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_angle",
+    "word": "angle",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_angry",
+    "word": "angry",
+    "partOfSpeech": "adj.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_ankle",
+    "word": "ankle",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_annoy",
+    "word": "annoy",
+    "partOfSpeech": "v.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_apart",
+    "word": "apart",
+    "partOfSpeech": "adv.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_apple",
+    "word": "apple",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_apply",
+    "word": "apply",
+    "partOfSpeech": "v.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_april",
+    "word": "april",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_argue",
+    "word": "argue",
+    "partOfSpeech": "v.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_arise",
+    "word": "arise",
+    "partOfSpeech": "v.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_armed",
+    "word": "armed",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_avoid",
+    "word": "avoid",
+    "partOfSpeech": "v.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_award",
+    "word": "award",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_aware",
+    "word": "aware",
+    "partOfSpeech": "adj.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_awful",
+    "word": "awful",
+    "partOfSpeech": "adj.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_badly",
+    "word": "badly",
+    "partOfSpeech": "adv.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_based",
+    "word": "based",
+    "partOfSpeech": "adj.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_basic",
+    "word": "basic",
+    "partOfSpeech": "adj.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_basis",
+    "word": "basis",
+    "partOfSpeech": "n.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_beach",
+    "word": "beach",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_begin",
+    "word": "begin",
+    "partOfSpeech": "v.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_being",
+    "word": "being",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_below",
+    "word": "below",
+    "partOfSpeech": "adv., prep.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_birth",
+    "word": "birth",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_black",
+    "word": "black",
+    "partOfSpeech": "adj., n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_blame",
+    "word": "blame",
+    "partOfSpeech": "v., n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_blank",
+    "word": "blank",
+    "partOfSpeech": "adj., n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_blind",
+    "word": "blind",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_block",
+    "word": "block",
+    "partOfSpeech": "n., v.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_blood",
+    "word": "blood",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_board",
+    "word": "board",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_bored",
+    "word": "bored",
+    "partOfSpeech": "adj.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_brain",
+    "word": "brain",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_brand",
+    "word": "brand",
+    "partOfSpeech": "n., v.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_brave",
+    "word": "brave",
+    "partOfSpeech": "adj.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_bread",
+    "word": "bread",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_break",
+    "word": "break",
+    "partOfSpeech": "v., n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_bride",
+    "word": "bride",
+    "partOfSpeech": "n.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_brief",
+    "word": "brief",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_bring",
+    "word": "bring",
+    "partOfSpeech": "v.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_broad",
+    "word": "broad",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_brown",
+    "word": "brown",
+    "partOfSpeech": "adj., n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_brush",
+    "word": "brush",
+    "partOfSpeech": "v., n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_build",
+    "word": "build",
+    "partOfSpeech": "v.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_bunch",
+    "word": "bunch",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_cable",
+    "word": "cable",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_carry",
+    "word": "carry",
+    "partOfSpeech": "v.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_catch",
+    "word": "catch",
+    "partOfSpeech": "v.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_cause",
+    "word": "cause",
+    "partOfSpeech": "n., v.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_chain",
+    "word": "chain",
+    "partOfSpeech": "n.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_chair",
+    "word": "chair",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_chart",
+    "word": "chart",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_cheap",
+    "word": "cheap",
+    "partOfSpeech": "adj.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_cheat",
+    "word": "cheat",
+    "partOfSpeech": "v., n.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_check",
+    "word": "check",
+    "partOfSpeech": "v.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_chest",
+    "word": "chest",
+    "partOfSpeech": "n.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_chief",
+    "word": "chief",
+    "partOfSpeech": "adj., n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_child",
+    "word": "child",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_civil",
+    "word": "civil",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_claim",
+    "word": "claim",
+    "partOfSpeech": "v., n.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_class",
+    "word": "class",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_clean",
+    "word": "clean",
+    "partOfSpeech": "adj., v.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_clear",
+    "word": "clear",
+    "partOfSpeech": "adj.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_click",
+    "word": "click",
+    "partOfSpeech": "v., n.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_climb",
+    "word": "climb",
+    "partOfSpeech": "v.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_cloth",
+    "word": "cloth",
+    "partOfSpeech": "n.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_cloud",
+    "word": "cloud",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_coach",
+    "word": "coach",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_coast",
+    "word": "coast",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_could",
+    "word": "could",
+    "partOfSpeech": "mo dal v.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_count",
+    "word": "count",
+    "partOfSpeech": "v.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_court",
+    "word": "court",
+    "partOfSpeech": "n.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_cover",
+    "word": "cover",
+    "partOfSpeech": "v.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_crash",
+    "word": "crash",
+    "partOfSpeech": "n., v.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_crazy",
+    "word": "crazy",
+    "partOfSpeech": "adj.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_cream",
+    "word": "cream",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_crime",
+    "word": "crime",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_cross",
+    "word": "cross",
+    "partOfSpeech": "v., n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_crowd",
+    "word": "crowd",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_cruel",
+    "word": "cruel",
+    "partOfSpeech": "adj.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_curly",
+    "word": "curly",
+    "partOfSpeech": "adj.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_curve",
+    "word": "curve",
+    "partOfSpeech": "n., v.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_cycle",
+    "word": "cycle",
+    "partOfSpeech": "n., v.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_daily",
+    "word": "daily",
+    "partOfSpeech": "adj.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_dance",
+    "word": "dance",
+    "partOfSpeech": "n., v.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_death",
+    "word": "death",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_delay",
+    "word": "delay",
+    "partOfSpeech": "v., n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_depth",
+    "word": "depth",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_diary",
+    "word": "diary",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_dirty",
+    "word": "dirty",
+    "partOfSpeech": "adj.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_doubt",
+    "word": "doubt",
+    "partOfSpeech": "n., v.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_dozen",
+    "word": "dozen",
+    "partOfSpeech": "n., det.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_draft",
+    "word": "draft",
+    "partOfSpeech": "n., v.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_drama",
+    "word": "drama",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_dream",
+    "word": "dream",
+    "partOfSpeech": "n., v.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_dress",
+    "word": "dress",
+    "partOfSpeech": "n., v.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_drink",
+    "word": "drink",
+    "partOfSpeech": "n., v.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_drive",
+    "word": "drive",
+    "partOfSpeech": "v.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_drunk",
+    "word": "drunk",
+    "partOfSpeech": "adj.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_early",
+    "word": "early",
+    "partOfSpeech": "adj., adv.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_earth",
+    "word": "earth",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_eight",
+    "word": "eight",
+    "partOfSpeech": "number",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_elect",
+    "word": "elect",
+    "partOfSpeech": "v.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_email",
+    "word": "email",
+    "partOfSpeech": "n., v.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_empty",
+    "word": "empty",
+    "partOfSpeech": "adj.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_enemy",
+    "word": "enemy",
+    "partOfSpeech": "n.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_enjoy",
+    "word": "enjoy",
+    "partOfSpeech": "v.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_enter",
+    "word": "enter",
+    "partOfSpeech": "v.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_entry",
+    "word": "entry",
+    "partOfSpeech": "n.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_equal",
+    "word": "equal",
+    "partOfSpeech": "adj., v.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_error",
+    "word": "error",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_essay",
+    "word": "essay",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_event",
+    "word": "event",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_every",
+    "word": "every",
+    "partOfSpeech": "det.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_exact",
+    "word": "exact",
+    "partOfSpeech": "adj.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_exist",
+    "word": "exist",
+    "partOfSpeech": "v.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_extra",
+    "word": "extra",
+    "partOfSpeech": "adj.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_faith",
+    "word": "faith",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_false",
+    "word": "false",
+    "partOfSpeech": "adj.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_fancy",
+    "word": "fancy",
+    "partOfSpeech": "v., adj.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_fault",
+    "word": "fault",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_fence",
+    "word": "fence",
+    "partOfSpeech": "n.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_field",
+    "word": "field",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_fifth",
+    "word": "fifth",
+    "partOfSpeech": "number",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_fifty",
+    "word": "fifty",
+    "partOfSpeech": "number",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_fight",
+    "word": "fight",
+    "partOfSpeech": "v., n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_final",
+    "word": "final",
+    "partOfSpeech": "adj.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_fixed",
+    "word": "fixed",
+    "partOfSpeech": "adj.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_flame",
+    "word": "flame",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_flash",
+    "word": "flash",
+    "partOfSpeech": "n., v.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_float",
+    "word": "float",
+    "partOfSpeech": "v.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_flood",
+    "word": "flood",
+    "partOfSpeech": "n., v.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_floor",
+    "word": "floor",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_flour",
+    "word": "flour",
+    "partOfSpeech": "n.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_focus",
+    "word": "focus",
+    "partOfSpeech": "v., n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_force",
+    "word": "force",
+    "partOfSpeech": "n., v.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_forty",
+    "word": "forty",
+    "partOfSpeech": "number",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_found",
+    "word": "found",
+    "partOfSpeech": "v.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_frame",
+    "word": "frame",
+    "partOfSpeech": "n., v.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_fresh",
+    "word": "fresh",
+    "partOfSpeech": "adj.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_front",
+    "word": "front",
+    "partOfSpeech": "n., adj.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_fruit",
+    "word": "fruit",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_fully",
+    "word": "fully",
+    "partOfSpeech": "adv.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_funny",
+    "word": "funny",
+    "partOfSpeech": "adj.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_genre",
+    "word": "genre",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_ghost",
+    "word": "ghost",
+    "partOfSpeech": "n.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_giant",
+    "word": "giant",
+    "partOfSpeech": "adj., n.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_glass",
+    "word": "glass",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_glove",
+    "word": "glove",
+    "partOfSpeech": "n.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_goods",
+    "word": "goods",
+    "partOfSpeech": "n.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_grade",
+    "word": "grade",
+    "partOfSpeech": "n.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_grain",
+    "word": "grain",
+    "partOfSpeech": "n.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_grand",
+    "word": "grand",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_grant",
+    "word": "grant",
+    "partOfSpeech": "v., n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_grass",
+    "word": "grass",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_great",
+    "word": "great",
+    "partOfSpeech": "adj.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_green",
+    "word": "green",
+    "partOfSpeech": "adj., n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_greet",
+    "word": "greet",
+    "partOfSpeech": "v.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_group",
+    "word": "group",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_guard",
+    "word": "guard",
+    "partOfSpeech": "n., v.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_guess",
+    "word": "guess",
+    "partOfSpeech": "v., n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_guest",
+    "word": "guest",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_guide",
+    "word": "guide",
+    "partOfSpeech": "n., v.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_habit",
+    "word": "habit",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_happy",
+    "word": "happy",
+    "partOfSpeech": "adj.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_heart",
+    "word": "heart",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_heavy",
+    "word": "heavy",
+    "partOfSpeech": "adj.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_hobby",
+    "word": "hobby",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_horse",
+    "word": "horse",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_hotel",
+    "word": "hotel",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_house",
+    "word": "house",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_human",
+    "word": "human",
+    "partOfSpeech": "adj., n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_hurry",
+    "word": "hurry",
+    "partOfSpeech": "n., v.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_ideal",
+    "word": "ideal",
+    "partOfSpeech": "adj.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_image",
+    "word": "image",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_imply",
+    "word": "imply",
+    "partOfSpeech": "v.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_inner",
+    "word": "inner",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_issue",
+    "word": "issue",
+    "partOfSpeech": "n.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_jeans",
+    "word": "jeans",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_judge",
+    "word": "judge",
+    "partOfSpeech": "n., v.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_juice",
+    "word": "juice",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_knife",
+    "word": "knife",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_knock",
+    "word": "knock",
+    "partOfSpeech": "v.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_label",
+    "word": "label",
+    "partOfSpeech": "n., v.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_large",
+    "word": "large",
+    "partOfSpeech": "adj.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_later",
+    "word": "later",
+    "partOfSpeech": "adv.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_laugh",
+    "word": "laugh",
+    "partOfSpeech": "v., n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_layer",
+    "word": "layer",
+    "partOfSpeech": "n.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_learn",
+    "word": "learn",
+    "partOfSpeech": "v.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_leave",
+    "word": "leave",
+    "partOfSpeech": "v.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_legal",
+    "word": "legal",
+    "partOfSpeech": "adj.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_lemon",
+    "word": "lemon",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_level",
+    "word": "level",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_limit",
+    "word": "limit",
+    "partOfSpeech": "n., v.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_local",
+    "word": "local",
+    "partOfSpeech": "adj.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_loose",
+    "word": "loose",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_lorry",
+    "word": "lorry",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_lower",
+    "word": "lower",
+    "partOfSpeech": "v.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_lucky",
+    "word": "lucky",
+    "partOfSpeech": "adj.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_lunch",
+    "word": "lunch",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_magic",
+    "word": "magic",
+    "partOfSpeech": "n., adj.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_major",
+    "word": "major",
+    "partOfSpeech": "adj.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_march",
+    "word": "march",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_marry",
+    "word": "marry",
+    "partOfSpeech": "v.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_maths",
+    "word": "maths",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_maybe",
+    "word": "maybe",
+    "partOfSpeech": "adv.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_means",
+    "word": "means",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_media",
+    "word": "media",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_metal",
+    "word": "metal",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_metre",
+    "word": "metre",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_might",
+    "word": "might",
+    "partOfSpeech": "mo dal v.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_minor",
+    "word": "minor",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_mixed",
+    "word": "mixed",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_model",
+    "word": "model",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_money",
+    "word": "money",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_month",
+    "word": "month",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_moral",
+    "word": "moral",
+    "partOfSpeech": "adj., n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_motor",
+    "word": "motor",
+    "partOfSpeech": "n., adj.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_mount",
+    "word": "mount",
+    "partOfSpeech": "v.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_mouse",
+    "word": "mouse",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_mouth",
+    "word": "mouth",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_movie",
+    "word": "movie",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_music",
+    "word": "music",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_nerve",
+    "word": "nerve",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_never",
+    "word": "never",
+    "partOfSpeech": "adv.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_night",
+    "word": "night",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_noise",
+    "word": "noise",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_noisy",
+    "word": "noisy",
+    "partOfSpeech": "adj.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_north",
+    "word": "north",
+    "partOfSpeech": "n., adj., adv.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_novel",
+    "word": "novel",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_nurse",
+    "word": "nurse",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_occur",
+    "word": "occur",
+    "partOfSpeech": "v.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_ocean",
+    "word": "ocean",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_offer",
+    "word": "offer",
+    "partOfSpeech": "v., n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_often",
+    "word": "often",
+    "partOfSpeech": "adv.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_onion",
+    "word": "onion",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_order",
+    "word": "order",
+    "partOfSpeech": "n., v.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_organ",
+    "word": "organ",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_ought",
+    "word": "ought",
+    "partOfSpeech": "mo dal v.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_outer",
+    "word": "outer",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_owner",
+    "word": "owner",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_paint",
+    "word": "paint",
+    "partOfSpeech": "v., n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_panel",
+    "word": "panel",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_pants",
+    "word": "pants",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_paper",
+    "word": "paper",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_party",
+    "word": "party",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_peace",
+    "word": "peace",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_penny",
+    "word": "penny",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_phase",
+    "word": "phase",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_phone",
+    "word": "phone",
+    "partOfSpeech": "n., v.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_photo",
+    "word": "photo",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_piano",
+    "word": "piano",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_piece",
+    "word": "piece",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_pilot",
+    "word": "pilot",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_pitch",
+    "word": "pitch",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_place",
+    "word": "place",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_plain",
+    "word": "plain",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_plane",
+    "word": "plane",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_plant",
+    "word": "plant",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_plate",
+    "word": "plate",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_point",
+    "word": "point",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_pound",
+    "word": "pound",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_power",
+    "word": "power",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_press",
+    "word": "press",
+    "partOfSpeech": "v., n.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_price",
+    "word": "price",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_prime",
+    "word": "prime",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_print",
+    "word": "print",
+    "partOfSpeech": "v.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_prize",
+    "word": "prize",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_proof",
+    "word": "proof",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_proud",
+    "word": "proud",
+    "partOfSpeech": "adj.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_prove",
+    "word": "prove",
+    "partOfSpeech": "v.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_pupil",
+    "word": "pupil",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_queen",
+    "word": "queen",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_queue",
+    "word": "queue",
+    "partOfSpeech": "n., v.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_quick",
+    "word": "quick",
+    "partOfSpeech": "adj.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_quiet",
+    "word": "quiet",
+    "partOfSpeech": "adj.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_quite",
+    "word": "quite",
+    "partOfSpeech": "adv.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_quote",
+    "word": "quote",
+    "partOfSpeech": "v., n.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_radio",
+    "word": "radio",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_raise",
+    "word": "raise",
+    "partOfSpeech": "v.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_range",
+    "word": "range",
+    "partOfSpeech": "n.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_rapid",
+    "word": "rapid",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_reach",
+    "word": "reach",
+    "partOfSpeech": "v.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_react",
+    "word": "react",
+    "partOfSpeech": "v.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_ready",
+    "word": "ready",
+    "partOfSpeech": "adj.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_refer",
+    "word": "refer",
+    "partOfSpeech": "v.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_relax",
+    "word": "relax",
+    "partOfSpeech": "v.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_reply",
+    "word": "reply",
+    "partOfSpeech": "v., n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_right",
+    "word": "right",
+    "partOfSpeech": "adj., adv., n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_river",
+    "word": "river",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_robot",
+    "word": "robot",
+    "partOfSpeech": "n.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_rough",
+    "word": "rough",
+    "partOfSpeech": "adj.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_round",
+    "word": "round",
+    "partOfSpeech": "adj., adv., prep.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_route",
+    "word": "route",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_royal",
+    "word": "royal",
+    "partOfSpeech": "adj.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_rugby",
+    "word": "rugby",
+    "partOfSpeech": "n.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_rural",
+    "word": "rural",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_sadly",
+    "word": "sadly",
+    "partOfSpeech": "adv.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_salad",
+    "word": "salad",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_sauce",
+    "word": "sauce",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_scale",
+    "word": "scale",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_scary",
+    "word": "scary",
+    "partOfSpeech": "adj.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_scene",
+    "word": "scene",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_score",
+    "word": "score",
+    "partOfSpeech": "v., n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_sense",
+    "word": "sense",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_serve",
+    "word": "serve",
+    "partOfSpeech": "v.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_seven",
+    "word": "seven",
+    "partOfSpeech": "number",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_shade",
+    "word": "shade",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_shake",
+    "word": "shake",
+    "partOfSpeech": "v.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_shall",
+    "word": "shall",
+    "partOfSpeech": "mo dal v.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_shame",
+    "word": "shame",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_shape",
+    "word": "shape",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_share",
+    "word": "share",
+    "partOfSpeech": "v.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_sharp",
+    "word": "sharp",
+    "partOfSpeech": "adj.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_sheep",
+    "word": "sheep",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_sheet",
+    "word": "sheet",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_shelf",
+    "word": "shelf",
+    "partOfSpeech": "n.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_shell",
+    "word": "shell",
+    "partOfSpeech": "n.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_shift",
+    "word": "shift",
+    "partOfSpeech": "n.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_shine",
+    "word": "shine",
+    "partOfSpeech": "v.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_shiny",
+    "word": "shiny",
+    "partOfSpeech": "adj.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_shirt",
+    "word": "shirt",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_shock",
+    "word": "shock",
+    "partOfSpeech": "n., v.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_shoot",
+    "word": "shoot",
+    "partOfSpeech": "v.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_short",
+    "word": "short",
+    "partOfSpeech": "adj.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_shout",
+    "word": "shout",
+    "partOfSpeech": "v., n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_sight",
+    "word": "sight",
+    "partOfSpeech": "n.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_silly",
+    "word": "silly",
+    "partOfSpeech": "adj.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_since",
+    "word": "since",
+    "partOfSpeech": "prep., conj.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_sixty",
+    "word": "sixty",
+    "partOfSpeech": "number",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_skill",
+    "word": "skill",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_skirt",
+    "word": "skirt",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_slave",
+    "word": "slave",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_sleep",
+    "word": "sleep",
+    "partOfSpeech": "v.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_slice",
+    "word": "slice",
+    "partOfSpeech": "n., v.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_slide",
+    "word": "slide",
+    "partOfSpeech": "v., n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_slope",
+    "word": "slope",
+    "partOfSpeech": "n., v.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_small",
+    "word": "small",
+    "partOfSpeech": "adj.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_smart",
+    "word": "smart",
+    "partOfSpeech": "adj.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_smell",
+    "word": "smell",
+    "partOfSpeech": "v., n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_smile",
+    "word": "smile",
+    "partOfSpeech": "v., n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_smoke",
+    "word": "smoke",
+    "partOfSpeech": "n., v.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_snake",
+    "word": "snake",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_solar",
+    "word": "solar",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_solid",
+    "word": "solid",
+    "partOfSpeech": "adj., n.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_solve",
+    "word": "solve",
+    "partOfSpeech": "v.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_sorry",
+    "word": "sorry",
+    "partOfSpeech": "adj., exclam.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_sound",
+    "word": "sound",
+    "partOfSpeech": "n., v.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_south",
+    "word": "south",
+    "partOfSpeech": "n., adj., adv.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_space",
+    "word": "space",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_speak",
+    "word": "speak",
+    "partOfSpeech": "v.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_speed",
+    "word": "speed",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_spell",
+    "word": "spell",
+    "partOfSpeech": "v.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_spend",
+    "word": "spend",
+    "partOfSpeech": "v.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_spicy",
+    "word": "spicy",
+    "partOfSpeech": "adj.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_split",
+    "word": "split",
+    "partOfSpeech": "v., n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_spoon",
+    "word": "spoon",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_sport",
+    "word": "sport",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_staff",
+    "word": "staff",
+    "partOfSpeech": "n.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_stage",
+    "word": "stage",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_stair",
+    "word": "stair",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_stamp",
+    "word": "stamp",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_stand",
+    "word": "stand",
+    "partOfSpeech": "v.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_stare",
+    "word": "stare",
+    "partOfSpeech": "v.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_start",
+    "word": "start",
+    "partOfSpeech": "v.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_state",
+    "word": "state",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_steal",
+    "word": "steal",
+    "partOfSpeech": "v.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_steel",
+    "word": "steel",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_steep",
+    "word": "steep",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_stiff",
+    "word": "stiff",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_still",
+    "word": "still",
+    "partOfSpeech": "adv.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_stock",
+    "word": "stock",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_stone",
+    "word": "stone",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_store",
+    "word": "store",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_storm",
+    "word": "storm",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_story",
+    "word": "story",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_study",
+    "word": "study",
+    "partOfSpeech": "n., v.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_stuff",
+    "word": "stuff",
+    "partOfSpeech": "n.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_style",
+    "word": "style",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_sugar",
+    "word": "sugar",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_swear",
+    "word": "swear",
+    "partOfSpeech": "v.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_sweep",
+    "word": "sweep",
+    "partOfSpeech": "v.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_sweet",
+    "word": "sweet",
+    "partOfSpeech": "adj., n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_table",
+    "word": "table",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_taste",
+    "word": "taste",
+    "partOfSpeech": "n., v.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_teach",
+    "word": "teach",
+    "partOfSpeech": "v.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_thank",
+    "word": "thank",
+    "partOfSpeech": "v.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_their",
+    "word": "their",
+    "partOfSpeech": "det.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_theme",
+    "word": "theme",
+    "partOfSpeech": "n.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_there",
+    "word": "there",
+    "partOfSpeech": "adv.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_thick",
+    "word": "thick",
+    "partOfSpeech": "adj.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_thief",
+    "word": "thief",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_thing",
+    "word": "thing",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_think",
+    "word": "think",
+    "partOfSpeech": "v.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_third",
+    "word": "third",
+    "partOfSpeech": "number",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_three",
+    "word": "three",
+    "partOfSpeech": "number",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_throw",
+    "word": "throw",
+    "partOfSpeech": "v.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_tight",
+    "word": "tight",
+    "partOfSpeech": "adj.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_tired",
+    "word": "tired",
+    "partOfSpeech": "adj.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_title",
+    "word": "title",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_today",
+    "word": "today",
+    "partOfSpeech": "adv., n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_tooth",
+    "word": "tooth",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_topic",
+    "word": "topic",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_total",
+    "word": "total",
+    "partOfSpeech": "adj., n.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_touch",
+    "word": "touch",
+    "partOfSpeech": "v.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_tough",
+    "word": "tough",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_towel",
+    "word": "towel",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_tower",
+    "word": "tower",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_track",
+    "word": "track",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_trade",
+    "word": "trade",
+    "partOfSpeech": "n., v.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_train",
+    "word": "train",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_treat",
+    "word": "treat",
+    "partOfSpeech": "v.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_trend",
+    "word": "trend",
+    "partOfSpeech": "n.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_trial",
+    "word": "trial",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_trick",
+    "word": "trick",
+    "partOfSpeech": "n., v.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_truck",
+    "word": "truck",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_truly",
+    "word": "truly",
+    "partOfSpeech": "adv.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_trust",
+    "word": "trust",
+    "partOfSpeech": "n., v.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_truth",
+    "word": "truth",
+    "partOfSpeech": "n.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_twice",
+    "word": "twice",
+    "partOfSpeech": "adv.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_uncle",
+    "word": "uncle",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_under",
+    "word": "under",
+    "partOfSpeech": "prep., adv.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_union",
+    "word": "union",
+    "partOfSpeech": "n.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_upper",
+    "word": "upper",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_upset",
+    "word": "upset",
+    "partOfSpeech": "adj., v.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_urban",
+    "word": "urban",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_usual",
+    "word": "usual",
+    "partOfSpeech": "adj.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_value",
+    "word": "value",
+    "partOfSpeech": "n.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_venue",
+    "word": "venue",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_video",
+    "word": "video",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_virus",
+    "word": "virus",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_visit",
+    "word": "visit",
+    "partOfSpeech": "v., n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_vital",
+    "word": "vital",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_voice",
+    "word": "voice",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_waste",
+    "word": "waste",
+    "partOfSpeech": "n., v., adj.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_watch",
+    "word": "watch",
+    "partOfSpeech": "v., n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_water",
+    "word": "water",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_weigh",
+    "word": "weigh",
+    "partOfSpeech": "v.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_wheel",
+    "word": "wheel",
+    "partOfSpeech": "n.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_where",
+    "word": "where",
+    "partOfSpeech": "adv., conj.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_while",
+    "word": "while",
+    "partOfSpeech": "conj.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_white",
+    "word": "white",
+    "partOfSpeech": "adj., n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_whole",
+    "word": "whole",
+    "partOfSpeech": "adj.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_woman",
+    "word": "woman",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_world",
+    "word": "world",
+    "partOfSpeech": "n.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_worry",
+    "word": "worry",
+    "partOfSpeech": "v.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_worse",
+    "word": "worse",
+    "partOfSpeech": "adj.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_worst",
+    "word": "worst",
+    "partOfSpeech": "adj.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_worth",
+    "word": "worth",
+    "partOfSpeech": "adj.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_would",
+    "word": "would",
+    "partOfSpeech": "mo dal v.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_wound",
+    "word": "wound",
+    "partOfSpeech": "n., v.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_write",
+    "word": "write",
+    "partOfSpeech": "v.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_wrong",
+    "word": "wrong",
+    "partOfSpeech": "adj.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_young",
+    "word": "young",
+    "partOfSpeech": "adj.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_yours",
+    "word": "yours",
+    "partOfSpeech": "pron.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_youth",
+    "word": "youth",
+    "partOfSpeech": "n.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_abuse",
+    "word": "abuse",
+    "partOfSpeech": "n., v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_acute",
+    "word": "acute",
+    "partOfSpeech": "adj.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_alert",
+    "word": "alert",
+    "partOfSpeech": "v., n., adj.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_alien",
+    "word": "alien",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_align",
+    "word": "align",
+    "partOfSpeech": "v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_alike",
+    "word": "alike",
+    "partOfSpeech": "adv., adj.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_amend",
+    "word": "amend",
+    "partOfSpeech": "v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_angel",
+    "word": "angel",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_arena",
+    "word": "arena",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_array",
+    "word": "array",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_arrow",
+    "word": "arrow",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_aside",
+    "word": "aside",
+    "partOfSpeech": "adv.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_asset",
+    "word": "asset",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_audio",
+    "word": "audio",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_audit",
+    "word": "audit",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_await",
+    "word": "await",
+    "partOfSpeech": "v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_badge",
+    "word": "badge",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_beast",
+    "word": "beast",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_bench",
+    "word": "bench",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_blade",
+    "word": "blade",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_blast",
+    "word": "blast",
+    "partOfSpeech": "n., v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_bleed",
+    "word": "bleed",
+    "partOfSpeech": "v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_blend",
+    "word": "blend",
+    "partOfSpeech": "v., n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_bless",
+    "word": "bless",
+    "partOfSpeech": "v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_boast",
+    "word": "boast",
+    "partOfSpeech": "v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_bonus",
+    "word": "bonus",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_boost",
+    "word": "boost",
+    "partOfSpeech": "v., n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_bound",
+    "word": "bound",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_breed",
+    "word": "breed",
+    "partOfSpeech": "v., n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_brick",
+    "word": "brick",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_buddy",
+    "word": "buddy",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_burst",
+    "word": "burst",
+    "partOfSpeech": "v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_cabin",
+    "word": "cabin",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_canal",
+    "word": "canal",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_cargo",
+    "word": "cargo",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_carve",
+    "word": "carve",
+    "partOfSpeech": "v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_cater",
+    "word": "cater",
+    "partOfSpeech": "v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_cease",
+    "word": "cease",
+    "partOfSpeech": "v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_chaos",
+    "word": "chaos",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_charm",
+    "word": "charm",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_chase",
+    "word": "chase",
+    "partOfSpeech": "v., n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_cheek",
+    "word": "cheek",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_cheer",
+    "word": "cheer",
+    "partOfSpeech": "v., n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_choir",
+    "word": "choir",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_chunk",
+    "word": "chunk",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_civic",
+    "word": "civic",
+    "partOfSpeech": "adj.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_clash",
+    "word": "clash",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_clerk",
+    "word": "clerk",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_cliff",
+    "word": "cliff",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_cling",
+    "word": "cling",
+    "partOfSpeech": "v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_comic",
+    "word": "comic",
+    "partOfSpeech": "adj., n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_crack",
+    "word": "crack",
+    "partOfSpeech": "v., n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_craft",
+    "word": "craft",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_crawl",
+    "word": "crawl",
+    "partOfSpeech": "v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_creep",
+    "word": "creep",
+    "partOfSpeech": "v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_crown",
+    "word": "crown",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_crude",
+    "word": "crude",
+    "partOfSpeech": "adj.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_crush",
+    "word": "crush",
+    "partOfSpeech": "v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_dairy",
+    "word": "dairy",
+    "partOfSpeech": "n., adj.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_debut",
+    "word": "debut",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_demon",
+    "word": "demon",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_dense",
+    "word": "dense",
+    "partOfSpeech": "adj.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_devil",
+    "word": "devil",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_donor",
+    "word": "donor",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_drain",
+    "word": "drain",
+    "partOfSpeech": "v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_drift",
+    "word": "drift",
+    "partOfSpeech": "v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_drown",
+    "word": "drown",
+    "partOfSpeech": "v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_eager",
+    "word": "eager",
+    "partOfSpeech": "adj.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_elbow",
+    "word": "elbow",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_elite",
+    "word": "elite",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_embed",
+    "word": "embed",
+    "partOfSpeech": "v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_enact",
+    "word": "enact",
+    "partOfSpeech": "v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_enrol",
+    "word": "enrol",
+    "partOfSpeech": "v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_ensue",
+    "word": "ensue",
+    "partOfSpeech": "v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_equip",
+    "word": "equip",
+    "partOfSpeech": "v.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_erect",
+    "word": "erect",
+    "partOfSpeech": "v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_erupt",
+    "word": "erupt",
+    "partOfSpeech": "v.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_ethic",
+    "word": "ethic",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_evoke",
+    "word": "evoke",
+    "partOfSpeech": "v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_exert",
+    "word": "exert",
+    "partOfSpeech": "v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_exile",
+    "word": "exile",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_fatal",
+    "word": "fatal",
+    "partOfSpeech": "adj.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_fever",
+    "word": "fever",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_fibre",
+    "word": "fibre",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_fleet",
+    "word": "fleet",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_flesh",
+    "word": "flesh",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_fluid",
+    "word": "fluid",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_forge",
+    "word": "forge",
+    "partOfSpeech": "v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_forth",
+    "word": "forth",
+    "partOfSpeech": "adv.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_forum",
+    "word": "forum",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_fraud",
+    "word": "fraud",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_globe",
+    "word": "globe",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_glory",
+    "word": "glory",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_grace",
+    "word": "grace",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_grasp",
+    "word": "grasp",
+    "partOfSpeech": "v., n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_grief",
+    "word": "grief",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_grind",
+    "word": "grind",
+    "partOfSpeech": "v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_gross",
+    "word": "gross",
+    "partOfSpeech": "adj.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_guilt",
+    "word": "guilt",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_handy",
+    "word": "handy",
+    "partOfSpeech": "adj.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_harsh",
+    "word": "harsh",
+    "partOfSpeech": "adj.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_haunt",
+    "word": "haunt",
+    "partOfSpeech": "v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_hence",
+    "word": "hence",
+    "partOfSpeech": "adv.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_idiot",
+    "word": "idiot",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_incur",
+    "word": "incur",
+    "partOfSpeech": "v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_index",
+    "word": "index",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_infer",
+    "word": "infer",
+    "partOfSpeech": "v.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_input",
+    "word": "input",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_irony",
+    "word": "irony",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_joint",
+    "word": "joint",
+    "partOfSpeech": "adj., n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_laser",
+    "word": "laser",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_litre",
+    "word": "litre",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_liver",
+    "word": "liver",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_lobby",
+    "word": "lobby",
+    "partOfSpeech": "n., v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_logic",
+    "word": "logic",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_loyal",
+    "word": "loyal",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_lyric",
+    "word": "lyric",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_mayor",
+    "word": "mayor",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_medal",
+    "word": "medal",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_mercy",
+    "word": "mercy",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_merge",
+    "word": "merge",
+    "partOfSpeech": "v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_merit",
+    "word": "merit",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_midst",
+    "word": "midst",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_miner",
+    "word": "miner",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_naked",
+    "word": "naked",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_nasty",
+    "word": "nasty",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_naval",
+    "word": "naval",
+    "partOfSpeech": "adj.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_newly",
+    "word": "newly",
+    "partOfSpeech": "adv.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_niche",
+    "word": "niche",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_noble",
+    "word": "noble",
+    "partOfSpeech": "adj.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_opera",
+    "word": "opera",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_panic",
+    "word": "panic",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_patch",
+    "word": "patch",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_pause",
+    "word": "pause",
+    "partOfSpeech": "v., n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_plead",
+    "word": "plead",
+    "partOfSpeech": "v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_pride",
+    "word": "pride",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_prior",
+    "word": "prior",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_probe",
+    "word": "probe",
+    "partOfSpeech": "n., v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_pulse",
+    "word": "pulse",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_punch",
+    "word": "punch",
+    "partOfSpeech": "n., v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_query",
+    "word": "query",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_quest",
+    "word": "quest",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_quota",
+    "word": "quota",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_radar",
+    "word": "radar",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_rally",
+    "word": "rally",
+    "partOfSpeech": "n., v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_ratio",
+    "word": "ratio",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_realm",
+    "word": "realm",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_rebel",
+    "word": "rebel",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_reign",
+    "word": "reign",
+    "partOfSpeech": "n., v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_renew",
+    "word": "renew",
+    "partOfSpeech": "v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_rifle",
+    "word": "rifle",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_risky",
+    "word": "risky",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_rival",
+    "word": "rival",
+    "partOfSpeech": "n., adj.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_saint",
+    "word": "saint",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_scope",
+    "word": "scope",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_screw",
+    "word": "screw",
+    "partOfSpeech": "v., n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_seize",
+    "word": "seize",
+    "partOfSpeech": "v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_smash",
+    "word": "smash",
+    "partOfSpeech": "v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_spare",
+    "word": "spare",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_spark",
+    "word": "spark",
+    "partOfSpeech": "v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_spice",
+    "word": "spice",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_spill",
+    "word": "spill",
+    "partOfSpeech": "v.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_spine",
+    "word": "spine",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_spite",
+    "word": "spite",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_spoil",
+    "word": "spoil",
+    "partOfSpeech": "v.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_squad",
+    "word": "squad",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_stake",
+    "word": "stake",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_stall",
+    "word": "stall",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_stark",
+    "word": "stark",
+    "partOfSpeech": "adj.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_steam",
+    "word": "steam",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_steer",
+    "word": "steer",
+    "partOfSpeech": "v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_suite",
+    "word": "suite",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_super",
+    "word": "super",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_surge",
+    "word": "surge",
+    "partOfSpeech": "n., v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_swing",
+    "word": "swing",
+    "partOfSpeech": "v., n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_sword",
+    "word": "sword",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_teens",
+    "word": "teens",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_tempt",
+    "word": "tempt",
+    "partOfSpeech": "v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_terms",
+    "word": "terms",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_thumb",
+    "word": "thumb",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_tonne",
+    "word": "tonne",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_toxic",
+    "word": "toxic",
+    "partOfSpeech": "adj.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_trace",
+    "word": "trace",
+    "partOfSpeech": "v.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_trail",
+    "word": "trail",
+    "partOfSpeech": "n., v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_trait",
+    "word": "trait",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_tribe",
+    "word": "tribe",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_troop",
+    "word": "troop",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_twist",
+    "word": "twist",
+    "partOfSpeech": "v., n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_unify",
+    "word": "unify",
+    "partOfSpeech": "v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_unite",
+    "word": "unite",
+    "partOfSpeech": "v.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_unity",
+    "word": "unity",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_usage",
+    "word": "usage",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_vague",
+    "word": "vague",
+    "partOfSpeech": "adj.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_valid",
+    "word": "valid",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_verse",
+    "word": "verse",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_vocal",
+    "word": "vocal",
+    "partOfSpeech": "adj.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_weave",
+    "word": "weave",
+    "partOfSpeech": "v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_weird",
+    "word": "weird",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_wheat",
+    "word": "wheat",
+    "partOfSpeech": "n.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_widen",
+    "word": "widen",
+    "partOfSpeech": "v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_widow",
+    "word": "widow",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_width",
+    "word": "width",
+    "partOfSpeech": "n.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_yield",
+    "word": "yield",
+    "partOfSpeech": "n., v.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_bkup_alone",
+    "word": "alone",
+    "partOfSpeech": "unknown",
+    "level": "UNRATED",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_bkup_clock",
+    "word": "clock",
+    "partOfSpeech": "unknown",
+    "level": "UNRATED",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_bkup_close",
+    "word": "close",
+    "partOfSpeech": "unknown",
+    "level": "UNRATED",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_bkup_first",
+    "word": "first",
+    "partOfSpeech": "unknown",
+    "level": "UNRATED",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_bkup_grave",
+    "word": "grave",
+    "partOfSpeech": "unknown",
+    "level": "UNRATED",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_bkup_hello",
+    "word": "hello",
+    "partOfSpeech": "unknown",
+    "level": "UNRATED",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_bkup_least",
+    "word": "least",
+    "partOfSpeech": "unknown",
+    "level": "UNRATED",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_bkup_light",
+    "word": "light",
+    "partOfSpeech": "unknown",
+    "level": "UNRATED",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_bkup_maker",
+    "word": "maker",
+    "partOfSpeech": "unknown",
+    "level": "UNRATED",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_bkup_match",
+    "word": "match",
+    "partOfSpeech": "unknown",
+    "level": "UNRATED",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_bkup_modal",
+    "word": "modal",
+    "partOfSpeech": "unknown",
+    "level": "UNRATED",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_bkup_other",
+    "word": "other",
+    "partOfSpeech": "unknown",
+    "level": "UNRATED",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_bkup_scare",
+    "word": "scare",
+    "partOfSpeech": "unknown",
+    "level": "UNRATED",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_bkup_sheer",
+    "word": "sheer",
+    "partOfSpeech": "unknown",
+    "level": "UNRATED",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_bkup_shore",
+    "word": "shore",
+    "partOfSpeech": "unknown",
+    "level": "UNRATED",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_bkup_shrug",
+    "word": "shrug",
+    "partOfSpeech": "unknown",
+    "level": "UNRATED",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_bkup_skull",
+    "word": "skull",
+    "partOfSpeech": "unknown",
+    "level": "UNRATED",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_bkup_slash",
+    "word": "slash",
+    "partOfSpeech": "unknown",
+    "level": "UNRATED",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_bkup_stick",
+    "word": "stick",
+    "partOfSpeech": "unknown",
+    "level": "UNRATED",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_bkup_strip",
+    "word": "strip",
+    "partOfSpeech": "unknown",
+    "level": "UNRATED",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_bkup_theft",
+    "word": "theft",
+    "partOfSpeech": "unknown",
+    "level": "UNRATED",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_bkup_until",
+    "word": "until",
+    "partOfSpeech": "unknown",
+    "level": "UNRATED",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_bkup_which",
+    "word": "which",
+    "partOfSpeech": "unknown",
+    "level": "UNRATED",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_bkup_whose",
+    "word": "whose",
+    "partOfSpeech": "unknown",
+    "level": "UNRATED",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_bkup_words",
+    "word": "words",
+    "partOfSpeech": "unknown",
+    "level": "UNRATED",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_bkup_wrist",
+    "word": "wrist",
+    "partOfSpeech": "unknown",
+    "level": "UNRATED",
+    "definition": "",
+    "emoji": ""
+  }
+]

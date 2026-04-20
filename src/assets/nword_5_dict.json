@@ -1,0 +1,5546 @@
+[
+  {
+    "id": "w_about",
+    "word": "about",
+    "partOfSpeech": "prep., adv.",
+    "level": "A1",
+    "definition": "Moving around; astir.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_above",
+    "word": "above",
+    "partOfSpeech": "prep., adv.",
+    "level": "A1",
+    "definition": "Heaven.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_abuse",
+    "word": "abuse",
+    "partOfSpeech": "noun., verb.",
+    "level": "C1",
+    "definition": "Improper treatment or usage; application to a wrong or bad purpose; an unju...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_actor",
+    "word": "actor",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "A person who performs, plays a part in a theatrical play or film.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_acute",
+    "word": "acute",
+    "partOfSpeech": "adj.",
+    "level": "C1",
+    "definition": "A person who has the acute form of a disorder, such as schizophrenia.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_adapt",
+    "word": "adapt",
+    "partOfSpeech": "verb.",
+    "level": "B2",
+    "definition": "To make suitable; to make to correspond; to fit or suit",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_admit",
+    "word": "admit",
+    "partOfSpeech": "verb.",
+    "level": "B1",
+    "definition": "To allow to enter; to grant entrance (to), whether into a place, into the m...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_adopt",
+    "word": "adopt",
+    "partOfSpeech": "verb.",
+    "level": "B2",
+    "definition": "To take by choice into relationship (a child, heir, friend, citizen, etc.)",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_adult",
+    "word": "adult",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "A fully grown human or animal.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_after",
+    "word": "after",
+    "partOfSpeech": "prep.",
+    "level": "A1",
+    "definition": "Later; second (of two); next, following, subsequent",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_again",
+    "word": "again",
+    "partOfSpeech": "adv.",
+    "level": "A1",
+    "definition": "Another time; once more.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_agent",
+    "word": "agent",
+    "partOfSpeech": "noun.",
+    "level": "B1",
+    "definition": "One who exerts power, or has the power to act",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_agree",
+    "word": "agree",
+    "partOfSpeech": "verb.",
+    "level": "A1",
+    "definition": "To harmonize in opinion, statement, or action; to be in unison or concord; ...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_ahead",
+    "word": "ahead",
+    "partOfSpeech": "adv.",
+    "level": "B1",
+    "definition": "In or to the front; in advance; onward.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_alarm",
+    "word": "alarm",
+    "partOfSpeech": "noun.",
+    "level": "B1",
+    "definition": "A summons to arms, as on the approach of an enemy.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_album",
+    "word": "album",
+    "partOfSpeech": "noun.",
+    "level": "B1",
+    "definition": "A book specially designed to keep photographs, stamps, or autographs.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_alert",
+    "word": "alert",
+    "partOfSpeech": "verb., noun., adj.",
+    "level": "C1",
+    "definition": "An alarm.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_alien",
+    "word": "alien",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "Any life form of extraterrestrial or extradimensional origin.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_align",
+    "word": "align",
+    "partOfSpeech": "verb.",
+    "level": "C1",
+    "definition": "To form a line; to fall into line.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_alike",
+    "word": "alike",
+    "partOfSpeech": "adv., adj.",
+    "level": "C1",
+    "definition": "Having resemblance or similitude; similar; without difference.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_alive",
+    "word": "alive",
+    "partOfSpeech": "adj.",
+    "level": "A2",
+    "definition": "Having life; living; not dead",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_allow",
+    "word": "allow",
+    "partOfSpeech": "verb.",
+    "level": "A2",
+    "definition": "To grant, give, admit, accord, afford, or yield; to let one have.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_alone",
+    "word": "alone",
+    "partOfSpeech": "adj./adv.",
+    "level": "A2",
+    "definition": "By oneself, solitary.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_along",
+    "word": "along",
+    "partOfSpeech": "prep., adv.",
+    "level": "A2",
+    "definition": "In company; together.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_alter",
+    "word": "alter",
+    "partOfSpeech": "verb.",
+    "level": "B2",
+    "definition": "To change the form or structure of.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_amend",
+    "word": "amend",
+    "partOfSpeech": "verb.",
+    "level": "C1",
+    "definition": "(usually in the plural) An act of righting a wrong; compensation.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_among",
+    "word": "among",
+    "partOfSpeech": "prep.",
+    "level": "A2",
+    "definition": "Denotes a mingling or intermixing with distinct or separable objects. (See ...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_angel",
+    "word": "angel",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "An incorporeal and sometimes divine messenger from a deity, or other divine...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_anger",
+    "word": "anger",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "A strong feeling of displeasure, hostility or antagonism towards someone or...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_angle",
+    "word": "angle",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "A figure formed by two rays which start from a common point (a plane angle)...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_angry",
+    "word": "angry",
+    "partOfSpeech": "adj.",
+    "level": "A1",
+    "definition": "Displaying or feeling anger.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_ankle",
+    "word": "ankle",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_annoy",
+    "word": "annoy",
+    "partOfSpeech": "verb.",
+    "level": "B1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_apart",
+    "word": "apart",
+    "partOfSpeech": "adv.",
+    "level": "B1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_apple",
+    "word": "apple",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_apply",
+    "word": "apply",
+    "partOfSpeech": "verb.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_april",
+    "word": "april",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_arena",
+    "word": "arena",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_argue",
+    "word": "argue",
+    "partOfSpeech": "verb.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_arise",
+    "word": "arise",
+    "partOfSpeech": "verb.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_armed",
+    "word": "armed",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_array",
+    "word": "array",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_arrow",
+    "word": "arrow",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_aside",
+    "word": "aside",
+    "partOfSpeech": "adv.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_asset",
+    "word": "asset",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_audio",
+    "word": "audio",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_audit",
+    "word": "audit",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_avoid",
+    "word": "avoid",
+    "partOfSpeech": "verb.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_await",
+    "word": "await",
+    "partOfSpeech": "verb.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_award",
+    "word": "award",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_aware",
+    "word": "aware",
+    "partOfSpeech": "adj.",
+    "level": "B1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_awful",
+    "word": "awful",
+    "partOfSpeech": "adj.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_badge",
+    "word": "badge",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_badly",
+    "word": "badly",
+    "partOfSpeech": "adv.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_based",
+    "word": "based",
+    "partOfSpeech": "adj.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_basic",
+    "word": "basic",
+    "partOfSpeech": "adj.",
+    "level": "B1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_basis",
+    "word": "basis",
+    "partOfSpeech": "noun.",
+    "level": "B1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_beach",
+    "word": "beach",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_beast",
+    "word": "beast",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_begin",
+    "word": "begin",
+    "partOfSpeech": "verb.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_being",
+    "word": "being",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_below",
+    "word": "below",
+    "partOfSpeech": "adv., prep.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_bench",
+    "word": "bench",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_birth",
+    "word": "birth",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_black",
+    "word": "black",
+    "partOfSpeech": "adj., noun.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_blade",
+    "word": "blade",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_blame",
+    "word": "blame",
+    "partOfSpeech": "verb., noun.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_blank",
+    "word": "blank",
+    "partOfSpeech": "adj., noun.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_blast",
+    "word": "blast",
+    "partOfSpeech": "noun., verb.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_bleed",
+    "word": "bleed",
+    "partOfSpeech": "verb.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_blend",
+    "word": "blend",
+    "partOfSpeech": "verb., noun.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_bless",
+    "word": "bless",
+    "partOfSpeech": "verb.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_blind",
+    "word": "blind",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_block",
+    "word": "block",
+    "partOfSpeech": "noun., verb.",
+    "level": "B1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_blood",
+    "word": "blood",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_board",
+    "word": "board",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_boast",
+    "word": "boast",
+    "partOfSpeech": "verb.",
+    "level": "C1",
+    "definition": "A brag; ostentatious positive appraisal of oneself.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_bonus",
+    "word": "bonus",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "Something extra that is good; an added benefit.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_boost",
+    "word": "boost",
+    "partOfSpeech": "verb., noun.",
+    "level": "B2",
+    "definition": "A push from behind, as to one who is endeavoring to climb.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_bored",
+    "word": "bored",
+    "partOfSpeech": "adj.",
+    "level": "A1",
+    "definition": "To inspire boredom in somebody.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_bound",
+    "word": "bound",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "To tie; to confine by any ligature.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_brain",
+    "word": "brain",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "The control center of the central nervous system of an animal located in th...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_brand",
+    "word": "brand",
+    "partOfSpeech": "noun., verb.",
+    "level": "B1",
+    "definition": "A conflagration; a flame.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_brave",
+    "word": "brave",
+    "partOfSpeech": "adj.",
+    "level": "B1",
+    "definition": "A Native American warrior.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_bread",
+    "word": "bread",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "A foodstuff made by baking dough made from cereals.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_break",
+    "word": "break",
+    "partOfSpeech": "verb., noun.",
+    "level": "A1",
+    "definition": "An instance of breaking something into two or more pieces.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_breed",
+    "word": "breed",
+    "partOfSpeech": "verb., noun.",
+    "level": "C1",
+    "definition": "All animals or plants of the same species or subspecies.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_brick",
+    "word": "brick",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "A hardened rectangular block of mud, clay etc., used for building.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_bride",
+    "word": "bride",
+    "partOfSpeech": "noun.",
+    "level": "B1",
+    "definition": "A woman in the context of her own wedding; one who is going to marry or has...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_brief",
+    "word": "brief",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "A writ summoning one to answer to any action.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_bring",
+    "word": "bring",
+    "partOfSpeech": "verb.",
+    "level": "A1",
+    "definition": "(ditransitive) To transport toward somebody/somewhere.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_broad",
+    "word": "broad",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "A shallow lake, one of a number of bodies of water in eastern Norfolk and S...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_brown",
+    "word": "brown",
+    "partOfSpeech": "adj., noun.",
+    "level": "A1",
+    "definition": "A colour like that of chocolate or coffee.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_brush",
+    "word": "brush",
+    "partOfSpeech": "verb., noun.",
+    "level": "A2",
+    "definition": "An implement consisting of multiple more or less flexible bristles or other...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_buddy",
+    "word": "buddy",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "A friend or casual acquaintance.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_build",
+    "word": "build",
+    "partOfSpeech": "verb.",
+    "level": "A1",
+    "definition": "The physique of a human body; constitution or structure of a human body.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_bunch",
+    "word": "bunch",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "A group of similar things, either growing together, or in a cluster or clum...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_burst",
+    "word": "burst",
+    "partOfSpeech": "verb.",
+    "level": "C1",
+    "definition": "An act or instance of bursting.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_cabin",
+    "word": "cabin",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "A small dwelling characteristic of the frontier, especially when built from...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_cable",
+    "word": "cable",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "(material) A long object used to make a physical connection.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_canal",
+    "word": "canal",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "An artificial waterway or artificially improved river used for travel, ship...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_cargo",
+    "word": "cargo",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_carry",
+    "word": "carry",
+    "partOfSpeech": "verb.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_carve",
+    "word": "carve",
+    "partOfSpeech": "verb.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_catch",
+    "word": "catch",
+    "partOfSpeech": "verb.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_cater",
+    "word": "cater",
+    "partOfSpeech": "verb.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_cause",
+    "word": "cause",
+    "partOfSpeech": "noun., verb.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_cease",
+    "word": "cease",
+    "partOfSpeech": "verb.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_chain",
+    "word": "chain",
+    "partOfSpeech": "noun.",
+    "level": "B1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_chair",
+    "word": "chair",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_chaos",
+    "word": "chaos",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_charm",
+    "word": "charm",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_chart",
+    "word": "chart",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_chase",
+    "word": "chase",
+    "partOfSpeech": "verb., noun.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_cheap",
+    "word": "cheap",
+    "partOfSpeech": "adj.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_cheat",
+    "word": "cheat",
+    "partOfSpeech": "verb., noun.",
+    "level": "B1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_check",
+    "word": "check",
+    "partOfSpeech": "verb.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_cheek",
+    "word": "cheek",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_cheer",
+    "word": "cheer",
+    "partOfSpeech": "verb., noun.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_chest",
+    "word": "chest",
+    "partOfSpeech": "noun.",
+    "level": "B1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_chief",
+    "word": "chief",
+    "partOfSpeech": "adj., noun.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_child",
+    "word": "child",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_choir",
+    "word": "choir",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_chunk",
+    "word": "chunk",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_civic",
+    "word": "civic",
+    "partOfSpeech": "adj.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_civil",
+    "word": "civil",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_claim",
+    "word": "claim",
+    "partOfSpeech": "verb., noun.",
+    "level": "B1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_clash",
+    "word": "clash",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_class",
+    "word": "class",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_clean",
+    "word": "clean",
+    "partOfSpeech": "adj., verb.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_clear",
+    "word": "clear",
+    "partOfSpeech": "adj.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_clerk",
+    "word": "clerk",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_click",
+    "word": "click",
+    "partOfSpeech": "verb., noun.",
+    "level": "B1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_cliff",
+    "word": "cliff",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_climb",
+    "word": "climb",
+    "partOfSpeech": "verb.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_cling",
+    "word": "cling",
+    "partOfSpeech": "verb.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_clock",
+    "word": "clock",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_close",
+    "word": "close",
+    "partOfSpeech": "verb.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_cloth",
+    "word": "cloth",
+    "partOfSpeech": "noun.",
+    "level": "B1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_cloud",
+    "word": "cloud",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_coach",
+    "word": "coach",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_coast",
+    "word": "coast",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_comic",
+    "word": "comic",
+    "partOfSpeech": "adj., noun.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_could",
+    "word": "could",
+    "partOfSpeech": "modal verb.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_count",
+    "word": "count",
+    "partOfSpeech": "verb.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_court",
+    "word": "court",
+    "partOfSpeech": "noun.",
+    "level": "B1",
+    "definition": "An enclosed space; a courtyard; an uncovered area shut in by the walls of a...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_cover",
+    "word": "cover",
+    "partOfSpeech": "verb.",
+    "level": "A2",
+    "definition": "A lid.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_crack",
+    "word": "crack",
+    "partOfSpeech": "verb., noun.",
+    "level": "B2",
+    "definition": "A thin and usually jagged space opened in a previously solid material.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_craft",
+    "word": "craft",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "Strength; power; might; force .",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_crash",
+    "word": "crash",
+    "partOfSpeech": "noun., verb.",
+    "level": "B2",
+    "definition": "A sudden, intense, loud sound, as made for example by cymbals.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_crawl",
+    "word": "crawl",
+    "partOfSpeech": "verb.",
+    "level": "C1",
+    "definition": "The act of moving slowly on hands and knees etc, or with frequent stops.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_crazy",
+    "word": "crazy",
+    "partOfSpeech": "adj.",
+    "level": "A2",
+    "definition": "An insane or eccentric person; a crackpot.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_cream",
+    "word": "cream",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "The butterfat/milkfat part of milk which rises to the top; this part when s...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_creep",
+    "word": "creep",
+    "partOfSpeech": "verb.",
+    "level": "C1",
+    "definition": "To move slowly with the abdomen close to the ground.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_crime",
+    "word": "crime",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "A specific act committed in violation of the law.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_cross",
+    "word": "cross",
+    "partOfSpeech": "verb., noun.",
+    "level": "A2",
+    "definition": "A geometrical figure consisting of two straight lines or bars intersecting ...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_crowd",
+    "word": "crowd",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "A group of people congregated or collected into a close body without order.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_crown",
+    "word": "crown",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "A royal, imperial or princely headdress; a diadem.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_crude",
+    "word": "crude",
+    "partOfSpeech": "adj.",
+    "level": "C1",
+    "definition": "Any substance in its natural state.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_cruel",
+    "word": "cruel",
+    "partOfSpeech": "adj.",
+    "level": "B1",
+    "definition": "To spoil or ruin (one's chance of success)",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_crush",
+    "word": "crush",
+    "partOfSpeech": "verb.",
+    "level": "C1",
+    "definition": "A violent collision or compression; a crash; destruction; ruin.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_curly",
+    "word": "curly",
+    "partOfSpeech": "adj.",
+    "level": "A2",
+    "definition": "A person or animal with curly hair.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_curve",
+    "word": "curve",
+    "partOfSpeech": "noun., verb.",
+    "level": "B2",
+    "definition": "A gentle bend, such as in a road.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_cycle",
+    "word": "cycle",
+    "partOfSpeech": "noun., verb.",
+    "level": "A2",
+    "definition": "An interval of space or time in which one set of events or phenomena is com...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_daily",
+    "word": "daily",
+    "partOfSpeech": "adj.",
+    "level": "A2",
+    "definition": "Something that is produced, consumed, used, or done every day.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_dairy",
+    "word": "dairy",
+    "partOfSpeech": "noun., adj.",
+    "level": "B2",
+    "definition": "(also dairy products or dairy produce) Products produced from milk.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_dance",
+    "word": "dance",
+    "partOfSpeech": "noun., verb.",
+    "level": "A1",
+    "definition": "A sequence of rhythmic steps or movements usually performed to music, for p...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_death",
+    "word": "death",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "The cessation of life and all associated processes; the end of an organism'...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_debut",
+    "word": "debut",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "A performer's first performance to the public, in sport, the arts or some o...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_delay",
+    "word": "delay",
+    "partOfSpeech": "verb., noun.",
+    "level": "B2",
+    "definition": "A period of time before an event occurs; the act of delaying; procrastinati...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_demon",
+    "word": "demon",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_dense",
+    "word": "dense",
+    "partOfSpeech": "adj.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_depth",
+    "word": "depth",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_devil",
+    "word": "devil",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_diary",
+    "word": "diary",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_dirty",
+    "word": "dirty",
+    "partOfSpeech": "adj.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_donor",
+    "word": "donor",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_doubt",
+    "word": "doubt",
+    "partOfSpeech": "noun., verb.",
+    "level": "B1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_dozen",
+    "word": "dozen",
+    "partOfSpeech": "noun., det.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_draft",
+    "word": "draft",
+    "partOfSpeech": "noun., verb.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_drain",
+    "word": "drain",
+    "partOfSpeech": "verb.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_drama",
+    "word": "drama",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_dream",
+    "word": "dream",
+    "partOfSpeech": "noun., verb.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_dress",
+    "word": "dress",
+    "partOfSpeech": "noun., verb.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_drift",
+    "word": "drift",
+    "partOfSpeech": "verb.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_drink",
+    "word": "drink",
+    "partOfSpeech": "noun., verb.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_drive",
+    "word": "drive",
+    "partOfSpeech": "verb.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_drown",
+    "word": "drown",
+    "partOfSpeech": "verb.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_drunk",
+    "word": "drunk",
+    "partOfSpeech": "adj.",
+    "level": "B1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_eager",
+    "word": "eager",
+    "partOfSpeech": "adj.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_early",
+    "word": "early",
+    "partOfSpeech": "adj., adv.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_earth",
+    "word": "earth",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_eight",
+    "word": "eight",
+    "partOfSpeech": "number",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_elbow",
+    "word": "elbow",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_elect",
+    "word": "elect",
+    "partOfSpeech": "verb.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_elite",
+    "word": "elite",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_email",
+    "word": "email",
+    "partOfSpeech": "noun., verb.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_embed",
+    "word": "embed",
+    "partOfSpeech": "verb.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_empty",
+    "word": "empty",
+    "partOfSpeech": "adj.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_enact",
+    "word": "enact",
+    "partOfSpeech": "verb.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_enemy",
+    "word": "enemy",
+    "partOfSpeech": "noun.",
+    "level": "B1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_enjoy",
+    "word": "enjoy",
+    "partOfSpeech": "verb.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_enrol",
+    "word": "enrol",
+    "partOfSpeech": "verb.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_ensue",
+    "word": "ensue",
+    "partOfSpeech": "verb.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_enter",
+    "word": "enter",
+    "partOfSpeech": "verb.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_entry",
+    "word": "entry",
+    "partOfSpeech": "noun.",
+    "level": "B1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_equal",
+    "word": "equal",
+    "partOfSpeech": "adj., verb.",
+    "level": "B1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_equip",
+    "word": "equip",
+    "partOfSpeech": "verb.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_erect",
+    "word": "erect",
+    "partOfSpeech": "verb.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_error",
+    "word": "error",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_erupt",
+    "word": "erupt",
+    "partOfSpeech": "verb.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_essay",
+    "word": "essay",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_ethic",
+    "word": "ethic",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_event",
+    "word": "event",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "An occurrence; something that happens.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_every",
+    "word": "every",
+    "partOfSpeech": "det.",
+    "level": "A1",
+    "definition": "Definition unavailable.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_evoke",
+    "word": "evoke",
+    "partOfSpeech": "verb.",
+    "level": "C1",
+    "definition": "To call out; to draw out or bring forth.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_exact",
+    "word": "exact",
+    "partOfSpeech": "adj.",
+    "level": "A2",
+    "definition": "To demand and enforce the payment or performance of, sometimes in a forcibl...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_exert",
+    "word": "exert",
+    "partOfSpeech": "verb.",
+    "level": "C1",
+    "definition": "To put in vigorous action.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_exile",
+    "word": "exile",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "The state of being banished from one's home or country.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_exist",
+    "word": "exist",
+    "partOfSpeech": "verb.",
+    "level": "A2",
+    "definition": "(stative) to be; have existence; have being or reality",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_extra",
+    "word": "extra",
+    "partOfSpeech": "adj.",
+    "level": "A1",
+    "definition": "Something additional, such as an item above and beyond the ordinary school ...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_faith",
+    "word": "faith",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "A trust or confidence in the intentions or abilities of a person, object, o...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_false",
+    "word": "false",
+    "partOfSpeech": "adj.",
+    "level": "A1",
+    "definition": "One of two options on a true-or-false test.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_fancy",
+    "word": "fancy",
+    "partOfSpeech": "verb., adj.",
+    "level": "B1",
+    "definition": "The imagination.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_fatal",
+    "word": "fatal",
+    "partOfSpeech": "adj.",
+    "level": "C1",
+    "definition": "A fatality; an event that leads to death.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_fault",
+    "word": "fault",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "A defect; something that detracts from perfection.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_fence",
+    "word": "fence",
+    "partOfSpeech": "noun.",
+    "level": "B1",
+    "definition": "A thin artificial barrier that separates two pieces of land or a house peri...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_fever",
+    "word": "fever",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "A higher than normal body temperature of a person (or, generally, a mammal)...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_focus",
+    "word": "focus",
+    "partOfSpeech": "verb., noun.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_force",
+    "word": "force",
+    "partOfSpeech": "noun., verb.",
+    "level": "B1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_forge",
+    "word": "forge",
+    "partOfSpeech": "verb.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_forth",
+    "word": "forth",
+    "partOfSpeech": "adv.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_forty",
+    "word": "forty",
+    "partOfSpeech": "number",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_forum",
+    "word": "forum",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_found",
+    "word": "found",
+    "partOfSpeech": "verb.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_frame",
+    "word": "frame",
+    "partOfSpeech": "noun., verb.",
+    "level": "B1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_fraud",
+    "word": "fraud",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_fresh",
+    "word": "fresh",
+    "partOfSpeech": "adj.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_front",
+    "word": "front",
+    "partOfSpeech": "noun., adj.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_fruit",
+    "word": "fruit",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_fully",
+    "word": "fully",
+    "partOfSpeech": "adv.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_funny",
+    "word": "funny",
+    "partOfSpeech": "adj.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_genre",
+    "word": "genre",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_ghost",
+    "word": "ghost",
+    "partOfSpeech": "noun.",
+    "level": "B1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_giant",
+    "word": "giant",
+    "partOfSpeech": "adj., noun.",
+    "level": "B1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_glass",
+    "word": "glass",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_globe",
+    "word": "globe",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_glory",
+    "word": "glory",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_glove",
+    "word": "glove",
+    "partOfSpeech": "noun.",
+    "level": "B1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_goods",
+    "word": "goods",
+    "partOfSpeech": "noun.",
+    "level": "B1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_grace",
+    "word": "grace",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_grade",
+    "word": "grade",
+    "partOfSpeech": "noun.",
+    "level": "B1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_grain",
+    "word": "grain",
+    "partOfSpeech": "noun.",
+    "level": "B1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_grand",
+    "word": "grand",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_grant",
+    "word": "grant",
+    "partOfSpeech": "verb., noun.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_grasp",
+    "word": "grasp",
+    "partOfSpeech": "verb., noun.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_grass",
+    "word": "grass",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_grave",
+    "word": "grave",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_great",
+    "word": "great",
+    "partOfSpeech": "adj.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_green",
+    "word": "green",
+    "partOfSpeech": "adj., noun.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_greet",
+    "word": "greet",
+    "partOfSpeech": "verb.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_grief",
+    "word": "grief",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_grind",
+    "word": "grind",
+    "partOfSpeech": "verb.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_gross",
+    "word": "gross",
+    "partOfSpeech": "adj.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_group",
+    "word": "group",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_guard",
+    "word": "guard",
+    "partOfSpeech": "noun., verb.",
+    "level": "B1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_guess",
+    "word": "guess",
+    "partOfSpeech": "verb., noun.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_guest",
+    "word": "guest",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_guide",
+    "word": "guide",
+    "partOfSpeech": "noun., verb.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_guilt",
+    "word": "guilt",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_habit",
+    "word": "habit",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "An action performed on a regular basis.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_handy",
+    "word": "handy",
+    "partOfSpeech": "adj.",
+    "level": "C1",
+    "definition": "Easy to use, useful.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_happy",
+    "word": "happy",
+    "partOfSpeech": "adj.",
+    "level": "A1",
+    "definition": "A happy event, thing, person, etc.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_harsh",
+    "word": "harsh",
+    "partOfSpeech": "adj.",
+    "level": "C1",
+    "definition": "To negatively criticize.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_haunt",
+    "word": "haunt",
+    "partOfSpeech": "verb.",
+    "level": "C1",
+    "definition": "A place at which one is regularly found; a habitation or hangout.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_heart",
+    "word": "heart",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "A muscular organ that pumps blood through the body, traditionally thought t...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_heavy",
+    "word": "heavy",
+    "partOfSpeech": "adj.",
+    "level": "A2",
+    "definition": "A villain or bad guy; the one responsible for evil or aggressive acts.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_hello",
+    "word": "hello",
+    "partOfSpeech": "exclam./noun.",
+    "level": "A1",
+    "definition": "\"Hello!\" or an equivalent greeting.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_hence",
+    "word": "hence",
+    "partOfSpeech": "adv.",
+    "level": "B2",
+    "definition": "From here, from this place, away",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_hobby",
+    "word": "hobby",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "An activity that one enjoys doing in one's spare time.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_horse",
+    "word": "horse",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "Any of several animals related to Equus ferus caballus.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_hotel",
+    "word": "hotel",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "A large town house or mansion; a grand private residence, especially in Fra...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_house",
+    "word": "house",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "A structure built or serving as an abode of human beings.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_human",
+    "word": "human",
+    "partOfSpeech": "adj., noun.",
+    "level": "A2",
+    "definition": "A human being, whether man, woman or child.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_hurry",
+    "word": "hurry",
+    "partOfSpeech": "noun., verb.",
+    "level": "B1",
+    "definition": "Rushed action.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_ideal",
+    "word": "ideal",
+    "partOfSpeech": "adj.",
+    "level": "A2",
+    "definition": "A perfect standard of beauty, intellect etc., or a standard of excellence t...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_idiot",
+    "word": "idiot",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "A person of low general intelligence.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_ierce",
+    "word": "ierce",
+    "partOfSpeech": "adj.",
+    "level": "C1",
+    "definition": "Definition unavailable.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_igure",
+    "word": "igure",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "Definition unavailable.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_ilter",
+    "word": "ilter",
+    "partOfSpeech": "noun., verb.",
+    "level": "C1",
+    "definition": "Definition unavailable.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_image",
+    "word": "image",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "An optical or other representation of a real object; a graphic; a picture.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_imply",
+    "word": "imply",
+    "partOfSpeech": "verb.",
+    "level": "B2",
+    "definition": "(of a proposition) to have as a necessary consequence",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_incur",
+    "word": "incur",
+    "partOfSpeech": "verb.",
+    "level": "C1",
+    "definition": "To bring upon oneself or expose oneself to, especially something inconvenie...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_index",
+    "word": "index",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "An alphabetical listing of items and their location.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_infer",
+    "word": "infer",
+    "partOfSpeech": "verb.",
+    "level": "B2",
+    "definition": "To introduce (something) as a reasoned conclusion; to conclude by reasoning...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_inger",
+    "word": "inger",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "Definition unavailable.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_inish",
+    "word": "inish",
+    "partOfSpeech": "verb.",
+    "level": "A1",
+    "definition": "Definition unavailable.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_inner",
+    "word": "inner",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "An inner part.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_input",
+    "word": "input",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "The act or process of putting in; infusion.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_irmly",
+    "word": "irmly",
+    "partOfSpeech": "adv.",
+    "level": "B2",
+    "definition": "Definition unavailable.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_irony",
+    "word": "irony",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "A statement that, when taken in context, may actually mean something differ...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_issue",
+    "word": "issue",
+    "partOfSpeech": "noun.",
+    "level": "B1",
+    "definition": "The action or an instance of flowing or coming out, an outflow, particularl...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_jeans",
+    "word": "jeans",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "Denim.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_joint",
+    "word": "joint",
+    "partOfSpeech": "adj., noun.",
+    "level": "B2",
+    "definition": "The point where two components of a structure join, but are still able to r...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_judge",
+    "word": "judge",
+    "partOfSpeech": "noun., verb.",
+    "level": "B1",
+    "definition": "A public official whose duty it is to administer the law, especially by pre...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_juice",
+    "word": "juice",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "A liquid from a plant, especially fruit.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_knife",
+    "word": "knife",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "A utensil or a tool designed for cutting, consisting of a flat piece of har...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_knock",
+    "word": "knock",
+    "partOfSpeech": "verb.",
+    "level": "A2",
+    "definition": "Sudden fatigue as a result of glycogen depletion from not having taken in e...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_label",
+    "word": "label",
+    "partOfSpeech": "noun., verb.",
+    "level": "B1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_large",
+    "word": "large",
+    "partOfSpeech": "adj.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_laser",
+    "word": "laser",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_later",
+    "word": "later",
+    "partOfSpeech": "adv.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_laugh",
+    "word": "laugh",
+    "partOfSpeech": "verb., noun.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_lawed",
+    "word": "lawed",
+    "partOfSpeech": "adj.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_layer",
+    "word": "layer",
+    "partOfSpeech": "noun.",
+    "level": "B1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_learn",
+    "word": "learn",
+    "partOfSpeech": "verb.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_least",
+    "word": "least",
+    "partOfSpeech": "det./pron., adv.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_leave",
+    "word": "leave",
+    "partOfSpeech": "verb.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_legal",
+    "word": "legal",
+    "partOfSpeech": "adj.",
+    "level": "B1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_lemon",
+    "word": "lemon",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_level",
+    "word": "level",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_light",
+    "word": "light",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_limit",
+    "word": "limit",
+    "partOfSpeech": "noun., verb.",
+    "level": "B1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_litre",
+    "word": "litre",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_liver",
+    "word": "liver",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_lobby",
+    "word": "lobby",
+    "partOfSpeech": "noun., verb.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_local",
+    "word": "local",
+    "partOfSpeech": "adj.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_logic",
+    "word": "logic",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_loose",
+    "word": "loose",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_lorry",
+    "word": "lorry",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_lower",
+    "word": "lower",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_loyal",
+    "word": "loyal",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_lucky",
+    "word": "lucky",
+    "partOfSpeech": "adj.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_lunch",
+    "word": "lunch",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_lying",
+    "word": "lying",
+    "partOfSpeech": "noun., adj.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_lyric",
+    "word": "lyric",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_magic",
+    "word": "magic",
+    "partOfSpeech": "noun., adj.",
+    "level": "B1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_major",
+    "word": "major",
+    "partOfSpeech": "adj.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_march",
+    "word": "march",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_marry",
+    "word": "marry",
+    "partOfSpeech": "verb.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_match",
+    "word": "match",
+    "partOfSpeech": "noun., verb.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_maths",
+    "word": "maths",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_maybe",
+    "word": "maybe",
+    "partOfSpeech": "adv.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_mayor",
+    "word": "mayor",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_means",
+    "word": "means",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_medal",
+    "word": "medal",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_media",
+    "word": "media",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_mercy",
+    "word": "mercy",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_merge",
+    "word": "merge",
+    "partOfSpeech": "verb.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_merit",
+    "word": "merit",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_metal",
+    "word": "metal",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "(heading) Chemical elements or alloys, and the mines where their ores come ...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_metre",
+    "word": "metre",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "To measure with a metering device.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_midst",
+    "word": "midst",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "A place in the middle of something; may be used of a literal or metaphorica...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_might",
+    "word": "might",
+    "partOfSpeech": "modal verb.",
+    "level": "A2",
+    "definition": "Power, strength, force or influence held by a person or group.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_miner",
+    "word": "miner",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "A person who works in a mine.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_minor",
+    "word": "minor",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "A person who is below the age of majority, consent, criminal responsibility...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_mixed",
+    "word": "mixed",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "To stir together.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_model",
+    "word": "model",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "A person who serves as a subject for artwork or fashion, usually in the med...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_money",
+    "word": "money",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "A legally or socially binding conceptual contract of entitlement to wealth,...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_month",
+    "word": "month",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "A period into which a year is divided, historically based on the phases of ...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_moral",
+    "word": "moral",
+    "partOfSpeech": "adj., noun.",
+    "level": "B2",
+    "definition": "(of a narrative) The ethical significance or practical lesson.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_motor",
+    "word": "motor",
+    "partOfSpeech": "noun., adj.",
+    "level": "B2",
+    "definition": "A machine or device that converts other energy forms into mechanical energy...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_mount",
+    "word": "mount",
+    "partOfSpeech": "verb.",
+    "level": "B2",
+    "definition": "A hill or mountain.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_mouse",
+    "word": "mouse",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "Any small rodent of the genus Mus.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_mouth",
+    "word": "mouth",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "The opening of a creature through which food is ingested.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_movie",
+    "word": "movie",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "A recorded sequence of images displayed on a screen at a rate sufficiently ...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_music",
+    "word": "music",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "A series of sounds organized in time, employing melody, harmony, tempo etc....",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_naked",
+    "word": "naked",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "Bare, not covered by clothing.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_nasty",
+    "word": "nasty",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "Something nasty.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_naval",
+    "word": "naval",
+    "partOfSpeech": "adj.",
+    "level": "C1",
+    "definition": "Of or relating to a navy.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_nerve",
+    "word": "nerve",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "A bundle of neurons with their connective tissue sheaths, blood vessels and...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_never",
+    "word": "never",
+    "partOfSpeech": "adv.",
+    "level": "A1",
+    "definition": "At no time; on no occasion; in no circumstance.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_newly",
+    "word": "newly",
+    "partOfSpeech": "adv.",
+    "level": "B2",
+    "definition": "Very recently; in the immediate past.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_niche",
+    "word": "niche",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "A cavity, hollow, or recess, generally within the thickness of a wall, for ...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_night",
+    "word": "night",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "The period between sunset and sunrise, when a location faces far away from ...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_noble",
+    "word": "noble",
+    "partOfSpeech": "adj.",
+    "level": "C1",
+    "definition": "An aristocrat; one of aristocratic blood.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_noise",
+    "word": "noise",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "Various sounds, usually unwanted or unpleasant.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_noisy",
+    "word": "noisy",
+    "partOfSpeech": "adj.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_north",
+    "word": "north",
+    "partOfSpeech": "noun., adj., adv.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_novel",
+    "word": "novel",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_nurse",
+    "word": "nurse",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_occur",
+    "word": "occur",
+    "partOfSpeech": "verb.",
+    "level": "B1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_ocean",
+    "word": "ocean",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_offer",
+    "word": "offer",
+    "partOfSpeech": "verb., noun.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_often",
+    "word": "often",
+    "partOfSpeech": "adv.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_onion",
+    "word": "onion",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_opera",
+    "word": "opera",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_order",
+    "word": "order",
+    "partOfSpeech": "noun., verb.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_organ",
+    "word": "organ",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_other",
+    "word": "other",
+    "partOfSpeech": "adj./pron.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_ought",
+    "word": "ought",
+    "partOfSpeech": "modal verb.",
+    "level": "B1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_outer",
+    "word": "outer",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_owner",
+    "word": "owner",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_paint",
+    "word": "paint",
+    "partOfSpeech": "verb., noun.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_panel",
+    "word": "panel",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_panic",
+    "word": "panic",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_pants",
+    "word": "pants",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_paper",
+    "word": "paper",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_party",
+    "word": "party",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_patch",
+    "word": "patch",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_pause",
+    "word": "pause",
+    "partOfSpeech": "verb., noun.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_peace",
+    "word": "peace",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_penny",
+    "word": "penny",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_phase",
+    "word": "phase",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_phone",
+    "word": "phone",
+    "partOfSpeech": "noun., verb.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_photo",
+    "word": "photo",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_piano",
+    "word": "piano",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_piece",
+    "word": "piece",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_pilot",
+    "word": "pilot",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_pitch",
+    "word": "pitch",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_place",
+    "word": "place",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_plain",
+    "word": "plain",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_plane",
+    "word": "plane",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_plant",
+    "word": "plant",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_plate",
+    "word": "plate",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_plead",
+    "word": "plead",
+    "partOfSpeech": "verb.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_point",
+    "word": "point",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_pound",
+    "word": "pound",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_power",
+    "word": "power",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "Ability to do or undergo something.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_press",
+    "word": "press",
+    "partOfSpeech": "verb., noun.",
+    "level": "B1",
+    "definition": "A device used to apply pressure to an item.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_price",
+    "word": "price",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "The cost required to gain possession of something.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_pride",
+    "word": "pride",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "The quality or state of being proud; an unreasonable overestimation of one'...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_prime",
+    "word": "prime",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "The first hour of daylight; the first canonical hour.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_print",
+    "word": "print",
+    "partOfSpeech": "verb.",
+    "level": "A2",
+    "definition": "Books and other material created by printing presses, considered collective...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_prior",
+    "word": "prior",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "A high-ranking member of a monastery, usually lower in rank than an abbot.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_prize",
+    "word": "prize",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "That which is taken from another; something captured; a thing seized by for...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_probe",
+    "word": "probe",
+    "partOfSpeech": "noun., verb.",
+    "level": "C1",
+    "definition": "Any of various medical instruments used to explore wounds, organs, etc.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_proof",
+    "word": "proof",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "An effort, process, or operation designed to establish or discover a fact o...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_proud",
+    "word": "proud",
+    "partOfSpeech": "adj.",
+    "level": "B1",
+    "definition": "Feeling honoured (by something); feeling happy or satisfied about an event ...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_prove",
+    "word": "prove",
+    "partOfSpeech": "verb.",
+    "level": "B1",
+    "definition": "To proofread.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_pulse",
+    "word": "pulse",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "A normally regular beat felt when arteries are depressed, caused by the pum...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_punch",
+    "word": "punch",
+    "partOfSpeech": "noun., verb.",
+    "level": "C1",
+    "definition": "A hit or strike with one's fist.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_pupil",
+    "word": "pupil",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "A learner under the supervision of a teacher or professor.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_queen",
+    "word": "queen",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "A female monarch. Example: Queen Victoria.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_query",
+    "word": "query",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "A question, an inquiry (US), an enquiry (UK).",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_quest",
+    "word": "quest",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "A journey or effort in pursuit of a goal (often lengthy, ambitious, or ferv...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_queue",
+    "word": "queue",
+    "partOfSpeech": "noun., verb.",
+    "level": "B1",
+    "definition": "An animal's tail.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_quick",
+    "word": "quick",
+    "partOfSpeech": "adj.",
+    "level": "A1",
+    "definition": "Raw or sensitive flesh, especially that underneath finger and toe nails.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_quiet",
+    "word": "quiet",
+    "partOfSpeech": "adj.",
+    "level": "A1",
+    "definition": "The absence of sound; quietness.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_quite",
+    "word": "quite",
+    "partOfSpeech": "adv.",
+    "level": "A1",
+    "definition": "(heading) To the greatest extent or degree; completely, entirely.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_quota",
+    "word": "quota",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "A proportional part or share; the share or proportion assigned to each in a...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_quote",
+    "word": "quote",
+    "partOfSpeech": "verb., noun.",
+    "level": "B1",
+    "definition": "A quotation; a statement attributed to a person.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_radar",
+    "word": "radar",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "A method of detecting distant objects and determining their position, veloc...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_radio",
+    "word": "radio",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "The technology that allows for the transmission of sound or other signals b...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_raise",
+    "word": "raise",
+    "partOfSpeech": "verb.",
+    "level": "A2",
+    "definition": "An increase in wages or salary; a rise (UK).",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_rally",
+    "word": "rally",
+    "partOfSpeech": "noun., verb.",
+    "level": "C1",
+    "definition": "A public gathering or mass meeting that is not mainly a protest and is orga...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_range",
+    "word": "range",
+    "partOfSpeech": "noun.",
+    "level": "B1",
+    "definition": "A line or series of mountains, buildings, etc.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_rapid",
+    "word": "rapid",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "(often in the plural) a rough section of a river or stream which is difficu...",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_ratio",
+    "word": "ratio",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "A number representing a comparison between two named things.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_reach",
+    "word": "reach",
+    "partOfSpeech": "verb.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_react",
+    "word": "react",
+    "partOfSpeech": "verb.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_ready",
+    "word": "ready",
+    "partOfSpeech": "adj.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_realm",
+    "word": "realm",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_rebel",
+    "word": "rebel",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_refer",
+    "word": "refer",
+    "partOfSpeech": "verb.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_reign",
+    "word": "reign",
+    "partOfSpeech": "noun., verb.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_relax",
+    "word": "relax",
+    "partOfSpeech": "verb.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_renew",
+    "word": "renew",
+    "partOfSpeech": "verb.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_reply",
+    "word": "reply",
+    "partOfSpeech": "verb., noun.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_rifle",
+    "word": "rifle",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_right",
+    "word": "right",
+    "partOfSpeech": "adj., adv., noun.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_risky",
+    "word": "risky",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_rival",
+    "word": "rival",
+    "partOfSpeech": "noun., adj.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_river",
+    "word": "river",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_robot",
+    "word": "robot",
+    "partOfSpeech": "noun.",
+    "level": "B1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_rough",
+    "word": "rough",
+    "partOfSpeech": "adj.",
+    "level": "B1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_round",
+    "word": "round",
+    "partOfSpeech": "adj., adv., prep.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_route",
+    "word": "route",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_royal",
+    "word": "royal",
+    "partOfSpeech": "adj.",
+    "level": "B1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_rugby",
+    "word": "rugby",
+    "partOfSpeech": "noun.",
+    "level": "B1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_rural",
+    "word": "rural",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_sadly",
+    "word": "sadly",
+    "partOfSpeech": "adv.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_saint",
+    "word": "saint",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_salad",
+    "word": "salad",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_sauce",
+    "word": "sauce",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_scale",
+    "word": "scale",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_scare",
+    "word": "scare",
+    "partOfSpeech": "verb., noun.",
+    "level": "B2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_scary",
+    "word": "scary",
+    "partOfSpeech": "adj.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_scene",
+    "word": "scene",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_scope",
+    "word": "scope",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_score",
+    "word": "score",
+    "partOfSpeech": "verb., noun.",
+    "level": "A2",
+    "definition": "Rate limited.",
+    "emoji": "🧭"
+  },
+  {
+    "id": "w_screw",
+    "word": "screw",
+    "partOfSpeech": "verb., noun.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_seize",
+    "word": "seize",
+    "partOfSpeech": "verb.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_sense",
+    "word": "sense",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_serve",
+    "word": "serve",
+    "partOfSpeech": "verb.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_seven",
+    "word": "seven",
+    "partOfSpeech": "number",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_shade",
+    "word": "shade",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_shake",
+    "word": "shake",
+    "partOfSpeech": "verb.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_shall",
+    "word": "shall",
+    "partOfSpeech": "modal verb.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_shame",
+    "word": "shame",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_shape",
+    "word": "shape",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_share",
+    "word": "share",
+    "partOfSpeech": "verb.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_sharp",
+    "word": "sharp",
+    "partOfSpeech": "adj.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_sheep",
+    "word": "sheep",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_sheer",
+    "word": "sheer",
+    "partOfSpeech": "adj.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_sheet",
+    "word": "sheet",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_shelf",
+    "word": "shelf",
+    "partOfSpeech": "noun.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_shell",
+    "word": "shell",
+    "partOfSpeech": "noun.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_shift",
+    "word": "shift",
+    "partOfSpeech": "noun.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_shine",
+    "word": "shine",
+    "partOfSpeech": "verb.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_shiny",
+    "word": "shiny",
+    "partOfSpeech": "adj.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_shirt",
+    "word": "shirt",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_shock",
+    "word": "shock",
+    "partOfSpeech": "noun., verb.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_shoot",
+    "word": "shoot",
+    "partOfSpeech": "verb.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_shore",
+    "word": "shore",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_short",
+    "word": "short",
+    "partOfSpeech": "adj.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_shout",
+    "word": "shout",
+    "partOfSpeech": "verb., noun.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_shrug",
+    "word": "shrug",
+    "partOfSpeech": "verb.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_sight",
+    "word": "sight",
+    "partOfSpeech": "noun.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_silly",
+    "word": "silly",
+    "partOfSpeech": "adj.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_since",
+    "word": "since",
+    "partOfSpeech": "prep., conj.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_sixty",
+    "word": "sixty",
+    "partOfSpeech": "number",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_skill",
+    "word": "skill",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_skirt",
+    "word": "skirt",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_skull",
+    "word": "skull",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_slash",
+    "word": "slash",
+    "partOfSpeech": "verb.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_slave",
+    "word": "slave",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_sleep",
+    "word": "sleep",
+    "partOfSpeech": "verb.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_slice",
+    "word": "slice",
+    "partOfSpeech": "noun., verb.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_slide",
+    "word": "slide",
+    "partOfSpeech": "verb., noun.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_slope",
+    "word": "slope",
+    "partOfSpeech": "noun., verb.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_small",
+    "word": "small",
+    "partOfSpeech": "adj.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_smart",
+    "word": "smart",
+    "partOfSpeech": "adj.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_smash",
+    "word": "smash",
+    "partOfSpeech": "verb.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_smell",
+    "word": "smell",
+    "partOfSpeech": "verb., noun.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_smile",
+    "word": "smile",
+    "partOfSpeech": "verb., noun.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_smoke",
+    "word": "smoke",
+    "partOfSpeech": "noun., verb.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_snake",
+    "word": "snake",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_solar",
+    "word": "solar",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_solid",
+    "word": "solid",
+    "partOfSpeech": "adj., noun.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_solve",
+    "word": "solve",
+    "partOfSpeech": "verb.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_sorry",
+    "word": "sorry",
+    "partOfSpeech": "adj., exclam.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_sound",
+    "word": "sound",
+    "partOfSpeech": "noun., verb.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_south",
+    "word": "south",
+    "partOfSpeech": "noun., adj., adv.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_space",
+    "word": "space",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_spare",
+    "word": "spare",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_spark",
+    "word": "spark",
+    "partOfSpeech": "verb.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_speak",
+    "word": "speak",
+    "partOfSpeech": "verb.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_speed",
+    "word": "speed",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_spell",
+    "word": "spell",
+    "partOfSpeech": "verb.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_spend",
+    "word": "spend",
+    "partOfSpeech": "verb.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_spice",
+    "word": "spice",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_spicy",
+    "word": "spicy",
+    "partOfSpeech": "adj.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_spill",
+    "word": "spill",
+    "partOfSpeech": "verb.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_spine",
+    "word": "spine",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_spite",
+    "word": "spite",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_split",
+    "word": "split",
+    "partOfSpeech": "verb., noun.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_spoil",
+    "word": "spoil",
+    "partOfSpeech": "verb.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_spoon",
+    "word": "spoon",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_sport",
+    "word": "sport",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_squad",
+    "word": "squad",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_staff",
+    "word": "staff",
+    "partOfSpeech": "noun.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_stage",
+    "word": "stage",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_stair",
+    "word": "stair",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_stake",
+    "word": "stake",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_stall",
+    "word": "stall",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_stamp",
+    "word": "stamp",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_stand",
+    "word": "stand",
+    "partOfSpeech": "verb.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_stare",
+    "word": "stare",
+    "partOfSpeech": "verb.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_stark",
+    "word": "stark",
+    "partOfSpeech": "adj.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_start",
+    "word": "start",
+    "partOfSpeech": "verb.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_state",
+    "word": "state",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_steal",
+    "word": "steal",
+    "partOfSpeech": "verb.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_steam",
+    "word": "steam",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_steel",
+    "word": "steel",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_steep",
+    "word": "steep",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_steer",
+    "word": "steer",
+    "partOfSpeech": "verb.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_stick",
+    "word": "stick",
+    "partOfSpeech": "verb.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_stiff",
+    "word": "stiff",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_still",
+    "word": "still",
+    "partOfSpeech": "adv.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_stock",
+    "word": "stock",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_stone",
+    "word": "stone",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_store",
+    "word": "store",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_storm",
+    "word": "storm",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_story",
+    "word": "story",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_strip",
+    "word": "strip",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_study",
+    "word": "study",
+    "partOfSpeech": "noun., verb.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_stuff",
+    "word": "stuff",
+    "partOfSpeech": "noun.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_style",
+    "word": "style",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_sugar",
+    "word": "sugar",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_suite",
+    "word": "suite",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_super",
+    "word": "super",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_surge",
+    "word": "surge",
+    "partOfSpeech": "noun., verb.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_swear",
+    "word": "swear",
+    "partOfSpeech": "verb.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_sweep",
+    "word": "sweep",
+    "partOfSpeech": "verb.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_sweet",
+    "word": "sweet",
+    "partOfSpeech": "adj., noun.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_swing",
+    "word": "swing",
+    "partOfSpeech": "verb., noun.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_sword",
+    "word": "sword",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_table",
+    "word": "table",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_taste",
+    "word": "taste",
+    "partOfSpeech": "noun., verb.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_teach",
+    "word": "teach",
+    "partOfSpeech": "verb.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_teens",
+    "word": "teens",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_tempt",
+    "word": "tempt",
+    "partOfSpeech": "verb.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_terms",
+    "word": "terms",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_thank",
+    "word": "thank",
+    "partOfSpeech": "verb.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_theft",
+    "word": "theft",
+    "partOfSpeech": "noun",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_their",
+    "word": "their",
+    "partOfSpeech": "det.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_theme",
+    "word": "theme",
+    "partOfSpeech": "noun.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_there",
+    "word": "there",
+    "partOfSpeech": "adv.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_thick",
+    "word": "thick",
+    "partOfSpeech": "adj.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_thief",
+    "word": "thief",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_thing",
+    "word": "thing",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_think",
+    "word": "think",
+    "partOfSpeech": "verb.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_third",
+    "word": "third",
+    "partOfSpeech": "number",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_three",
+    "word": "three",
+    "partOfSpeech": "number",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_throw",
+    "word": "throw",
+    "partOfSpeech": "verb.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_thumb",
+    "word": "thumb",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_tight",
+    "word": "tight",
+    "partOfSpeech": "adj.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_tired",
+    "word": "tired",
+    "partOfSpeech": "adj.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_title",
+    "word": "title",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_today",
+    "word": "today",
+    "partOfSpeech": "adv., noun.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_tonne",
+    "word": "tonne",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_tooth",
+    "word": "tooth",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_topic",
+    "word": "topic",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_total",
+    "word": "total",
+    "partOfSpeech": "adj., noun.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_touch",
+    "word": "touch",
+    "partOfSpeech": "verb.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_tough",
+    "word": "tough",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_towel",
+    "word": "towel",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_tower",
+    "word": "tower",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_toxic",
+    "word": "toxic",
+    "partOfSpeech": "adj.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_trace",
+    "word": "trace",
+    "partOfSpeech": "verb.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_track",
+    "word": "track",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_trade",
+    "word": "trade",
+    "partOfSpeech": "noun., verb.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_trail",
+    "word": "trail",
+    "partOfSpeech": "noun., verb.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_train",
+    "word": "train",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_trait",
+    "word": "trait",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_treat",
+    "word": "treat",
+    "partOfSpeech": "verb.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_trend",
+    "word": "trend",
+    "partOfSpeech": "noun.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_trial",
+    "word": "trial",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_tribe",
+    "word": "tribe",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_trick",
+    "word": "trick",
+    "partOfSpeech": "noun., verb.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_troop",
+    "word": "troop",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_truck",
+    "word": "truck",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_truly",
+    "word": "truly",
+    "partOfSpeech": "adv.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_trust",
+    "word": "trust",
+    "partOfSpeech": "noun., verb.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_truth",
+    "word": "truth",
+    "partOfSpeech": "noun.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_twice",
+    "word": "twice",
+    "partOfSpeech": "adv.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_twist",
+    "word": "twist",
+    "partOfSpeech": "verb., noun.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_uncle",
+    "word": "uncle",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_under",
+    "word": "under",
+    "partOfSpeech": "prep., adv.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_unify",
+    "word": "unify",
+    "partOfSpeech": "verb.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_union",
+    "word": "union",
+    "partOfSpeech": "noun.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_unite",
+    "word": "unite",
+    "partOfSpeech": "verb.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_unity",
+    "word": "unity",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_until",
+    "word": "until",
+    "partOfSpeech": "conj./prep.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_upper",
+    "word": "upper",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_upset",
+    "word": "upset",
+    "partOfSpeech": "adj., verb.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_urban",
+    "word": "urban",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_usage",
+    "word": "usage",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_usual",
+    "word": "usual",
+    "partOfSpeech": "adj.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_vague",
+    "word": "vague",
+    "partOfSpeech": "adj.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_valid",
+    "word": "valid",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_value",
+    "word": "value",
+    "partOfSpeech": "noun.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_venue",
+    "word": "venue",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_verse",
+    "word": "verse",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_video",
+    "word": "video",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_virus",
+    "word": "virus",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_visit",
+    "word": "visit",
+    "partOfSpeech": "verb., noun.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_vital",
+    "word": "vital",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_vocal",
+    "word": "vocal",
+    "partOfSpeech": "adj.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_voice",
+    "word": "voice",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_waste",
+    "word": "waste",
+    "partOfSpeech": "noun., verb., adj.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_watch",
+    "word": "watch",
+    "partOfSpeech": "verb., noun.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_water",
+    "word": "water",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_weave",
+    "word": "weave",
+    "partOfSpeech": "verb.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_weigh",
+    "word": "weigh",
+    "partOfSpeech": "verb.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_weird",
+    "word": "weird",
+    "partOfSpeech": "adj.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_wheat",
+    "word": "wheat",
+    "partOfSpeech": "noun.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_wheel",
+    "word": "wheel",
+    "partOfSpeech": "noun.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_where",
+    "word": "where",
+    "partOfSpeech": "adv., conj.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_which",
+    "word": "which",
+    "partOfSpeech": "pron./det.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_while",
+    "word": "while",
+    "partOfSpeech": "conj.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_white",
+    "word": "white",
+    "partOfSpeech": "adj., noun.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_whole",
+    "word": "whole",
+    "partOfSpeech": "adj.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_whose",
+    "word": "whose",
+    "partOfSpeech": "det./pron.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_widen",
+    "word": "widen",
+    "partOfSpeech": "verb.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_widow",
+    "word": "widow",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_width",
+    "word": "width",
+    "partOfSpeech": "noun.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_woman",
+    "word": "woman",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_world",
+    "word": "world",
+    "partOfSpeech": "noun.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_worry",
+    "word": "worry",
+    "partOfSpeech": "verb.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_worse",
+    "word": "worse",
+    "partOfSpeech": "adj.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_worst",
+    "word": "worst",
+    "partOfSpeech": "adj.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_worth",
+    "word": "worth",
+    "partOfSpeech": "adj.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_would",
+    "word": "would",
+    "partOfSpeech": "modal verb.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_wound",
+    "word": "wound",
+    "partOfSpeech": "noun., verb.",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_wrist",
+    "word": "wrist",
+    "partOfSpeech": "noun",
+    "level": "B2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_write",
+    "word": "write",
+    "partOfSpeech": "verb.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_wrong",
+    "word": "wrong",
+    "partOfSpeech": "adj.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_yield",
+    "word": "yield",
+    "partOfSpeech": "noun., verb.",
+    "level": "C1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_young",
+    "word": "young",
+    "partOfSpeech": "adj.",
+    "level": "A1",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_yours",
+    "word": "yours",
+    "partOfSpeech": "pron.",
+    "level": "A2",
+    "definition": "",
+    "emoji": ""
+  },
+  {
+    "id": "w_youth",
+    "word": "youth",
+    "partOfSpeech": "noun.",
+    "level": "B1",
+    "definition": "",
+    "emoji": ""
+  }
+]
