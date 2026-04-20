@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
 import DictionaryPage from './pages/DictionaryPage';
 import WordlePage from './pages/WordlePage';
 import SolverPage from './pages/SolverPage';
+import CompetitionPage from './pages/CompetitionPage';
 import './index.css';
 
 function Nav() {
@@ -18,6 +19,9 @@ function Nav() {
         </NavLink>
         <NavLink to="/solver" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
           Solver 🔍
+        </NavLink>
+        <NavLink to="/competition" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
+          Competition 🏆
         </NavLink>
         <NavLink to="/dictionary" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
           Dictionary 📖
@@ -35,6 +39,7 @@ export default function App() {
         <Route path="/" element={<WordlePage />} />
         <Route path="/play" element={<WordlePage />} />
         <Route path="/solver" element={<SolverPage />} />
+        <Route path="/competition" element={<CompetitionPage />} />
         <Route path="/dictionary" element={<DictionaryPage />} />
       </Routes>
       <footer className="app-footer">

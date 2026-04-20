@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import wordsData from '../assets/nword_5_dict.json';
+import fullDictData from '../assets/full_dict.json';
+
+const wordsData = fullDictData.filter(w => w.word.length === 5);
 
 // ── Constants ──────────────────────────────────────────────────────────────
 const ROWS = 6;
