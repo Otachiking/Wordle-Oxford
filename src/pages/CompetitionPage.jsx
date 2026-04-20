@@ -1,11 +1,13 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import fullDictData from '../assets/full_dict.json';
 
-const WORDS_5 = fullDictData.filter(w => w.word.length === 5);
-const VALID_WORDS = new Set(WORDS_5.map(w => w.word.toLowerCase()));
+// C2 dihilangkan, max C1.
+const WORDS_5 = fullDictData.filter(w => w.word.length === 5 && w.level !== 'C2');
+const VALID_WORDS = new Set(fullDictData.filter(w => w.word.length === 5).map(w => w.word.toLowerCase()));
 
 const ROWS = 6;
 const COLS = 5;
+const MAX_TIME_MS = 180000; // 3 minutes
 
 const KEYBOARD_ROWS = [
   ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'],
@@ -53,7 +55,7 @@ function loadStats() {
     const s = localStorage.getItem('compStats');
     if (s) return JSON.parse(s);
   } catch (e) {}
-  return { played: 0, won: 0, matchLog: [] };
+  return { played: 0, won: 0, highestScore: 0, matchLog: [] };
 }
 
 function saveStats(st) {
@@ -61,59 +63,35 @@ function saveStats(st) {
 }
 
 export default function CompetitionPage() {
-  const [gameState, setGameState] = useState('setup');
-  const [difficulty, setDifficulty] = useState('A1-A2');
+  const [gameState, setGameState] = useState('playing'); // playing, stats
+  const [difficulty, setDifficulty] = useState('Random');
   
   const [secretEntry, setSecretEntry] = useState(null);
   const [board, setBoard] = useState(() => makeEmptyBoard());
   const [currentRow, setCurrentRow] = useState(0);
   const [currentCol, setCurrentCol] = useState(0);
   const [letterStates, setLetterStates] = useState({});
-  const [timerStatus, setTimerStatus] = useState('stopped');
-  const [timeMs, setTimeMs] = useState(0);
+  const [timerStatus, setTimerStatus] = useState('idle'); // idle, running, stopped
+  const [timeMs, setTimeMs] = useState(MAX_TIME_MS);
 
   const [shake, setShake] = useState(false);
   const [invalidMsg, setInvalidMsg] = useState('');
   const [showModal, setShowModal] = useState(false);
   const [gameResult, setGameResult] = useState('');
+  const [finalScore, setFinalScore] = useState(0);
 
   const [stats, setStats] = useState(loadStats);
 
-  const timerRef = useRef(null);
-  useEffect(() => {
-    if (timerStatus === 'running') {
-      const startTime = Date.now() - timeMs;
-      timerRef.current = setInterval(() => {
-        setTimeMs(Date.now() - startTime);
-      }, 100);
-    } else {
-      clearInterval(timerRef.current);
-    }
-    return () => clearInterval(timerRef.current);
-  }, [timerStatus]);
-
-  const formatTime = (ms) => {
-    const totalSec = Math.floor(ms / 1000);
-    const m = Math.floor(totalSec / 60);
-    const s = (totalSec % 60).toString().padStart(2, '0');
-    return `${m}:${s}`;
-  };
-
-  const startCompetition = () => {
+  const startNewGame = useCallback((diff) => {
     let allowed = [];
-    if (difficulty === 'A1-A2') allowed = ['A1', 'A2'];
-    else if (difficulty === 'B1-B2') allowed = ['B1', 'B2'];
-    else if (difficulty === 'C1-C2') allowed = ['C1', 'C2', 'none'];
-    else allowed = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2', 'none'];
+    if (diff === 'Hardmode') allowed = ['B2', 'C1'];
+    else allowed = ['A1', 'A2', 'B1', 'B2', 'C1', 'none'];
 
     const pool = WORDS_5.filter(w => allowed.includes(w.level));
     const targetPool = pool.length > 0 ? pool : WORDS_5;
     
-    // Toggle Excluded Words built-in here dynamically based on stats log (only previously WON words)
     const solvedWords = new Set(stats.matchLog.filter(m => m.won).map(m => m.word.toLowerCase()));
     let finalPool = targetPool.filter(w => !solvedWords.has(w.word.toLowerCase()));
-    
-    // Fallback if everything is solved
     if(finalPool.length === 0) finalPool = targetPool;
 
     const chosen = finalPool[Math.floor(Math.random() * finalPool.length)];
@@ -123,12 +101,82 @@ export default function CompetitionPage() {
     setCurrentRow(0);
     setCurrentCol(0);
     setLetterStates({});
-    setTimeMs(0);
+    setTimeMs(MAX_TIME_MS);
     
-    setGameState('playing');
-    setTimerStatus('running');
+    setTimerStatus('idle');
     setGameResult('');
     setShowModal(false);
+    setFinalScore(0);
+  }, [stats]);
+
+  useEffect(() => {
+    if (!secretEntry) {
+      startNewGame(difficulty);
+    }
+  }, [secretEntry, startNewGame, difficulty]);
+
+  useEffect(() => {
+    let interval = null;
+    if (timerStatus === 'running') {
+      interval = setInterval(() => {
+        setTimeMs((prev) => {
+          if (prev <= 100) {
+            clearInterval(interval);
+            handleTimeOut();
+            return 0;
+          }
+          return prev - 100;
+        });
+      }, 100);
+    }
+    return () => clearInterval(interval);
+  }, [timerStatus]);
+
+  // If time runs out
+  const handleTimeOut = useCallback(() => {
+    setTimerStatus('stopped');
+    setGameResult('lost');
+    setFinalScore(0);
+    recordMatch(false, ROWS, 0);
+    setShowModal(true);
+  }, [stats]); // Re-bind safely although it triggers recordMatch. To avoid stale stats, recordMatch accesses current state safely.
+
+  const calculateScore = (guessesUsed, timeRemainingMs) => {
+    const timeScore = Math.floor((timeRemainingMs / MAX_TIME_MS) * 500);
+    const guessScoreArr = [0, 500, 400, 300, 200, 100, 50]; 
+    const guessScore = guessScoreArr[guessesUsed] || 0;
+    return 1000 + timeScore + guessScore;
+  };
+
+  const recordMatch = (won, guesses, score) => {
+    setStats(prev => {
+        const newStats = { ...prev };
+        newStats.played += 1;
+        if (won) newStats.won += 1;
+        if (score > (newStats.highestScore || 0)) {
+            newStats.highestScore = score;
+        }
+        
+        newStats.matchLog.push({
+          date: new Date().toISOString(), // Timestamp
+          word: secretEntry.word,
+          level: secretEntry.level,
+          difficulty,
+          won,
+          guesses,
+          timeLeftMs: timeMs,
+          score
+        });
+        saveStats(newStats);
+        return newStats;
+    });
+  };
+
+  const formatTime = (ms) => {
+    const totalSec = Math.ceil(ms / 1000);
+    const m = Math.floor(totalSec / 60);
+    const s = (totalSec % 60).toString().padStart(2, '0');
+    return `${m}:${s}`;
   };
 
   const showInvalid = (msg) => {
@@ -141,8 +189,10 @@ export default function CompetitionPage() {
   };
 
   const submitGuess = useCallback(() => {
-    if (gameState !== 'playing') return;
+    if (gameState !== 'playing' || timerStatus === 'stopped') return;
     const guess = board[currentRow].map(c => c.letter).join('').toLowerCase();
+    
+    if (!secretEntry) return; // safeguard
     const secret = secretEntry.word.toLowerCase();
 
     if (guess.length < COLS) {
@@ -187,37 +237,21 @@ export default function CompetitionPage() {
     if (won) {
         setTimerStatus('stopped');
         setGameResult('won');
-        recordMatch(true, currentRow + 1);
+        const sc = calculateScore(currentRow + 1, timeMs);
+        setFinalScore(sc);
+        recordMatch(true, currentRow + 1, sc);
         setTimeout(() => setShowModal(true), 1800);
     } else if (currentRow + 1 >= ROWS) {
         setTimerStatus('stopped');
         setGameResult('lost');
-        recordMatch(false, ROWS);
+        setFinalScore(0);
+        recordMatch(false, ROWS, 0);
         setTimeout(() => setShowModal(true), 1800);
     } else {
       setCurrentRow(r => r + 1);
       setCurrentCol(0);
     }
-  }, [gameState, board, currentRow, secretEntry, stats]);
-
-  const recordMatch = (won, guesses) => {
-    const newStats = { ...stats };
-    newStats.played += 1;
-    if (won) newStats.won += 1;
-    
-    newStats.matchLog.push({
-      date: new Date().toISOString(),
-      word: secretEntry.word,
-      level: secretEntry.level,
-      difficulty,
-      won,
-      guesses,
-      timeMs
-    });
-    
-    setStats(newStats);
-    saveStats(newStats);
-  };
+  }, [gameState, board, currentRow, secretEntry, timerStatus, timeMs]);
 
   const handleKey = useCallback((key) => {
     const k = key.toUpperCase();
@@ -235,6 +269,12 @@ export default function CompetitionPage() {
       setCurrentCol(c => c - 1);
     } else if (/^[A-Z]$/.test(k) && k !== 'ENTER') {
       if (currentCol >= COLS) return;
+      
+      // Start timer on first letter type
+      if (timerStatus === 'idle') {
+          setTimerStatus('running');
+      }
+
       setBoard(prev => {
         const next = prev.map(r => r.map(c => ({ ...c })));
         next[currentRow][currentCol] = { letter: k, state: 'tbd' };
@@ -242,7 +282,7 @@ export default function CompetitionPage() {
       });
       setCurrentCol(c => c + 1);
     }
-  }, [gameState, currentRow, currentCol, submitGuess, showModal]);
+  }, [gameState, currentRow, currentCol, submitGuess, showModal, timerStatus]);
 
   useEffect(() => {
     const handler = (e) => handleKey(e.key);
@@ -250,64 +290,45 @@ export default function CompetitionPage() {
     return () => window.removeEventListener('keydown', handler);
   }, [handleKey]);
 
-  if (gameState === 'setup') {
-     return (
-       <div className="wordle-page setup-page page-transition">
-         <div className="setup-card glass-panel" style={{ padding: '2rem', textAlign: 'center', width: '90%', maxWidth: '400px' }}>
-            <h2 style={{ marginBottom: '1rem' }}>🏆 Competition Mode</h2>
-            <p style={{ opacity: 0.8, marginBottom: '2rem' }}>Play against the clock with curated CEFR level words. Target words already won will be excluded!</p>
-            
-            <div style={{ marginBottom: '2rem' }}>
-                <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 'bold' }}>Select Difficulty:</label>
-                <select value={difficulty} onChange={e=>setDifficulty(e.target.value)} className="glass-select" style={{ padding: '0.5rem 1rem', borderRadius: '8px', background: 'rgba(255,255,255,0.1)', color: 'white', border: '1px solid rgba(255, 255, 255, 0.2)', width: '100%', outline: 'none' }}>
-                    <option value="A1-A2" style={{ color: 'black' }}>Easy (A1-A2)</option>
-                    <option value="B1-B2" style={{ color: 'black' }}>Medium (B1-B2)</option>
-                    <option value="C1-C2" style={{ color: 'black' }}>Hard (C1-C2)</option>
-                    <option value="Random" style={{ color: 'black' }}>Random</option>
-                </select>
-            </div>
-            
-            <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
-                <button className="modal-btn primary" onClick={startCompetition}>🚀 Start</button>
-                <button className="modal-btn secondary" onClick={()=>setGameState('stats')}>📊 Stats</button>
-            </div>
-         </div>
-       </div>
-     );
-  }
-
   if (gameState === 'stats') {
       const winRate = stats.played === 0 ? 0 : Math.round((stats.won / stats.played) * 100);
       return (
           <div className="wordle-page page-transition">
              <div className="glass-panel" style={{ padding: '2rem', width: '90%', maxWidth: '600px', margin: 'auto' }}>
-                 <h2 style={{ textAlign: 'center', marginBottom: '1.5rem' }}>📊 Player Rapot</h2>
-                 <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '2rem', padding: '1rem', background: 'rgba(255,255,255,0.05)', borderRadius: '12px' }}>
+                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                     <h2>📊 Player Rapot</h2>
+                     <button className="modal-btn secondary" style={{margin:0, padding: '0.4rem 1rem'}} onClick={()=>setGameState('playing')}>Close</button>
+                 </div>
+                 
+                 <div style={{ display: 'flex', justifyContent: 'space-between', margin: '1rem 0', padding: '1rem', background: 'rgba(255,255,255,0.05)', borderRadius: '12px' }}>
                      <div style={{ textAlign: 'center' }}><h3>{stats.played}</h3><span style={{opacity: 0.7, fontSize: '0.9rem'}}>Played</span></div>
                      <div style={{ textAlign: 'center' }}><h3>{stats.won}</h3><span style={{opacity: 0.7, fontSize: '0.9rem'}}>Won</span></div>
                      <div style={{ textAlign: 'center' }}><h3>{winRate}%</h3><span style={{opacity: 0.7, fontSize: '0.9rem'}}>Win Rate</span></div>
+                     <div style={{ textAlign: 'center', color: '#ffeb3b' }}><h3>{stats.highestScore || 0}</h3><span style={{opacity: 0.7, fontSize: '0.9rem'}}>Best Score</span></div>
                  </div>
                  
                  <div>
-                    <h3 style={{ marginBottom: '1rem', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '0.5rem' }}>Recent Matches</h3>
-                    <div style={{ maxHeight: '300px', overflowY: 'auto' }}>
-                        {stats.matchLog.slice(-10).reverse().map((m, i) => (
-                           <div key={i} style={{ display: 'flex', justifyContent: 'space-between', padding: '0.8rem', borderBottom: '1px solid rgba(255,255,255,0.05)', background: m.won ? 'rgba(83, 141, 78, 0.1)' : 'rgba(200, 50, 50, 0.1)' }}>
-                               <div>
-                                   <strong>{m.word.toUpperCase()}</strong> <span style={{ opacity: 0.7, fontSize: '0.8rem' }}>({m.level})</span> - <span style={{fontSize: '0.8rem'}}>{m.difficulty}</span>
+                    <h3 style={{ marginBottom: '1rem', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '0.5rem' }}>Match History (With Scores!)</h3>
+                    <div style={{ maxHeight: '350px', overflowY: 'auto' }}>
+                        {stats.matchLog.slice(-15).reverse().map((m, i) => {
+                           const d = new Date(m.date);
+                           return (
+                               <div key={i} style={{ display: 'flex', justifyContent: 'space-between', padding: '0.8rem', borderBottom: '1px solid rgba(255,255,255,0.05)', background: m.won ? 'rgba(83, 141, 78, 0.1)' : 'rgba(200, 50, 50, 0.1)' }}>
+                                   <div>
+                                       <strong>{m.word.toUpperCase()}</strong> <span style={{ opacity: 0.7, fontSize: '0.8rem' }}>({m.level})</span>
+                                       <div style={{ opacity: 0.5, fontSize: '0.7rem', marginTop: '0.2rem' }}>
+                                           {d.toLocaleDateString()} {d.toLocaleTimeString()} - {m.difficulty}
+                                       </div>
+                                   </div>
+                                   <div style={{ fontSize: '0.9rem', textAlign: 'right' }}>
+                                       <div style={{ color: m.won ? '#a8e6cf' : '#ff8b94', fontWeight: 'bold' }}>⭐ {m.score} pts</div>
+                                       <div style={{ opacity: 0.7, fontSize: '0.8rem' }}>{m.won ? `${m.guesses}/6 guesses` : 'Failed'}</div>
+                                   </div>
                                </div>
-                               <div style={{ fontSize: '0.9rem', textAlign: 'right' }}>
-                                   <div>{m.won ? `${m.guesses} guesses` : 'Failed'}</div>
-                                   <div style={{ opacity: 0.7 }}>⏱ {formatTime(m.timeMs)}</div>
-                               </div>
-                           </div>
-                        ))}
+                           );
+                        })}
                         {stats.matchLog.length === 0 && <p style={{opacity: 0.5, textAlign: 'center', padding: '1rem'}}>No matches yet.</p>}
                     </div>
-                 </div>
-                 
-                 <div style={{ marginTop: '2rem', textAlign: 'center' }}>
-                     <button className="modal-btn secondary" onClick={()=>setGameState('setup')}>Back</button>
                  </div>
              </div>
           </div>
@@ -316,12 +337,36 @@ export default function CompetitionPage() {
 
   return (
     <div className="wordle-page page-transition">
-      <div className="glass-panel" style={{ padding: '0.8rem 1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '90%', maxWidth: '500px', marginBottom: '1rem', borderRadius: '50px' }}>
-         <div style={{ display: 'flex', flexDirection: 'column', fontWeight: 'bold' }}>
-             <span>⏱ {formatTime(timeMs)}</span>
+      
+      {/* TOP CONTROLS (Difficulty & Stats) */}
+      <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', marginBottom: '1rem', width: '100%' }}>
+          <select 
+             value={difficulty} 
+             onChange={(e) => {
+                 setDifficulty(e.target.value);
+                 startNewGame(e.target.value);
+             }} 
+             className="glass-select" 
+             style={{ padding: '0.4rem 1rem', borderRadius: '20px', background: 'rgba(255,255,255,0.1)', color: 'white', border: '1px solid rgba(255, 255, 255, 0.2)', outline: 'none', cursor: 'pointer' }}
+          >
+              <option value="Random" style={{ color: 'black' }}>Random (All)</option>
+              <option value="Hardmode" style={{ color: 'black' }}>Hardmode (B2-C1)</option>
+          </select>
+          <button 
+             className="modal-btn secondary" 
+             style={{ padding: '0.4rem 1rem', borderRadius: '20px', margin: 0, minWidth: 0, fontSize: '0.9rem' }} 
+             onClick={() => setGameState('stats')}
+          >
+             📊 Stats
+          </button>
+      </div>
+
+      {/* TIMER DISPLAY */}
+      <div className="glass-panel" style={{ padding: '0.5rem 1.5rem', marginBottom: '1.5rem', borderRadius: '50px', background: timeMs <= 30000 ? 'rgba(255, 50, 50, 0.2)' : '' }}>
+         <div style={{ fontWeight: 'bold', fontSize: '1.2rem', color: timeMs <= 30000 ? '#ff8b94' : 'white', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+             ⏱ {formatTime(timeMs)}
+             {timerStatus === 'idle' && <span style={{ fontSize: '0.7rem', opacity: 0.7, fontWeight: 'normal' }}>(Starts on type)</span>}
          </div>
-         <div style={{ opacity: 0.8, fontSize: '0.9rem', background: 'rgba(255,255,255,0.1)', padding: '0.3rem 0.8rem', borderRadius: '15px' }}>{difficulty}</div>
-         <button className="modal-btn secondary" style={{ padding: '0.4rem 0.8rem', fontSize: '0.8rem', margin: 0, minWidth: 0 }} onClick={() => { setTimerStatus('stopped'); setGameState('setup'); }}>Quit</button>
       </div>
 
       {invalidMsg && <div className="wordle-toast">{invalidMsg}</div>}
@@ -365,35 +410,37 @@ export default function CompetitionPage() {
       </div>
 
       {showModal && (
-        <div className="modal-overlay" onClick={() => setGameState('setup')}>
+        <div className="modal-overlay" onClick={() => startNewGame(difficulty)}>
           <div className="modal-card" onClick={e => e.stopPropagation()}>
             <div className="modal-status">
-              {gameResult === 'won' ? 'You Won! 🎉' : 'Game Over 😔'}
+              {gameResult === 'won' ? 'You Won! 🎉' : 'Time/Guesses Over! 😔'}
             </div>
-            <div className="modal-row-count" style={{ marginBottom: '1rem' }}>
-              {gameResult === 'won'
-                ? `Solved in ${formatTime(timeMs)} (${currentRow} guesses)`
-                : 'Time over / Guesses out!'}
+            
+            <div style={{ margin: '1rem 0', background: 'rgba(0,0,0,0.2)', padding: '1rem', borderRadius: '12px' }}>
+                <h3 style={{ margin: 0, color: gameResult === 'won' ? '#a8e6cf' : '#ff8b94' }}>Total Score: {finalScore}</h3>
+                {gameResult === 'won' && <p style={{ opacity: 0.7, fontSize: '0.8rem', marginTop: '0.5rem' }}>Earned by guesses ({currentRow}) & time left ({formatTime(timeMs)})</p>}
             </div>
+
             <div className="modal-word-card">
-              <div className="modal-emoji">{secretEntry.emoji || '📘'}</div>
+              <div className="modal-emoji">{secretEntry?.emoji || '📘'}</div>
               <div className="modal-word-info">
-                <div className="modal-word">{secretEntry.word.toUpperCase()}</div>
+                <div className="modal-word">{secretEntry?.word.toUpperCase()}</div>
                 <div className="modal-pos-level">
-                  <span className="modal-level">{secretEntry.level}</span>
-                  <span className="modal-pos">{secretEntry.partOfSpeech}</span>
+                  <span className="modal-level">{secretEntry?.level}</span>
+                  <span className="modal-pos">{secretEntry?.partOfSpeech}</span>
                 </div>
                 <div className="modal-definition">
-                  {secretEntry.definition || 'No definition yet.'}
+                  {secretEntry?.definition || 'No definition yet.'}
                 </div>
               </div>
             </div>
+            
             <div className="modal-actions">
-              <button className="modal-btn secondary" onClick={() => setGameState('setup')}>
-                 To Setup
-              </button>
-              <button className="modal-btn primary" onClick={() => setGameState('stats')}>
+              <button className="modal-btn secondary" onClick={() => setGameState('stats')}>
                  View Stats
+              </button>
+              <button className="modal-btn primary" onClick={() => startNewGame(difficulty)}>
+                 Play Again
               </button>
             </div>
           </div>

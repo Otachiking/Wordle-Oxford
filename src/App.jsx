@@ -14,17 +14,17 @@ function Nav() {
         <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="GB" className="gb-flag" />
       </div>
       <div className="nav-links">
+        <NavLink to="/competition" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
+          Comp 🏆
+        </NavLink>
         <NavLink to="/play" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
-          Casual 🎮
+          Daily 🎮
         </NavLink>
         <NavLink to="/solver" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
           Solver 🔍
         </NavLink>
-        <NavLink to="/competition" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
-          Competition 🏆
-        </NavLink>
         <NavLink to="/dictionary" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>
-          Dictionary 📖
+          Dict 📖
         </NavLink>
       </div>
     </nav>
