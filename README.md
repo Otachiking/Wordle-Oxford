@@ -1,16 +1,30 @@
-# React + Vite
+# 🇬🇧 Wordle Oxford
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A premium Wordle clone powered by the **Oxford Learner's Dictionary** (3000-5000 wordlist). Featuring a sleek dark-mode glassmorphism UI, game persistence, and a built-in solver.
 
-Currently, two official plugins are available:
+## ✨ Features
+- **Oxford Dictionary Integration:** Play with high-quality vocabulary.
+- **Glassmorphism UI:** Modern, responsive design with smooth animations.
+- **Game Solver:** Stuck? Use the built-in solver to filter possible candidates based on your current clues.
+- **Persistent Progress:** Your game state is saved locally.
+- **Vercel Ready:** Fully optimized for seamless deployment on Vercel.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Deployment
+This project is already configured for **Vercel**. 
+1. Push to GitHub (Done ✅).
+2. Import project in [Vercel Dashboard](https://vercel.com/new).
+3. Vercel will automatically detect the **Vite** configuration.
 
-## React Compiler
+## 🛠️ Tech Stack
+- **Framework:** React 19 (Vite)
+- **Routing:** React Router v7
+- **Styling:** Vanilla CSS (Glassmorphism)
+- **Data:** Custom scripts for Oxford Dictionary processing.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📜 Scripts
+- `npm run dev`: Start development server.
+- `npm run build`: Build for production.
+- `npm run preview`: Preview the production build locally.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+Made by [Muhammad Iqbal Rasyid](https://portfolio-otachiking.vercel.app/) 🦊
