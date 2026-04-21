@@ -1025,98 +1025,52 @@ female adj., n. A2
 fence n. B1
 festival n. A1
 few det./adj., pron. A1
-f
-iction n. A2
-f
-ield n. A2
-f
-ifteen number A1
-f
-ifth number A1
-f
-ifty number A1
-f
-ight v., n. A2
-f
-ighting n. B1
-f
-igure n. A2, v. B2
-f
-ile n. B1, v. B2
-f
-ill v. A1
-f
-ilm n. A1, v. A2
-f
-inal adj. A1, n. A2
-f
-inally adv. A2
-f
-inance n., v. B2
-f
-inancial adj. B1
-f
-ind v. A1
-f
-inding n. B2
-f
-ine adj. A1
-f
-inger n. A2
-f
-inish v. A1, n. A2
-f
-ire n. A1, v. B1
-f
-irm n. B2
-f
-irst det./number, adv. A1, n. A2
-f
-irstly adv. A2
-f
-ish n. A1, v. A2
-f
-ishing n. A2
-f
-it v., adj. A2
-f
-itness n. B1
-f
-ive number A1
-f
-ix v. A2, n. B2
-f
-ixed adj. B1
-f
-lag n. B1
-f
-lame n. B2
-f
-lash n., v. B2
-f
-lat n. A1, adj. A2
-f
-lexible adj. B2
-f
-light n. A1
-f
-loat v. B2
-f
-lood n., v. B1
-f
-loor n. A1
-f
-lour n. B1
-f
-low v., n. B1
-f
-lower n. A1
-f
-lu n. A2
-f
-ly v. A1, n. A2
-f
-lying n., adj. A2
+fiction n. A2
+field n. A2
+fifteen number A1
+fifth number A1
+fifty number A1
+fight v., n. A2
+fighting n. B1
+figure n. A2, v. B2
+file n. B1, v. B2
+fill v. A1
+film n. A1, v. A2
+final adj. A1, n. A2
+finally adv. A2
+finance n., v. B2
+financial adj. B1
+find v. A1
+finding n. B2
+fine adj. A1
+finger n. A2
+finish v. A1, n. A2
+fire n. A1, v. B1
+firm n. B2
+first det./number, adv. A1, n. A2
+firstly adv. A2
+fish n. A1, v. A2
+fishing n. A2
+fit v., adj. A2
+fitness n. B1
+five number A1
+fix v. A2, n. B2
+fixed adj. B1
+flag n. B1
+flame n. B2
+flash n., v. B2
+flat n. A1, adj. A2
+flexible adj. B2
+flight n. A1
+float v. B2
+flood n., v. B1
+floor n. A1
+flour n. B1
+flow v., n. B1
+flower n. A1
+flu n. A2
+fly v. A1, n. A2
+flying n., adj. A2
 focus v., n. A2
 fold v. B1, n. B2
 folding adj. B2
@@ -1573,7 +1527,6 @@ adj. A1, v. A2
 light (not heavy) adj. A2
 like (similar) prep. A1
 like (find sb/sth pleasant) v. A1, 
-n. B1
 likely adj. A2
 limit n., v. B1
 limited adj. B2
@@ -1651,8 +1604,7 @@ marry v. A2
 mass n., adj. B2
 massive adj. B2
 master n., v. B2
-match (contest/correspond) n., 
-v. A1
+match n., v. A1
 matching adj. B2
 material n. A2, adj. B2
 mathematics n. A2
@@ -1660,7 +1612,6 @@ maths n. A2
 matter n., v. A2
 maximum adj., n. B2
 May n. A1
-may modal v. A2
 maybe adv. A1
 me pron. A1
 meal n. A1
@@ -1698,8 +1649,7 @@ milk n. A1
 nature n. A2
 million number A1
 mind n., v. A2
-mine (belongs to me) pron. A2
-mine (hole in the ground) n. B1
+mine pron. A2
 mineral n. B2
 minimum adj., n. B2
 minister n. B2
@@ -1795,8 +1745,6 @@ nightmare n. B2
 nine number A1
 nineteen number A1
 ninety number A1
-no exclam., det. A1
-no one pron. A1
 nobody pron. A1
 noise n. A2
 noisy adj. A2
@@ -1834,7 +1782,7 @@ occasion n. B1
 occasionally adv. B2
 occur v. B1
 ocean n. A2
-o’clock adv. A1
+oclock adv. A1
 October n. A1
 odd adj. B1
 of prep. A1
@@ -1847,9 +1795,7 @@ office n. A1
 officer n. A2
 official adj. B1, n. B2
 often adv. A1
-oh exclam. A1
 oil n. A2
-OK exclam., adj./adv. A1
 old adj. A1
 old-fashioned adj. B1
 on prep., adv. A1
@@ -1895,8 +1841,7 @@ outdoor adj. B1
 outdoors adv. B1
 outer adj. B2
 outline n., v. B2
-outside adv. A1, prep., noun., adj. 
-A2
+outside adv. A1
 oven n. A2
 over prep., adv. A1
 overall adj., adv. B2

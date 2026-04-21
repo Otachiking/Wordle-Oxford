@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import fullDictData from '../assets/full_dict.json';
+import dictionaryData from '../DICTIONARY_nWord_5.json';
 
-const wordsData = fullDictData.filter(w => w.word.length === 5 && w.level !== 'C2');
+const wordsData = dictionaryData.filter(w => w.level !== 'C2');
 
 function saveWordTick(word, won) {
   try {
@@ -247,7 +247,7 @@ export default function WordlePage() {
             {row.map((cell, ci) => (
               <div
                 key={ci}
-                className={`wordle-tile state-${cell.state}${gameStatus === 'won' && ri === currentRow ? ' win-flip' : ''}`}
+                className={`wordle-tile state-${cell.state}${gameStatus === 'won' && ri === currentRow ? ' win-jump' : ''}`}
                 style={{ animationDelay: `${ci * 100}ms` }}
               >
                 {cell.letter}
@@ -295,7 +295,7 @@ export default function WordlePage() {
             </div>
             <div className="modal-row-count">
               {gameStatus === 'won'
-                ? `Solved in ${currentRow} ${currentRow === 1 ? 'guess' : 'guesses'}!`
+                ? `Solved in ${currentRow + 1} ${currentRow + 1 === 1 ? 'guess' : 'guesses'}!`
                 : `The answer was: ${secretEntry.word.toUpperCase()}`}
             </div>
             <div className="modal-word-card">
@@ -304,7 +304,7 @@ export default function WordlePage() {
                 <div className="modal-word">{secretEntry.word.toUpperCase()}</div>
                 <div className="modal-pos-level">
                   <span className="modal-level">{secretEntry.level}</span>
-                  <span className="modal-pos">{secretEntry.partOfSpeech}</span>
+                  <span className="modal-pos">{secretEntry.part}</span>
                 </div>
                 <div className="modal-definition">
                   {secretEntry.definition || 'No definition yet.'}

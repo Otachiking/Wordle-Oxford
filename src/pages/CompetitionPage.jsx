@@ -1,9 +1,8 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import fullDictData from '../assets/full_dict.json';
+import dictionaryData from '../DICTIONARY_nWord_5.json';
 
-// C2 excluded
-const WORDS_5 = fullDictData.filter(w => w.word.length === 5 && w.level !== 'C2');
-const VALID_WORDS = new Set(fullDictData.filter(w => w.word.length === 5).map(w => w.word.toLowerCase()));
+const WORDS_5 = dictionaryData.filter(w => w.level !== 'C2');
+const VALID_WORDS = new Set(dictionaryData.map(w => w.word.toLowerCase()));
 
 const ROWS = 6;
 const COLS = 5;
@@ -454,7 +453,7 @@ export default function CompetitionPage() {
                 <div className="modal-word">{secretEntry?.word.toUpperCase()}</div>
                 <div className="modal-pos-level">
                   <span className="modal-level">{secretEntry?.level}</span>
-                  <span className="modal-pos">{secretEntry?.partOfSpeech}</span>
+                  <span className="modal-pos">{secretEntry?.part}</span>
                 </div>
                 <div className="modal-definition">{secretEntry?.definition || 'No definition yet.'}</div>
               </div>

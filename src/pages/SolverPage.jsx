@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import fullDict from '../assets/full_dict.json';
+import dictionaryData from '../DICTIONARY_nWord_5.json';
 
 const levelColors = {
   'A1': '#4ade80',
@@ -55,7 +55,7 @@ export default function SolverPage() {
   };
 
   const filteredWords = useMemo(() => {
-    const pool = fullDict.filter(i => i.nWord === 5 && i.level !== 'C2');
+    const pool = dictionaryData.filter(i => i.level !== 'C2');
     if (!green.some(x => x) && !yellowRows[0].some(x => x) && !grey.some(x => x)) {
       return pool;
     }
@@ -200,21 +200,35 @@ export default function SolverPage() {
             <button
               className={`s-sort-btn${sortMode === 'alpha' ? ' active' : ''}`}
               onClick={() => setSortMode('alpha')}
-            >A–Z</button>
+            >
+              A–Z
+            </button>
             <button
               className={`s-sort-btn${sortMode === 'level' ? ' active' : ''}`}
               onClick={() => setSortMode('level')}
-            >Level</button>
+            >
+              Level
+            </button>
           </div>
         </div>
 
-        <div className="s-results-container">
-          {sortedWords.map(w => (
-            <div key={w.id} className="s-result-item" style={{ borderLeftColor: levelColors[w.level] || '#94a3b8' }}>
-              {w.word.toUpperCase()}
+        <div className="solver-results">
+          {sortedWords.map((w, i) => (
+            <div key={i} className="s-word-card">
+              <div className="s-word-main">
+                <span className="s-word-emoji">{w.emoji}</span>
+                <span className="s-word-text">{w.word.toUpperCase()}</span>
+                <div className="s-word-badge" style={{ background: levelColors[w.level] || '#94a3b8' }}>
+                  {w.level}
+                </div>
+              </div>
+              <div className="s-word-bottom">
+                <div className="s-word-part">{w.part}</div>
+                <div className="s-word-def">{w.definition}</div>
+              </div>
             </div>
           ))}
-          {filteredWords.length === 0 && <div className="s-more">No words match...</div>}
+          {sortedWords.length === 0 && <div className="s-empty">No matching words found.</div>}
         </div>
       </div>
     </div>
