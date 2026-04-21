@@ -245,17 +245,13 @@ export default function TrainPage() {
 
       {/* Timer & Stats Global Bar */}
       <div className="train-meta-bar">
-        {/* Left: Duration Dropdown */}
+        {/* Left: Stats (P W R) */}
         <div className="meta-left">
-           <select 
-            className="timer-select"
-            value={timerDuration}
-            onChange={(e) => handleTimerSettingChange(e.target.value)}
-           >
-             <option value="2">2m</option>
-             <option value="3">3m</option>
-             <option value="5">5m</option>
-           </select>
+           <div className="compact-stats">
+             <span title="Played">🎮 <b>P: {stats.played}</b></span>
+             <span title="Won">✅ <b>W: {stats.won}</b></span>
+             <span title="Win Rate">📈 <b>R: {winRate}%</b></span>
+           </div>
         </div>
 
         {/* Center: Timer Display */}
@@ -265,13 +261,17 @@ export default function TrainPage() {
             </div>
         </div>
 
-        {/* Right: Stats (P W R) */}
+        {/* Right: Duration Dropdown */}
         <div className="meta-right">
-           <div className="compact-stats">
-             <span title="Played">🎮 <b>P: {stats.played}</b></span>
-             <span title="Won">✅ <b>W: {stats.won}</b></span>
-             <span title="Win Rate">📈 <b>R: {winRate}%</b></span>
-           </div>
+           <select 
+            className="timer-select"
+            value={timerDuration}
+            onChange={(e) => handleTimerSettingChange(e.target.value)}
+           >
+             <option value="2">2m</option>
+             <option value="3">3m</option>
+             <option value="5">5m</option>
+           </select>
         </div>
       </div>
 
