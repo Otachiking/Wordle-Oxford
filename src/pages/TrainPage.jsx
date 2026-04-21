@@ -81,6 +81,7 @@ export default function TrainPage() {
     return parseInt(localStorage.getItem('trainTimerSetting') || '3');
   });
   const [timeLeft, setTimeLeft] = useState(timerDuration * 60);
+  const [timerActive, setTimerActive] = useState(false);
   const timerRef = useRef(null);
 
   const [stats, setStats] = useState(() => {
@@ -97,12 +98,13 @@ export default function TrainPage() {
     setLetterStates({});
     setGameStatus('playing');
     setShowModal(false);
+    setTimerActive(false);
     setTimeLeft(timerDuration * 60);
   }, [selectedLevel, timerDuration]);
 
   // Handle timer
   useEffect(() => {
-    if (gameStatus === 'playing' && !showModal) {
+    if (gameStatus === 'playing' && timerActive && !showModal) {
       timerRef.current = setInterval(() => {
         setTimeLeft(t => {
           if (t <= 1) {
@@ -118,7 +120,7 @@ export default function TrainPage() {
       clearInterval(timerRef.current);
     }
     return () => clearInterval(timerRef.current);
-  }, [gameStatus, showModal]);
+  }, [gameStatus, timerActive, showModal]);
 
   const handleLevelChange = (lvl) => {
     setSelectedLevel(lvl);
@@ -126,9 +128,10 @@ export default function TrainPage() {
   };
 
   const handleTimerSettingChange = (mins) => {
-    setTimerDuration(mins);
-    localStorage.setItem('trainTimerSetting', mins.toString());
-    setTimeLeft(mins * 60);
+    const m = parseInt(mins);
+    setTimerDuration(m);
+    localStorage.setItem('trainTimerSetting', m.toString());
+    setTimeLeft(m * 60);
     startNew(selectedLevel);
   };
 
@@ -166,6 +169,7 @@ export default function TrainPage() {
     const won = evaluation.every(s => s === 'correct');
     if (won) {
       setGameStatus('won');
+      setTimerActive(false);
       saveWordTick(secret, true);
       setStats(prev => {
         const ns = { ...prev, played: prev.played + 1, won: prev.won + 1, log: [...prev.log, { word: secretEntry.word, level: secretEntry.level, won: true, date: new Date().toISOString() }] };
@@ -175,6 +179,7 @@ export default function TrainPage() {
       setTimeout(() => setShowModal(true), 1800);
     } else if (currentRow + 1 >= ROWS) {
       setGameStatus('lost');
+      setTimerActive(false);
       saveWordTick(secret, false);
       setStats(prev => {
         const ns = { ...prev, played: prev.played + 1, log: [...prev.log, { word: secretEntry.word, level: secretEntry.level, won: false, date: new Date().toISOString() }] };
@@ -202,10 +207,11 @@ export default function TrainPage() {
       setCurrentCol(c => c - 1);
     } else if (/^[A-Z]$/.test(k)) {
       if (currentCol >= COLS) return;
+      if (!timerActive) setTimerActive(true);
       setBoard(b => { const next = b.map(r => r.map(c => ({ ...c }))); next[currentRow][currentCol] = { letter: k, state: 'tbd' }; return next; });
       setCurrentCol(c => c + 1);
     }
-  }, [gameStatus, currentRow, currentCol, submitGuess, showModal, startNew]);
+  }, [gameStatus, currentRow, currentCol, submitGuess, showModal, startNew, timerActive]);
 
   useEffect(() => {
     const handler = (e) => handleKey(e.key);
@@ -232,32 +238,41 @@ export default function TrainPage() {
             className={`train-level-btn${selectedLevel === lvl ? ' active' : ''}`}
             onClick={() => handleLevelChange(lvl)}
           >
-            {lvl === 'R' ? 'R 🎲' : lvl}
+            {lvl === 'R' ? '🎲' : lvl}
           </button>
         ))}
       </div>
 
-      {/* Timer Bar */}
-      <div className="train-timer-bar">
-        <div className="timer-display">⏱️ <b>{formatTime(timeLeft)}</b></div>
-        <div className="timer-settings">
-          {[2, 3, 5].map(m => (
-            <button
-              key={m}
-              className={`timer-set-btn${timerDuration === m ? ' active' : ''}`}
-              onClick={() => handleTimerSettingChange(m)}
-            >
-              {m}m
-            </button>
-          ))}
+      {/* Timer & Stats Global Bar */}
+      <div className="train-meta-bar">
+        {/* Left: Duration Dropdown */}
+        <div className="meta-left">
+           <select 
+            className="timer-select"
+            value={timerDuration}
+            onChange={(e) => handleTimerSettingChange(e.target.value)}
+           >
+             <option value="2">2m</option>
+             <option value="3">3m</option>
+             <option value="5">5m</option>
+           </select>
         </div>
-      </div>
 
-      {/* Stats Bar */}
-      <div className="train-stats-bar">
-        <span>🎮 Played: <b>{stats.played}</b></span>
-        <span>✅ Won: <b>{stats.won}</b></span>
-        <span>📈 Win Rate: <b>{winRate}%</b></span>
+        {/* Center: Timer Display */}
+        <div className="meta-center">
+            <div className={`timer-display ${timerActive ? 'active' : ''}`}>
+              ⏱️ <b>{formatTime(timeLeft)}</b>
+            </div>
+        </div>
+
+        {/* Right: Stats (P W R) */}
+        <div className="meta-right">
+           <div className="compact-stats">
+             <span title="Played">🎮 <b>P: {stats.played}</b></span>
+             <span title="Won">✅ <b>W: {stats.won}</b></span>
+             <span title="Win Rate">📈 <b>R: {winRate}%</b></span>
+           </div>
+        </div>
       </div>
 
       {invalidMsg && <div className="wordle-toast">{invalidMsg}</div>}
@@ -269,7 +284,7 @@ export default function TrainPage() {
             {row.map((cell, ci) => (
               <div
                 key={ci}
-                className={`wordle-tile state-${cell.state}${gameStatus === 'won' && ri === currentRow ? ' win-flip' : ''}`}
+                className={`wordle-tile state-${cell.state}${gameStatus === 'won' && ri === currentRow ? ' win-jump' : ''}`}
                 style={{ animationDelay: `${ci * 100}ms` }}
               >
                 {cell.letter}

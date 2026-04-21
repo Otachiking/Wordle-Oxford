@@ -876,9 +876,9 @@ body {
 }
 .solver-clear-btn:hover { background: rgba(239,68,68,0.2); }
 
-/* ════════════════════════════════════════════════
+/* ════════════════════════
    TRAIN PAGE
-════════════════════════════════════════════════ */
+════════════════════════ */
 .train-level-bar {
   display: flex;
   align-items: center;
@@ -910,55 +910,79 @@ body {
   border-color: rgba(124,58,237,0.6);
 }
 
-.train-stats-bar {
-  display: flex;
-  gap: 1.5rem;
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  background: rgba(255,255,255,0.04);
-  padding: 0.5rem 1.2rem;
-  border-radius: 30px;
-  border: 1px solid var(--border-subtle);
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.train-stats-bar b { color: var(--text-main); }
-
-/* ── Train Timer ── */
-.train-timer-bar {
+.train-meta-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1.5rem;
-  background: rgba(255, 255, 255, 0.05);
-  padding: 0.6rem 1.2rem;
-  border-radius: 12px;
-  border: 1px solid var(--border-subtle);
   width: 100%;
-  max-width: 400px;
-  margin-top: 0.5rem;
-}
-.timer-display { font-size: 1.1rem; color: #a78bfa; }
-.timer-settings { display: flex; gap: 0.4rem; }
-.timer-set-btn {
-  padding: 0.3rem 0.7rem;
-  border-radius: 6px;
+  max-width: 550px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(8px);
+  padding: 0.8rem 1.4rem;
+  border-radius: 16px;
   border: 1px solid var(--border-subtle);
-  background: rgba(255,255,255,0.05);
-  color: var(--text-muted);
-  font-size: 0.8rem;
-  cursor: pointer;
-  transition: all 0.2s;
+  margin-top: 0.5rem;
+  gap: 1rem;
+}
+
+.meta-left { flex: 1; display: flex; justify-content: flex-start; }
+.meta-center { flex: 1; display: flex; justify-content: center; }
+.meta-right { flex: 1; display: flex; justify-content: flex-end; }
+
+/* Dropdown */
+.timer-select {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-main);
+  padding: 0.4rem 0.6rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
   font-family: inherit;
-  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s;
 }
-.timer-set-btn.active {
-  background: rgba(124, 58, 237, 0.3);
-  color: #fff;
-  border-color: rgba(124, 58, 237, 0.5);
+.timer-select:focus { border-color: var(--primary-light); }
+
+/* Timer */
+.timer-display {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.timer-set-btn:hover:not(.active) {
-  background: rgba(255,255,255,0.1);
+.timer-display.active {
+  color: #a78bfa;
+  transform: scale(1.05);
+}
+
+/* Compact Stats */
+.compact-stats {
+  display: flex;
+  gap: 1.2rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+.compact-stats span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.compact-stats b { color: var(--text-main); }
+
+@media (max-width: 480px) {
+  .train-meta-bar {
+    padding: 0.6rem 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+  }
+  .meta-left, .meta-center, .meta-right {
+    flex: none;
+  }
+  .compact-stats { gap: 0.8rem; font-size: 0.8rem; }
 }
 
 /* ════════════════════════════════════════════════
