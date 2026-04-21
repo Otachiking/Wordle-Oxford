@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import dictionaryData from '../DICTIONARY_nWord_5.json';
+import fullDict from '../DICTIONARY_nWord_5.json';
 
 const levelColors = {
   'A1': '#4ade80',
@@ -13,10 +13,29 @@ const levelColors = {
 const levelOrder = { A1: 1, A2: 2, B1: 3, B2: 4, C1: 5, UNRATED: 6 };
 
 export default function SolverPage() {
-  const [green, setGreen] = useState(Array(5).fill(''));
-  const [yellowRows, setYellowRows] = useState([Array(5).fill('')]);
-  const [grey, setGrey] = useState(Array(10).fill(''));
-  const [sortMode, setSortMode] = useState('alpha'); // 'alpha' | 'level'
+  const [green, setGreen] = useState(() => {
+    try { return JSON.parse(localStorage.getItem('solverGreen')) || Array(5).fill(''); }
+    catch(e) { return Array(5).fill(''); }
+  });
+  const [yellowRows, setYellowRows] = useState(() => {
+    try { return JSON.parse(localStorage.getItem('solverYellow')) || [Array(5).fill('')]; }
+    catch(e) { return [Array(5).fill('')]; }
+  });
+  const [grey, setGrey] = useState(() => {
+    try { return JSON.parse(localStorage.getItem('solverGrey')) || Array(10).fill(''); }
+    catch(e) { return Array(10).fill(''); }
+  });
+  const [sortMode, setSortMode] = useState('alpha');
+
+  React.useEffect(() => {
+    localStorage.setItem('solverGreen', JSON.stringify(green));
+  }, [green]);
+  React.useEffect(() => {
+    localStorage.setItem('solverYellow', JSON.stringify(yellowRows));
+  }, [yellowRows]);
+  React.useEffect(() => {
+    localStorage.setItem('solverGrey', JSON.stringify(grey));
+  }, [grey]);
 
   const clearAll = () => {
     setGreen(Array(5).fill(''));
@@ -55,7 +74,7 @@ export default function SolverPage() {
   };
 
   const filteredWords = useMemo(() => {
-    const pool = dictionaryData.filter(i => i.level !== 'C2');
+    const pool = fullDict.filter(i => i.nWord === 5 && i.level !== 'C2');
     if (!green.some(x => x) && !yellowRows[0].some(x => x) && !grey.some(x => x)) {
       return pool;
     }
@@ -200,35 +219,21 @@ export default function SolverPage() {
             <button
               className={`s-sort-btn${sortMode === 'alpha' ? ' active' : ''}`}
               onClick={() => setSortMode('alpha')}
-            >
-              A–Z
-            </button>
+            >A–Z</button>
             <button
               className={`s-sort-btn${sortMode === 'level' ? ' active' : ''}`}
               onClick={() => setSortMode('level')}
-            >
-              Level
-            </button>
+            >Level</button>
           </div>
         </div>
 
-        <div className="solver-results">
-          {sortedWords.map((w, i) => (
-            <div key={i} className="s-word-card">
-              <div className="s-word-main">
-                <span className="s-word-emoji">{w.emoji}</span>
-                <span className="s-word-text">{w.word.toUpperCase()}</span>
-                <div className="s-word-badge" style={{ background: levelColors[w.level] || '#94a3b8' }}>
-                  {w.level}
-                </div>
-              </div>
-              <div className="s-word-bottom">
-                <div className="s-word-part">{w.part}</div>
-                <div className="s-word-def">{w.definition}</div>
-              </div>
+        <div className="s-results-container">
+          {sortedWords.map(w => (
+            <div key={w.id} className="s-result-item" style={{ borderLeftColor: levelColors[w.level] || '#94a3b8' }}>
+              {w.word.toUpperCase()}
             </div>
           ))}
-          {sortedWords.length === 0 && <div className="s-empty">No matching words found.</div>}
+          {filteredWords.length === 0 && <div className="s-more">No words match...</div>}
         </div>
       </div>
     </div>

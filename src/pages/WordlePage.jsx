@@ -168,11 +168,11 @@ export default function WordlePage() {
     if (won) {
       setGameStatus('won');
       saveWordTick(secret, true);
-      setTimeout(() => { setShowModal(true); }, 1800);
+      setTimeout(() => { setShowModal(true); }, 1200);
     } else if (currentRow + 1 >= ROWS) {
       setGameStatus('lost');
       saveWordTick(secret, false);
-      setTimeout(() => { setShowModal(true); }, 1800);
+      setTimeout(() => { setShowModal(true); }, 1200);
     } else {
       setCurrentRow(r => r + 1);
       setCurrentCol(0);
@@ -280,8 +280,8 @@ export default function WordlePage() {
         ))}
       </div>
 
-      {/* Hint Trigger */}
-      <div className="hints-container">
+      {/* Hint Trigger - Now below keyboard */}
+      <div className="hints-container" style={{ marginTop: '1.5rem' }}>
         <button className="hint-btn trigger" onClick={() => setShowHintModal(true)}>Give me a hint 💡</button>
       </div>
 

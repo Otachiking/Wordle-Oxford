@@ -443,33 +443,14 @@ body {
   transition: background-color 0.3s, border-color 0.3s;
 }
 
-.wordle-tile.state-correct,
-.wordle-tile.state-present,
-.wordle-tile.state-absent {
-  animation: revealTile 0.6s ease forwards;
+.wordle-tile.win-flip {
+  animation: flip 0.6s ease forwards;
 }
 
-@keyframes revealTile {
+@keyframes flip {
   0%   { transform: rotateX(0deg); }
   50%  { transform: rotateX(-90deg); }
   100% { transform: rotateX(0deg); }
-}
-
-.wordle-tile.win-jump {
-  animation: winJump 0.6s ease forwards;
-}
-
-/* Stagger the win jump so tiles jump one by one after the flip */
-.wordle-tile.win-jump:nth-child(1) { animation-delay: 1.5s; }
-.wordle-tile.win-jump:nth-child(2) { animation-delay: 1.6s; }
-.wordle-tile.win-jump:nth-child(3) { animation-delay: 1.7s; }
-.wordle-tile.win-jump:nth-child(4) { animation-delay: 1.8s; }
-.wordle-tile.win-jump:nth-child(5) { animation-delay: 1.9s; }
-
-@keyframes winJump {
-  0%   { transform: translateY(0); }
-  50%  { transform: translateY(-20px); }
-  100% { transform: translateY(0); }
 }
 
 /* ── Hints Trigger ── */
@@ -876,9 +857,9 @@ body {
 }
 .solver-clear-btn:hover { background: rgba(239,68,68,0.2); }
 
-/* ════════════════════════
+/* ════════════════════════════════════════════════
    TRAIN PAGE
-════════════════════════ */
+════════════════════════════════════════════════ */
 .train-level-bar {
   display: flex;
   align-items: center;
@@ -916,81 +897,56 @@ body {
   justify-content: center;
   width: fit-content;
   max-width: 95%;
-  background: var(--glass-bg);
-  backdrop-filter: blur(8px);
-  padding: 0.8rem 1.8rem;
-  border-radius: 16px;
-  border: 1px solid var(--glass-border);
-  margin-top: 0.5rem;
-  gap: 2rem;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
-}
-
-.meta-left { display: flex; align-items: center; }
-.meta-center { display: flex; align-items: center; }
-.meta-right { display: flex; align-items: center; }
-
-/* Dropdown */
-.timer-select {
-  background: rgba(255,255,255,0.08);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(16px);
+  padding: 0.5rem 1.5rem;
+  border-radius: 30px;
   border: 1px solid var(--border-subtle);
-  color: var(--text-main);
-  padding: 0.4rem 0.6rem;
-  border-radius: 8px;
-  font-size: 0.85rem;
-  font-family: inherit;
-  outline: none;
-  cursor: pointer;
-  transition: border-color 0.2s;
-}
-.timer-select:focus { border-color: var(--primary-light); }
-
-/* Timer */
-.timer-display {
-  font-size: 1.25rem;
-  color: var(--text-muted);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.timer-display.active {
-  color: #a78bfa;
-  transform: scale(1.05);
+  margin: 0.7rem auto;
+  gap: 1.2rem;
+  box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);
 }
 
-/* Compact Stats */
+.meta-divider {
+  width: 1px;
+  height: 18px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
 .compact-stats {
   display: flex;
-  gap: 1.25rem;
-  font-size: 1rem;
+  gap: 1rem;
+  font-size: 0.88rem;
   color: var(--text-muted);
   white-space: nowrap;
   align-items: center;
 }
-.compact-stats span {
+.compact-stats b { color: var(--text-main); font-weight: 600; }
+.compact-stats span { display: flex; align-items: center; gap: 4px; }
+
+.timer-display {
+  font-size: 1.1rem;
+  color: #a78bfa;
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
+  font-weight: 600;
 }
-.compact-stats b { 
-  color: var(--text-main); 
-  font-weight: 700;
-  font-family: inherit;
-}
+.timer-display.active { color: #fff; text-shadow: 0 0 8px rgba(167, 139, 250, 0.5); }
 
-@media (max-width: 480px) {
-  .train-meta-bar {
-    padding: 0.6rem 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.8rem;
-  }
-  .meta-left, .meta-center, .meta-right {
-    flex: none;
-  }
-  .compact-stats { gap: 0.8rem; font-size: 0.8rem; }
+.timer-select-compact {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  padding: 2px 4px;
 }
+.timer-select-compact:hover { color: var(--text-main); }
+.timer-select-compact option { background: #1a1d2e; color: var(--text-main); }
 
 /* ════════════════════════════════════════════════
    COMPETITION PAGE

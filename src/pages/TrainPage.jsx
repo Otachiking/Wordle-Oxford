@@ -61,28 +61,51 @@ function saveWordTick(word, won) {
   localStorage.setItem('trainWordHistory', JSON.stringify(history));
 }
 
+// ── Persistence Logic ────────────────────────────────────────────────────────
+function getInitialState() {
+  try {
+    const saved = localStorage.getItem('trainGameState');
+    if (saved) {
+      const parsed = JSON.parse(saved);
+      if (parsed && parsed.gameStatus === 'playing') return parsed;
+    }
+  } catch (e) {}
+  return null;
+}
+
 export default function TrainPage() {
-  const [selectedLevel, setSelectedLevel] = useState('A1');
-  const [secretEntry, setSecretEntry] = useState(() => pickWord('A1'));
+  const init = React.useMemo(() => getInitialState(), []);
+
+  const [selectedLevel, setSelectedLevel] = useState(init?.selectedLevel || 'A1');
+  const [secretEntry, setSecretEntry] = useState(() => init?.secretEntry || pickWord(init?.selectedLevel || 'A1'));
   const secret = secretEntry.word.toLowerCase();
 
-  const [board, setBoard] = useState(makeEmptyBoard);
-  const [currentRow, setCurrentRow] = useState(0);
-  const [currentCol, setCurrentCol] = useState(0);
-  const [letterStates, setLetterStates] = useState({});
-  const [gameStatus, setGameStatus] = useState('playing');
+  const [board, setBoard] = useState(() => init?.board || makeEmptyBoard());
+  const [currentRow, setCurrentRow] = useState(init?.currentRow || 0);
+  const [currentCol, setCurrentCol] = useState(init?.currentCol || 0);
+  const [letterStates, setLetterStates] = useState(init?.letterStates || {});
+  const [gameStatus, setGameStatus] = useState(init?.gameStatus || 'playing');
 
   const [shake, setShake] = useState(false);
   const [invalidMsg, setInvalidMsg] = useState('');
   const [showModal, setShowModal] = useState(false);
+  const [showHintModal, setShowHintModal] = useState(false);
+  const [hintsRevealed, setHintsRevealed] = useState(init?.hintsRevealed || { level: false, emoji: false, def: false });
 
   // Timer states
   const [timerDuration, setTimerDuration] = useState(() => {
-    return parseInt(localStorage.getItem('trainTimerSetting') || '3');
+    return init?.timerDuration || parseInt(localStorage.getItem('trainTimerSetting') || '3');
   });
-  const [timeLeft, setTimeLeft] = useState(timerDuration * 60);
-  const [timerActive, setTimerActive] = useState(false);
+  const [timeLeft, setTimeLeft] = useState(init?.timeLeft || (timerDuration * 60));
+  const [timerActive, setTimerActive] = useState(init?.timerActive || false);
   const timerRef = useRef(null);
+
+  // Persistence effect
+  useEffect(() => {
+    localStorage.setItem('trainGameState', JSON.stringify({
+      selectedLevel, secretEntry, board, currentRow, currentCol, letterStates, gameStatus, hintsRevealed, timerDuration, timeLeft, timerActive
+    }));
+  }, [selectedLevel, secretEntry, board, currentRow, currentCol, letterStates, gameStatus, hintsRevealed, timerDuration, timeLeft, timerActive]);
 
   const [stats, setStats] = useState(() => {
     try { return JSON.parse(localStorage.getItem('trainStats')) || { played: 0, won: 0, log: [] }; }
@@ -98,6 +121,8 @@ export default function TrainPage() {
     setLetterStates({});
     setGameStatus('playing');
     setShowModal(false);
+    setShowHintModal(false);
+    setHintsRevealed({ level: false, emoji: false, def: false });
     setTimerActive(false);
     setTimeLeft(timerDuration * 60);
   }, [selectedLevel, timerDuration]);
@@ -176,7 +201,7 @@ export default function TrainPage() {
         localStorage.setItem('trainStats', JSON.stringify(ns));
         return ns;
       });
-      setTimeout(() => setShowModal(true), 1800);
+      setTimeout(() => setShowModal(true), 1200);
     } else if (currentRow + 1 >= ROWS) {
       setGameStatus('lost');
       setTimerActive(false);
@@ -186,7 +211,7 @@ export default function TrainPage() {
         localStorage.setItem('trainStats', JSON.stringify(ns));
         return ns;
       });
-      setTimeout(() => setShowModal(true), 1800);
+      setTimeout(() => setShowModal(true), 1200);
     } else {
       setCurrentRow(r => r + 1);
       setCurrentCol(0);
@@ -229,7 +254,37 @@ export default function TrainPage() {
 
   return (
     <div className="wordle-page">
-      {/* Level Selector */}
+      {/* Stats, Timer, Option - Compact 1-Row Bar */}
+      <div className="train-meta-bar">
+        {/* PWR Stats */}
+        <div className="compact-stats">
+          <span title="Played">🎮 <b>P:{stats.played}</b></span>
+          <span title="Won">✅ <b>W:{stats.won}</b></span>
+          <span title="Win Rate">📈 <b>R:{winRate}%</b></span>
+        </div>
+
+        <div className="meta-divider"></div>
+
+        {/* Timer Display */}
+        <div className={`timer-display ${timerActive ? 'active' : ''}`}>
+          ⏱️ <b>{formatTime(timeLeft)}</b>
+        </div>
+
+        <div className="meta-divider"></div>
+
+        {/* Duration Select */}
+        <select 
+          className="timer-select-compact"
+          value={timerDuration}
+          onChange={(e) => handleTimerSettingChange(e.target.value)}
+        >
+          <option value="2">2m</option>
+          <option value="3">3m</option>
+          <option value="5">5m</option>
+        </select>
+      </div>
+
+      {/* Level Selector - Now below Meta Bar */}
       <div className="train-level-bar">
         <span className="train-label">Level:</span>
         {LEVELS.map(lvl => (
@@ -243,37 +298,30 @@ export default function TrainPage() {
         ))}
       </div>
 
-      {/* Timer & Stats Global Bar */}
-      <div className="train-meta-bar">
-        {/* Left: Stats (P W R) */}
-        <div className="meta-left">
-           <div className="compact-stats">
-             <span title="Played">🎮 <b>P: {stats.played}</b></span>
-             <span title="Won">✅ <b>W: {stats.won}</b></span>
-             <span title="Win Rate">📈 <b>R: {winRate}%</b></span>
-           </div>
-        </div>
+      {/* Hint Modal moved to end of return, Hint button moved to below keyboard */}
 
-        {/* Center: Timer Display */}
-        <div className="meta-center">
-            <div className={`timer-display ${timerActive ? 'active' : ''}`}>
-              ⏱️ <b>{formatTime(timeLeft)}</b>
+      {showHintModal && (
+        <div className="modal-overlay" onClick={() => setShowHintModal(false)}>
+          <div className="modal-card hint-card" onClick={e => e.stopPropagation()}>
+            <button className="close-btn" onClick={() => setShowHintModal(false)}>×</button>
+            <div className="hint-header">
+              <h2>Need a Hint? 🧐</h2>
+              <p>Reveal some info about the word:</p>
             </div>
+            <div className="hint-grid">
+              <button className="hint-box" onClick={() => setHintsRevealed(p => ({ ...p, level: true }))}>
+                {hintsRevealed.level ? <span className="hint-revealed level">{secretEntry.level}</span> : 'CEFR Level'}
+              </button>
+              <button className="hint-box" onClick={() => setHintsRevealed(p => ({ ...p, emoji: true }))}>
+                {hintsRevealed.emoji ? <span className="hint-revealed emoji">{secretEntry.emoji || '📘'}</span> : 'Emoji'}
+              </button>
+              <button className="hint-box full" onClick={() => setHintsRevealed(p => ({ ...p, def: true }))}>
+                {hintsRevealed.def ? <span className="hint-revealed def">{secretEntry.definition || 'No definition'}</span> : 'Definition'}
+              </button>
+            </div>
+          </div>
         </div>
-
-        {/* Right: Duration Dropdown */}
-        <div className="meta-right">
-           <select 
-            className="timer-select"
-            value={timerDuration}
-            onChange={(e) => handleTimerSettingChange(e.target.value)}
-           >
-             <option value="2">2m</option>
-             <option value="3">3m</option>
-             <option value="5">5m</option>
-           </select>
-        </div>
-      </div>
+      )}
 
       {invalidMsg && <div className="wordle-toast">{invalidMsg}</div>}
 
@@ -315,6 +363,13 @@ export default function TrainPage() {
             })}
           </div>
         ))}
+      </div>
+
+      {/* Hints Trigger - Now below keyboard */}
+      <div className="hints-container" style={{ marginTop: '1.5rem' }}>
+        <button className="hint-btn trigger" onClick={() => setShowHintModal(true)}>
+          Give me a hint 💡
+        </button>
       </div>
 
       {/* Post-game Modal */}

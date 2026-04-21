@@ -83,8 +83,24 @@ function saveStats(st) {
   localStorage.setItem('compStats', JSON.stringify(st));
 }
 
+// ── Persistence Logic ────────────────────────────────────────────────────────
+function getCompInitialState() {
+  try {
+    const saved = localStorage.getItem('compGameState');
+    if (saved) {
+      const parsed = JSON.parse(saved);
+      if (parsed && parsed.timerStatus === 'running') {
+        // Only restore if it was mid-game
+        return parsed;
+      }
+    }
+  } catch (e) {}
+  return null;
+}
+
 // ── Component ────────────────────────────────────────────────────────────────
 export default function CompetitionPage() {
+  const init = useMemo(() => getCompInitialState(), []);
   const [view, setView] = useState('playing'); // 'playing' | 'stats'
   const [stats, setStats] = useState(loadStats);
 
@@ -92,19 +108,34 @@ export default function CompetitionPage() {
   const dailySetlist = useMemo(() => getDailySetlist(), []);
 
   // Progress in today's set
-  const [repIndex, setRepIndex] = useState(0);       // 0-29
+  const [repIndex, setRepIndex] = useState(() => {
+    const savedIdx = localStorage.getItem('compRepIndex');
+    return savedIdx ? parseInt(savedIdx) : 0;
+  });
+
   const currentRound = Math.floor(repIndex / REPS_PER_ROUND) + 1; // 1-3
   const repInRound = (repIndex % REPS_PER_ROUND) + 1; // 1-10
 
   const secretEntry = dailySetlist[repIndex] || dailySetlist[0];
   const secret = secretEntry.word.toLowerCase();
 
-  const [board, setBoard] = useState(makeEmptyBoard);
-  const [currentRow, setCurrentRow] = useState(0);
-  const [currentCol, setCurrentCol] = useState(0);
-  const [letterStates, setLetterStates] = useState({});
-  const [timerStatus, setTimerStatus] = useState('idle');
-  const [timeMs, setTimeMs] = useState(MAX_TIME_MS);
+  const [board, setBoard] = useState(() => init?.board || makeEmptyBoard());
+  const [currentRow, setCurrentRow] = useState(init?.currentRow || 0);
+  const [currentCol, setCurrentCol] = useState(init?.currentCol || 0);
+  const [letterStates, setLetterStates] = useState(init?.letterStates || {});
+  const [timerStatus, setTimerStatus] = useState(init?.timerStatus || 'idle');
+  const [timeMs, setTimeMs] = useState(init?.timeMs || MAX_TIME_MS);
+
+  // Persistence effects
+  useEffect(() => {
+    localStorage.setItem('compRepIndex', repIndex.toString());
+  }, [repIndex]);
+
+  useEffect(() => {
+    localStorage.setItem('compGameState', JSON.stringify({
+      board, currentRow, currentCol, letterStates, timerStatus, timeMs
+    }));
+  }, [board, currentRow, currentCol, letterStates, timerStatus, timeMs]);
 
   const [shake, setShake] = useState(false);
   const [invalidMsg, setInvalidMsg] = useState('');
@@ -182,7 +213,7 @@ export default function CompetitionPage() {
 
     const isEndOfRound = (repIndex + 1) % REPS_PER_ROUND === 0;
     setRoundDone(isEndOfRound);
-    setTimeout(() => setShowModal(true), 1800);
+    setTimeout(() => setShowModal(true), 1200);
   }, [secretEntry, timeMs, repIndex, currentRound, repInRound]);
 
   const showInvalid = (msg) => {
