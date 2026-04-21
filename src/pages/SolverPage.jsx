@@ -1,5 +1,4 @@
 import React, { useState, useMemo } from 'react';
-import { Link } from 'react-router-dom';
 import fullDict from '../assets/full_dict.json';
 
 const levelColors = {
@@ -8,14 +7,22 @@ const levelColors = {
   'B1': '#ef9700',
   'B2': '#a65f00',
   'C1': '#ce1532',
-  'C2': '#a60046',
   'UNRATED': '#94a3b8'
 };
+
+const levelOrder = { A1: 1, A2: 2, B1: 3, B2: 4, C1: 5, UNRATED: 6 };
 
 export default function SolverPage() {
   const [green, setGreen] = useState(Array(5).fill(''));
   const [yellowRows, setYellowRows] = useState([Array(5).fill('')]);
-  const [grey, setGrey] = useState(Array(10).fill('')); // Start with 2 rows of 5
+  const [grey, setGrey] = useState(Array(10).fill(''));
+  const [sortMode, setSortMode] = useState('alpha'); // 'alpha' | 'level'
+
+  const clearAll = () => {
+    setGreen(Array(5).fill(''));
+    setYellowRows([Array(5).fill('')]);
+    setGrey(Array(10).fill(''));
+  };
 
   const updateGreen = (idx, val) => {
     const nv = [...green];
@@ -26,8 +33,6 @@ export default function SolverPage() {
   const updateYellow = (rowIdx, colIdx, val) => {
     const nv = [...yellowRows];
     nv[rowIdx][colIdx] = val.toUpperCase().slice(0, 1);
-
-    // Add row if current row gets fully filled
     if (nv[rowIdx].some(v => v !== '')) {
       if (nv[nv.length - 1].some(v => v !== '')) {
         nv.push(Array(5).fill(''));
@@ -39,31 +44,25 @@ export default function SolverPage() {
   const updateGrey = (idx, val) => {
     const nv = [...grey];
     nv[idx] = val.toUpperCase().slice(0, 1);
-
-    // Dynamic rows logic
     const lastRowEmpty = nv.slice(-5).every(x => x === '');
     const secondLastRowEmpty = nv.length >= 10 && nv.slice(-10, -5).every(x => x === '');
-
     if (!lastRowEmpty) {
       nv.push(...Array(5).fill(''));
     } else if (secondLastRowEmpty && nv.length > 10) {
-      // Cleanup extra empty rows if possible
       nv.splice(-5);
     }
-
     setGrey(nv);
   };
 
   const filteredWords = useMemo(() => {
-    const pool = fullDict.filter(i => i.nWord === 5);
+    const pool = fullDict.filter(i => i.nWord === 5 && i.level !== 'C2');
     if (!green.some(x => x) && !yellowRows[0].some(x => x) && !grey.some(x => x)) {
-      return pool; // no filter return all
+      return pool;
     }
 
     const requiredCounts = {};
     for (let g of green) if (g) requiredCounts[g] = (requiredCounts[g] || 0) + 1;
 
-    // We roughly track yellow requirements
     const yellowReq = {};
     yellowRows.forEach(r => {
       const rowCounts = {};
@@ -72,31 +71,24 @@ export default function SolverPage() {
         yellowReq[k] = Math.max(yellowReq[k] || 0, rowCounts[k]);
       }
     });
-
     for (const k in yellowReq) {
       requiredCounts[k] = Math.max(requiredCounts[k] || 0, yellowReq[k]);
     }
 
     return pool.filter(item => {
       const w = item.word.toUpperCase();
-
-      // Green
       for (let i = 0; i < 5; i++) {
         if (green[i] && w[i] !== green[i]) return false;
       }
-
-      // Yellow
       for (const yRow of yellowRows) {
         for (let i = 0; i < 5; i++) {
           const y = yRow[i];
           if (y) {
             if (!w.includes(y)) return false;
-            if (w[i] === y) return false; // same pos
+            if (w[i] === y) return false;
           }
         }
       }
-
-      // Grey (with exact count)
       for (const g of grey) {
         if (g) {
           const allowed = requiredCounts[g] || 0;
@@ -104,18 +96,25 @@ export default function SolverPage() {
           if (actual > allowed) return false;
         }
       }
-
       return true;
     });
-
   }, [green, yellowRows, grey]);
+
+  const sortedWords = useMemo(() => {
+    const copy = [...filteredWords];
+    if (sortMode === 'level') {
+      copy.sort((a, b) => (levelOrder[a.level] || 9) - (levelOrder[b.level] || 9) || a.word.localeCompare(b.word));
+    } else {
+      copy.sort((a, b) => a.word.localeCompare(b.word));
+    }
+    return copy;
+  }, [filteredWords, sortMode]);
 
   const handleKeyDown = (e) => {
     if (!e.target.classList.contains('s-input')) return;
     const inputs = Array.from(document.querySelectorAll('.s-input'));
     const idx = inputs.indexOf(e.target);
     if (idx === -1) return;
-
     if (e.key === 'ArrowRight' || e.key === ' ') {
       e.preventDefault();
       if (idx + 1 < inputs.length) inputs[idx + 1].focus();
@@ -142,6 +141,12 @@ export default function SolverPage() {
   return (
     <div className="solver-container" onKeyDown={handleKeyDown}>
       <div className="solver-left">
+
+        {/* Clear All */}
+        <button className="solver-clear-btn" onClick={clearAll}>
+          🗑 Clear All
+        </button>
+
         <div className="solver-group">
           <h3><span className="box-icon green"></span> Green Letters:</h3>
           <div className="solver-input-row">
@@ -184,17 +189,31 @@ export default function SolverPage() {
           <h2>WordleOxford Solver</h2>
           <p>Just type and it'll immediately search it for you</p>
         </div>
+
+        {/* Found count + Sort controls */}
+        <div className="s-results-header">
+          <span className="s-found-count">
+            Found <strong>{filteredWords.length}</strong> {filteredWords.length === 1 ? 'word' : 'words'}
+          </span>
+          <div className="s-sort-btns">
+            <span style={{ opacity: 0.7, fontSize: '0.8rem' }}>Sort:</span>
+            <button
+              className={`s-sort-btn${sortMode === 'alpha' ? ' active' : ''}`}
+              onClick={() => setSortMode('alpha')}
+            >A–Z</button>
+            <button
+              className={`s-sort-btn${sortMode === 'level' ? ' active' : ''}`}
+              onClick={() => setSortMode('level')}
+            >Level</button>
+          </div>
+        </div>
+
         <div className="s-results-container">
-          {filteredWords.slice(0, 50).map(w => (
+          {sortedWords.map(w => (
             <div key={w.id} className="s-result-item" style={{ borderLeftColor: levelColors[w.level] || '#94a3b8' }}>
               {w.word.toUpperCase()}
             </div>
           ))}
-          {filteredWords.length > 50 && (
-            <div className="s-more">
-              and {filteredWords.length - 50} more... <Link to="/dictionary">Check Dictionary 📖</Link>
-            </div>
-          )}
           {filteredWords.length === 0 && <div className="s-more">No words match...</div>}
         </div>
       </div>

@@ -2,7 +2,16 @@ import React, { useState, useMemo } from 'react';
 import { Search } from 'lucide-react';
 import dictData from '../assets/full_dict.json';
 
-// --- Helper: get divider key based on sortBy ---
+// ── Word Tick: read from trainWordHistory (only Train & Daily track ticks) ──
+function loadWordTicks() {
+  try {
+    const s = localStorage.getItem('trainWordHistory');
+    if (s) return JSON.parse(s);
+  } catch (e) {}
+  return {};
+}
+
+// ── Helper: divider key ────────────────────────────────────────────────────
 function getDividerKey(item, sortBy) {
   switch (sortBy) {
     case 'a-z':
@@ -19,11 +28,11 @@ function getDividerKey(item, sortBy) {
   }
 }
 
-// Level color map
+// Level color map — C2 removed
 const levelColors = {
   A1: '#4ade80', A2: '#86efac',
   B1: '#facc15', B2: '#fbbf24',
-  C1: '#f87171', C2: '#ef4444',
+  C1: '#f87171',
   UNRATED: '#94a3b8',
 };
 
@@ -34,8 +43,10 @@ const DictionaryPage = () => {
   const [sortBy, setSortBy] = useState('a-z');
   const [colCount, setColCount] = useState(2);
 
+  const wordTicks = useMemo(() => loadWordTicks(), []);
+
   const processedData = useMemo(() => {
-    let result = dictData;
+    let result = dictData.filter(item => item.level !== 'C2'); // Remove C2
     if (searchTerm) {
       result = result.filter(item =>
         item.word.toLowerCase().includes(searchTerm.toLowerCase())
@@ -79,7 +90,6 @@ const DictionaryPage = () => {
     return groups;
   }, [processedData, sortBy]);
 
-  // Split sections into 3 balanced columns
   const wordCount = processedData.length;
   const colSize = Math.ceil(wordCount / colCount);
 
@@ -102,12 +112,20 @@ const DictionaryPage = () => {
     return cols;
   }, [sections, colSize, colCount]);
 
+  // Tick indicator colors
+  const getTickColor = (word) => {
+    const tick = wordTicks[word.toLowerCase()];
+    if (tick === 'correct') return '#22c55e'; // green
+    if (tick === 'wrong') return '#ef4444';   // red
+    return '#4a5068';                          // grey = unplayed
+  };
+
   return (
     <div className="app-container">
       <header className="app-header">
-        <h1 className="title-glow">Oxford Learner’s Dictionary</h1>
+        <h1 className="title-glow">Oxford Learner's Dictionary</h1>
         <p className="dict-subtitle">
-          Showing {processedData.length.toLocaleString()} out of 4,654 words &nbsp;|&nbsp; Common Wordlist A1-C1
+          Showing {processedData.length.toLocaleString()} words &nbsp;|&nbsp; Common Wordlist A1–C1
         </p>
       </header>
 
@@ -130,14 +148,14 @@ const DictionaryPage = () => {
 
         <select className="dropdown-select" value={filterLevel} onChange={e => setFilterLevel(e.target.value)}>
           <option value="ALL">All Levels</option>
-          {['A1', 'A2', 'B1', 'B2', 'C1', 'C2'].map(l => <option key={l} value={l}>{l}</option>)}
+          {['A1', 'A2', 'B1', 'B2', 'C1'].map(l => <option key={l} value={l}>{l}</option>)}
         </select>
 
         <select className="dropdown-select" value={sortBy} onChange={e => setSortBy(e.target.value)}>
           <option value="a-z">A → Z</option>
           <option value="z-a">Z → A</option>
-          <option value="level-asc">A1 → C2</option>
-          <option value="level-desc">C2 → A1</option>
+          <option value="level-asc">A1 → C1</option>
+          <option value="level-desc">C1 → A1</option>
           <option value="length-asc">Shortest</option>
           <option value="length-desc">Longest</option>
         </select>
@@ -159,6 +177,14 @@ const DictionaryPage = () => {
                 </div>
               ) : (
                 <div key={row.item.id} className="word-row">
+                  {/* Word Tick Indicator */}
+                  <span
+                    className="word-tick"
+                    style={{ color: getTickColor(row.item.word) }}
+                    title={wordTicks[row.item.word.toLowerCase()] === 'correct' ? 'Played & Correct' : wordTicks[row.item.word.toLowerCase()] === 'wrong' ? 'Played & Wrong' : 'Not played yet'}
+                  >
+                    •
+                  </span>
                   <span className="word-row-word">{row.item.word}</span>
                   <span className="word-row-emoji">{row.item.emoji || '📘'}</span>
                   <span className="word-row-definition">{row.item.definition || 'No definition yet...'}</span>

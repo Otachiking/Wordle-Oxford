@@ -1,7 +1,15 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import fullDictData from '../assets/full_dict.json';
 
-const wordsData = fullDictData.filter(w => w.word.length === 5);
+const wordsData = fullDictData.filter(w => w.word.length === 5 && w.level !== 'C2');
+
+function saveWordTick(word, won) {
+  try {
+    const existing = JSON.parse(localStorage.getItem('trainWordHistory') || '{}');
+    existing[word.toLowerCase()] = won ? 'correct' : 'wrong';
+    localStorage.setItem('trainWordHistory', JSON.stringify(existing));
+  } catch (e) {}
+}
 
 // ── Constants ──────────────────────────────────────────────────────────────
 const ROWS = 6;
@@ -10,7 +18,7 @@ const COLS = 5;
 const KEYBOARD_ROWS = [
   ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'],
   ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L'],
-  ['ENTER', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', '⌫'],
+  ['⌫', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', 'ENTER'],
 ];
 
 // Build word set for valid-guess validation (all words lowercase)
@@ -159,9 +167,11 @@ export default function WordlePage() {
     const won = evaluation.every(s => s === 'correct');
     if (won) {
       setGameStatus('won');
+      saveWordTick(secret, true);
       setTimeout(() => { setShowModal(true); }, 1800);
     } else if (currentRow + 1 >= ROWS) {
       setGameStatus('lost');
+      saveWordTick(secret, false);
       setTimeout(() => { setShowModal(true); }, 1800);
     } else {
       setCurrentRow(r => r + 1);
@@ -174,6 +184,9 @@ export default function WordlePage() {
     if (showModal) {
       if (k === 'ENTER' || key === ' ') {
         handleNewGame();
+      }
+      if (k === 'ESCAPE') {
+        setShowModal(false);
       }
       return;
     }
@@ -276,13 +289,14 @@ export default function WordlePage() {
       {showModal && (
         <div className="modal-overlay" onClick={() => setShowModal(false)}>
           <div className="modal-card" onClick={e => e.stopPropagation()}>
+            <button className="close-btn modal-close-x" onClick={() => setShowModal(false)} aria-label="Close">×</button>
             <div className="modal-status">
               {gameStatus === 'won' ? 'You Won! 🎉' : 'Game Over 😔'}
             </div>
             <div className="modal-row-count">
               {gameStatus === 'won'
                 ? `Solved in ${currentRow} ${currentRow === 1 ? 'guess' : 'guesses'}!`
-                : 'Better luck next time!'}
+                : `The answer was: ${secretEntry.word.toUpperCase()}`}
             </div>
             <div className="modal-word-card">
               <div className="modal-emoji">{secretEntry.emoji || '📘'}</div>
@@ -297,12 +311,10 @@ export default function WordlePage() {
                 </div>
               </div>
             </div>
+            <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Press Space or Enter for new game</p>
             <div className="modal-actions">
               <button className="modal-btn primary" onClick={handleNewGame}>
                 🔄 New Game
-              </button>
-              <button className="modal-btn secondary" onClick={() => setShowModal(false)}>
-                Close
               </button>
             </div>
           </div>
