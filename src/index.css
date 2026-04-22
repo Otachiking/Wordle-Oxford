@@ -972,11 +972,11 @@ body {
   color: #a78bfa;
 }
 .comp-progress-pills {
-  display: flex;
-  gap: 3px;
-  flex-wrap: wrap;
-  flex: 1;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 4px;
+  width: fit-content;
+  margin: 0 auto;
 }
 .comp-pill {
   width: 12px;
@@ -985,6 +985,7 @@ body {
   transition: background 0.3s;
 }
 .comp-pill-done { background: #538d4e; }
+.comp-pill-fail { background: #ef4444; }
 .comp-pill-current { background: #a78bfa; }
 .comp-pill-upcoming { background: rgba(255,255,255,0.12); }
 

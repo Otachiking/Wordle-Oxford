@@ -1,15 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { Search } from 'lucide-react';
 import dictData from '../DICTIONARY_nWord_5.json';
-
-// ── Word Tick: read from trainWordHistory (only Train & Daily track ticks) ──
-function loadWordTicks() {
-  try {
-    const s = localStorage.getItem('trainWordHistory');
-    if (s) return JSON.parse(s);
-  } catch (e) {}
-  return {};
-}
+import { loadWordTicks } from '../utils/historyManager';
 
 // ── Helper: divider key ────────────────────────────────────────────────────
 function getDividerKey(item, sortBy) {
@@ -42,6 +34,16 @@ const DictionaryPage = () => {
   const [filterLength, setFilterLength] = useState(() => localStorage.getItem('dictLength') || '5');
   const [sortBy, setSortBy] = useState(() => localStorage.getItem('dictSort') || 'a-z');
   const [colCount, setColCount] = useState(() => parseInt(localStorage.getItem('dictCol')) || 2);
+  const [isPhoneViewport, setIsPhoneViewport] = useState(() => {
+    if (typeof window === 'undefined') return false;
+    return window.innerWidth <= 900;
+  });
+
+  React.useEffect(() => {
+    const onResize = () => setIsPhoneViewport(window.innerWidth <= 900);
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, []);
 
   React.useEffect(() => {
     localStorage.setItem('dictSearch', searchTerm);
@@ -52,6 +54,7 @@ const DictionaryPage = () => {
   }, [searchTerm, filterLevel, filterLength, sortBy, colCount]);
 
   const wordTicks = useMemo(() => loadWordTicks(), []);
+  const displayColCount = isPhoneViewport ? 1 : colCount;
 
   const processedData = useMemo(() => {
     let result = dictData.filter(item => item.level !== 'C2'); // Remove C2
@@ -99,26 +102,26 @@ const DictionaryPage = () => {
   }, [processedData, sortBy]);
 
   const wordCount = processedData.length;
-  const colSize = Math.ceil(wordCount / colCount);
+  const colSize = Math.ceil(wordCount / displayColCount);
 
   const columns = useMemo(() => {
-    const cols = Array.from({ length: colCount }, () => []);
+    const cols = Array.from({ length: displayColCount }, () => []);
     let colIdx = 0;
     let wordInColCount = 0;
 
     for (const row of sections) {
-      if (colIdx >= colCount) break;
+      if (colIdx >= displayColCount) break;
       cols[colIdx].push(row);
       if (row.type === 'word') {
         wordInColCount++;
-        if (wordInColCount >= colSize && colIdx < (colCount - 1)) {
+        if (wordInColCount >= colSize && colIdx < (displayColCount - 1)) {
           colIdx++;
           wordInColCount = 0;
         }
       }
     }
     return cols;
-  }, [sections, colSize, colCount]);
+  }, [sections, colSize, displayColCount]);
 
   // Tick indicator colors
   const getTickColor = (word) => {
@@ -179,7 +182,7 @@ const DictionaryPage = () => {
         </select>
       </section>
 
-      <div className="dict-grid" style={{ gridTemplateColumns: `repeat(${colCount}, 1fr)` }}>
+      <div className="dict-grid" style={{ gridTemplateColumns: `repeat(${displayColCount}, 1fr)` }}>
         {columns.map((col, ci) => (
           <div key={ci} className="dict-col">
             {col.map((row, ri) =>
@@ -201,7 +204,7 @@ const DictionaryPage = () => {
                   <span className="word-row-emoji">{row.item.emoji || '📘'}</span>
                   <span className="word-row-definition">{row.item.definition || 'No definition yet...'}</span>
                   <span className="word-row-meta">
-                    {row.item.partOfSpeech} &bull; {(row.item.nWord || 5)}L
+                    {(row.item.part || row.item.partOfSpeech || '-')} &bull; {(row.item.nWord || 5)}L
                   </span>
                   <span className="word-row-level" style={{ color: levelColors[row.item.level] || '#94a3b8' }}>
                     {row.item.level}

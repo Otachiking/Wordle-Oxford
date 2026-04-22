@@ -26,6 +26,7 @@ export default function SolverPage() {
     catch(e) { return Array(10).fill(''); }
   });
   const [sortMode, setSortMode] = useState('alpha');
+  const [selectedWord, setSelectedWord] = useState(null);
 
   React.useEffect(() => {
     localStorage.setItem('solverGreen', JSON.stringify(green));
@@ -146,6 +147,14 @@ export default function SolverPage() {
     }
   };
 
+  React.useEffect(() => {
+    const onKeyDown = (e) => {
+      if (e.key === 'Escape') closeWordMeta();
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, []);
+
   const wrapChange = (fn) => (e) => {
     fn(e);
     if (e.target.value) {
@@ -157,13 +166,16 @@ export default function SolverPage() {
     }
   };
 
+  const openWordMeta = (entry) => setSelectedWord(entry);
+  const closeWordMeta = () => setSelectedWord(null);
+
   return (
     <div className="solver-container" onKeyDown={handleKeyDown}>
       <div className="solver-left">
 
         {/* Clear All */}
         <button className="solver-clear-btn" onClick={clearAll}>
-          🗑 Clear All
+          Clear All 🗑
         </button>
 
         <div className="solver-group">
@@ -229,13 +241,47 @@ export default function SolverPage() {
 
         <div className="s-results-container">
           {sortedWords.map(w => (
-            <div key={w.id} className="s-result-item" style={{ borderLeftColor: levelColors[w.level] || '#94a3b8' }}>
+            <div
+              key={w.id}
+              className="s-result-item"
+              style={{ borderLeftColor: levelColors[w.level] || '#94a3b8', cursor: 'pointer' }}
+              role="button"
+              tabIndex={0}
+              onClick={() => openWordMeta(w)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  openWordMeta(w);
+                }
+              }}
+              title="Click to see metadata"
+            >
               {w.word.toUpperCase()}
             </div>
           ))}
           {filteredWords.length === 0 && <div className="s-more">No words match...</div>}
         </div>
       </div>
+
+      {selectedWord && (
+        <div className="modal-overlay" onClick={closeWordMeta}>
+          <div className="modal-card" onClick={(e) => e.stopPropagation()}>
+            <button className="close-btn" onClick={closeWordMeta} aria-label="Close metadata">×</button>
+            
+            <div className="modal-word-card">
+              <div className="modal-emoji">{selectedWord.emoji || '📘'}</div>
+              <div className="modal-word-info">
+                <div className="modal-word">{selectedWord.word.toUpperCase()}</div>
+                <div className="modal-pos-level">
+                  <span className="modal-level">{selectedWord.level || 'UNRATED'}</span>
+                  <span className="modal-pos">{selectedWord.part || selectedWord.partOfSpeech || '-'}</span>
+                </div>
+                <div className="modal-definition">{selectedWord.definition || 'No definition yet.'}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

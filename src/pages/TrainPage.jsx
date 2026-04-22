@@ -1,11 +1,15 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import dictionaryData from '../DICTIONARY_nWord_5.json';
+import { pickPrioritizedWord } from '../utils/wordSelection';
+import { saveWordAttempt } from '../utils/historyManager';
+import HistoryModal from '../components/HistoryModal';
 
 const ALL_WORDS_5 = dictionaryData.filter(w => w.level !== 'C2');
 const VALID_WORDS = new Set(dictionaryData.map(w => w.word.toLowerCase()));
 
 const ROWS = 6;
 const COLS = 5;
+const COMP_SCORE_MAX_TIME_MS = 180000;
 
 const LEVELS = ['A1', 'A2', 'B1', 'B2', 'C1', 'R'];
 
@@ -44,22 +48,16 @@ function evaluateGuess(guess, secret) {
 function pickWord(level) {
   const pool = (level === 'ALL' || level === 'R') ? ALL_WORDS_5 : ALL_WORDS_5.filter(w => w.level === level);
   const finalPool = pool.length > 0 ? pool : ALL_WORDS_5;
-  return finalPool[Math.floor(Math.random() * finalPool.length)];
+  return pickPrioritizedWord(finalPool) || finalPool[0];
 }
 
-function loadTrainHistory() {
-  try {
-    const s = localStorage.getItem('trainWordHistory');
-    if (s) return JSON.parse(s);
-  } catch (e) {}
-  return {};
-}
-
-function saveWordTick(word, won) {
-  const history = loadTrainHistory();
-  history[word.toLowerCase()] = won ? 'correct' : 'wrong';
-  localStorage.setItem('trainWordHistory', JSON.stringify(history));
-}
+const calculateScore = (guessesUsed, timeRemainingMs) => {
+  const safeTime = Math.max(0, Math.min(timeRemainingMs, COMP_SCORE_MAX_TIME_MS));
+  const timeScore = Math.floor((safeTime / COMP_SCORE_MAX_TIME_MS) * 500);
+  const guessScoreArr = [0, 500, 400, 300, 200, 100, 50];
+  const guessScore = guessScoreArr[guessesUsed] || 0;
+  return 1000 + timeScore + guessScore;
+};
 
 // ── Persistence Logic ────────────────────────────────────────────────────────
 function getInitialState() {
@@ -69,15 +67,15 @@ function getInitialState() {
       const parsed = JSON.parse(saved);
       if (parsed && parsed.gameStatus === 'playing') return parsed;
     }
-  } catch (e) {}
+  } catch (e) { }
   return null;
 }
 
 export default function TrainPage() {
   const init = React.useMemo(() => getInitialState(), []);
 
-  const [selectedLevel, setSelectedLevel] = useState(init?.selectedLevel || 'A1');
-  const [secretEntry, setSecretEntry] = useState(() => init?.secretEntry || pickWord(init?.selectedLevel || 'A1'));
+  const [selectedLevel, setSelectedLevel] = useState(init?.selectedLevel || 'R');
+  const [secretEntry, setSecretEntry] = useState(() => init?.secretEntry || pickWord(init?.selectedLevel || 'R'));
   const secret = secretEntry.word.toLowerCase();
 
   const [board, setBoard] = useState(() => init?.board || makeEmptyBoard());
@@ -89,12 +87,15 @@ export default function TrainPage() {
   const [shake, setShake] = useState(false);
   const [invalidMsg, setInvalidMsg] = useState('');
   const [showModal, setShowModal] = useState(false);
+  const [showTimerModal, setShowTimerModal] = useState(false);
+  const [finalScore, setFinalScore] = useState(0);
   const [showHintModal, setShowHintModal] = useState(false);
+  const [showHistoryModal, setShowHistoryModal] = useState(false);
   const [hintsRevealed, setHintsRevealed] = useState(init?.hintsRevealed || { level: false, emoji: false, def: false });
 
   // Timer states
   const [timerDuration, setTimerDuration] = useState(() => {
-    return init?.timerDuration || parseInt(localStorage.getItem('trainTimerSetting') || '3');
+    return init?.timerDuration || parseFloat(localStorage.getItem('trainTimerSetting') || '3');
   });
   const [timeLeft, setTimeLeft] = useState(init?.timeLeft || (timerDuration * 60));
   const [timerActive, setTimerActive] = useState(init?.timerActive || false);
@@ -124,7 +125,8 @@ export default function TrainPage() {
     setShowHintModal(false);
     setHintsRevealed({ level: false, emoji: false, def: false });
     setTimerActive(false);
-    setTimeLeft(timerDuration * 60);
+    setTimeLeft(Math.floor(timerDuration * 60));
+    setFinalScore(0);
   }, [selectedLevel, timerDuration]);
 
   // Handle timer
@@ -135,6 +137,14 @@ export default function TrainPage() {
           if (t <= 1) {
             clearInterval(timerRef.current);
             setGameStatus('lost');
+            setTimerActive(false);
+            setFinalScore(0);
+            const attempt = saveWordAttempt({ word: secret, level: secretEntry.level, won: false, guesses: ROWS, timeMs: 0, score: 0, game: 'Train' });
+            setStats(prev => {
+              const ns = { ...prev, played: prev.played + 1, log: [...prev.log, attempt] };
+              localStorage.setItem('trainStats', JSON.stringify(ns));
+              return ns;
+            });
             setShowModal(true);
             return 0;
           }
@@ -145,7 +155,7 @@ export default function TrainPage() {
       clearInterval(timerRef.current);
     }
     return () => clearInterval(timerRef.current);
-  }, [gameStatus, timerActive, showModal]);
+  }, [gameStatus, timerActive, showModal, secret, secretEntry]);
 
   const handleLevelChange = (lvl) => {
     setSelectedLevel(lvl);
@@ -153,10 +163,11 @@ export default function TrainPage() {
   };
 
   const handleTimerSettingChange = (mins) => {
-    const m = parseInt(mins);
+    const m = parseFloat(mins);
     setTimerDuration(m);
     localStorage.setItem('trainTimerSetting', m.toString());
-    setTimeLeft(m * 60);
+    setTimeLeft(Math.floor(m * 60));
+    setShowTimerModal(false);
     startNew(selectedLevel);
   };
 
@@ -195,9 +206,12 @@ export default function TrainPage() {
     if (won) {
       setGameStatus('won');
       setTimerActive(false);
-      saveWordTick(secret, true);
+      const guessesUsed = currentRow + 1;
+      const score = calculateScore(guessesUsed, timeLeft * 1000);
+      setFinalScore(score);
+      const attempt = saveWordAttempt({ word: secret, level: secretEntry.level, won: true, guesses: guessesUsed, timeMs: timeLeft * 1000, score, game: 'Train' });
       setStats(prev => {
-        const ns = { ...prev, played: prev.played + 1, won: prev.won + 1, log: [...prev.log, { word: secretEntry.word, level: secretEntry.level, won: true, date: new Date().toISOString() }] };
+        const ns = { ...prev, played: prev.played + 1, won: prev.won + 1, log: [...prev.log, attempt] };
         localStorage.setItem('trainStats', JSON.stringify(ns));
         return ns;
       });
@@ -205,9 +219,9 @@ export default function TrainPage() {
     } else if (currentRow + 1 >= ROWS) {
       setGameStatus('lost');
       setTimerActive(false);
-      saveWordTick(secret, false);
+      const attempt = saveWordAttempt({ word: secret, level: secretEntry.level, won: false, guesses: ROWS, timeMs: timeLeft * 1000, score: 0, game: 'Train' });
       setStats(prev => {
-        const ns = { ...prev, played: prev.played + 1, log: [...prev.log, { word: secretEntry.word, level: secretEntry.level, won: false, date: new Date().toISOString() }] };
+        const ns = { ...prev, played: prev.played + 1, log: [...prev.log, attempt] };
         localStorage.setItem('trainStats', JSON.stringify(ns));
         return ns;
       });
@@ -239,7 +253,15 @@ export default function TrainPage() {
   }, [gameStatus, currentRow, currentCol, submitGuess, showModal, startNew, timerActive]);
 
   useEffect(() => {
-    const handler = (e) => handleKey(e.key);
+    const handler = (e) => {
+      if (e.key === 'Escape') {
+        setShowModal(false);
+        setShowTimerModal(false);
+        setShowHintModal(false);
+        setShowHistoryModal(false);
+      }
+      handleKey(e.key);
+    };
     window.addEventListener('keydown', handler);
     return () => window.removeEventListener('keydown', handler);
   }, [handleKey]);
@@ -266,22 +288,14 @@ export default function TrainPage() {
         <div className="meta-divider"></div>
 
         {/* Timer Display */}
-        <div className={`timer-display ${timerActive ? 'active' : ''}`}>
-          ⏱️ <b>{formatTime(timeLeft)}</b>
-        </div>
-
-        <div className="meta-divider"></div>
-
-        {/* Duration Select */}
-        <select 
-          className="timer-select-compact"
-          value={timerDuration}
-          onChange={(e) => handleTimerSettingChange(e.target.value)}
+        <div
+          className={`timer-display ${timerActive ? 'active' : ''}`}
+          onClick={() => setShowTimerModal(true)}
+          style={{ cursor: 'pointer', userSelect: 'none' }}
+          title="Click to change timer"
         >
-          <option value="2">2m</option>
-          <option value="3">3m</option>
-          <option value="5">5m</option>
-        </select>
+          <b>{formatTime(timeLeft)}</b> ⏱️
+        </div>
       </div>
 
       {/* Level Selector - Now below Meta Bar */}
@@ -292,11 +306,30 @@ export default function TrainPage() {
             key={lvl}
             className={`train-level-btn${selectedLevel === lvl ? ' active' : ''}`}
             onClick={() => handleLevelChange(lvl)}
+            aria-label={lvl === 'R' ? 'Random' : `Level ${lvl}`}
           >
             {lvl === 'R' ? '🎲' : lvl}
           </button>
         ))}
       </div>
+
+      {/* Timer Modal */}
+      {showTimerModal && (
+        <div className="modal-overlay" onClick={() => setShowTimerModal(false)} style={{ zIndex: 1000 }}>
+          <div className="modal-card" onClick={e => e.stopPropagation()}>
+            <button className="close-btn" onClick={() => setShowTimerModal(false)}>×</button>
+            <div className="hint-header">
+              <h2>Set Timer ⏱️</h2>
+              <p>Choose duration for Train mode:</p>
+            </div>
+            <div className="hint-grid" style={{ gridTemplateColumns: 'repeat(3, 1fr)', gap: '0.5rem' }}>
+              <button className={`hint-box ${timerDuration === 1.5 ? 'active' : ''}`} onClick={() => handleTimerSettingChange('1.5')}>1:30</button>
+              <button className={`hint-box ${timerDuration === 2 ? 'active' : ''}`} onClick={() => handleTimerSettingChange('2')}>2:00</button>
+              <button className={`hint-box ${timerDuration === 3 ? 'active' : ''}`} onClick={() => handleTimerSettingChange('3')}>3:00</button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Hint Modal moved to end of return, Hint button moved to below keyboard */}
 
@@ -365,10 +398,13 @@ export default function TrainPage() {
         ))}
       </div>
 
-      {/* Hints Trigger - Now below keyboard */}
-      <div className="hints-container" style={{ marginTop: '1.5rem' }}>
+      {/* Hints & History Trigger - Now below keyboard */}
+      <div className="hints-container" style={{ marginTop: '1.5rem', gap: '0.8rem' }}>
         <button className="hint-btn trigger" onClick={() => setShowHintModal(true)}>
           Give me a hint 💡
+        </button>
+        <button className="hint-btn trigger history-trigger" onClick={() => setShowHistoryModal(true)}>
+          History 📚
         </button>
       </div>
 
@@ -380,6 +416,11 @@ export default function TrainPage() {
             <div className="modal-status">
               {gameStatus === 'won' ? 'You Got It! 🎉' : 'Keep Training! 💪🏻'}
             </div>
+
+            <div style={{ margin: '0.5rem 0', background: 'rgba(0,0,0,0.2)', padding: '0.8rem 1.2rem', borderRadius: '12px', textAlign: 'center' }}>
+              <h3 style={{ margin: 0, color: '#a8e6cf' }}>+{finalScore} pts</h3>
+            </div>
+
             <div className="modal-row-count">
               {gameStatus === 'won'
                 ? `Solved in ${currentRow + 1} ${currentRow + 1 === 1 ? 'guess' : 'guesses'}!`
@@ -399,12 +440,13 @@ export default function TrainPage() {
             <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Press Space or Enter for next word</p>
             <div className="modal-actions">
               <button className="modal-btn primary" onClick={() => startNew()}>
-                💪🏻 Next Word
+                Next Word 💪🏻
               </button>
             </div>
           </div>
         </div>
       )}
+      <HistoryModal open={showHistoryModal} onClose={() => setShowHistoryModal(false)} title="Train History" />
     </div>
   );
 }

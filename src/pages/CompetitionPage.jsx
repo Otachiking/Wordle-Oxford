@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import dictionaryData from '../DICTIONARY_nWord_5.json';
-
+import { saveWordAttempt, loadHistoryLog } from '../utils/historyManager';
 const WORDS_5 = dictionaryData.filter(w => w.level !== 'C2');
 const VALID_WORDS = new Set(dictionaryData.map(w => w.word.toLowerCase()));
 
@@ -188,7 +188,18 @@ export default function CompetitionPage() {
     setGameResult(won ? 'won' : 'lost');
     setFinalScore(sc);
 
-    // Record stats (no word tick indicator for Comp)
+    // Record to global history
+    saveWordAttempt({
+      word: secretEntry.word,
+      level: secretEntry.level,
+      won,
+      guesses: guessCount || ROWS,
+      timeMs: timeMs,
+      score: sc,
+      game: 'Comp'
+    });
+
+    // Record stats
     setStats(prev => {
       const ns = {
         ...prev,
@@ -281,10 +292,16 @@ export default function CompetitionPage() {
   }, [showModal, currentRow, currentCol, submitGuess, timerStatus]);
 
   useEffect(() => {
-    const handler = (e) => handleKey(e.key);
+    const handler = (e) => {
+      if (e.key === 'Escape') {
+        setShowModal(false);
+        if (view === 'stats') setView('playing');
+      }
+      handleKey(e.key);
+    };
     window.addEventListener('keydown', handler);
     return () => window.removeEventListener('keydown', handler);
-  }, [handleKey]);
+  }, [handleKey, view]);
 
   const goNext = () => {
     if (repIndex + 1 >= TOTAL_DAILY) return; // all done
@@ -301,40 +318,48 @@ export default function CompetitionPage() {
     setRoundDone(false);
   };
 
-  // ── Stats View ────────────────────────────────────────────────────────────
+  // ── History View ────────────────────────────────────────────────────────────
   const [sortField, setSortField] = useState('date'); // date | score | level
-  const winRate = stats.played === 0 ? 0 : Math.round((stats.won / stats.played) * 100);
+  const [filterGame, setFilterGame] = useState('All'); // All | Daily | Train | Comp
 
-  const sortedLog = useMemo(() => {
-    const log = [...(stats.matchLog || [])];
-    switch (sortField) {
-      case 'score': return log.sort((a, b) => b.score - a.score);
-      case 'level': return log.sort((a, b) => a.level.localeCompare(b.level));
-      default: return log.reverse(); // newest first
+  const fullHistoryLog = useMemo(() => loadHistoryLog(), [view]);
+
+  const displayLog = useMemo(() => {
+    let log = [...fullHistoryLog];
+    if (filterGame !== 'All') {
+      log = log.filter(item => item.game === filterGame);
     }
-  }, [stats.matchLog, sortField]);
+    switch (sortField) {
+      case 'score': return log.sort((a, b) => (b.score || 0) - (a.score || 0));
+      case 'level': return log.sort((a, b) => (a.level || '').localeCompare(b.level || ''));
+      default: return log.sort((a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf()); // newest first
+    }
+  }, [fullHistoryLog, sortField, filterGame]);
+
+  const winRateHistory = fullHistoryLog.length === 0 ? 0 : Math.round((fullHistoryLog.filter(m => m.won).length / fullHistoryLog.length) * 100);
+  const highestScoreHistory = fullHistoryLog.reduce((max, m) => Math.max(max, m.score || 0), 0);
 
   if (view === 'stats') {
     return (
       <div className="wordle-page page-transition">
         <div className="glass-panel" style={{ padding: '2rem', width: '90%', maxWidth: '640px', margin: 'auto' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
-            <h2>📊 Record Stats</h2>
-            <button className="modal-btn secondary" style={{ margin: 0, padding: '0.4rem 1rem', flex: 'none' }} onClick={() => setView('playing')}>✕ Close</button>
+            <h2>📚 Game History</h2>
+            <button className="modal-btn secondary" style={{ margin: 0, padding: '0.4rem 1rem', flex: 'none' }} onClick={() => setView('playing')}>Close ✖️</button>
           </div>
 
           {/* Summary */}
           <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1.5rem', padding: '1rem', background: 'rgba(255,255,255,0.05)', borderRadius: '12px', gap: '0.5rem' }}>
-            <div style={{ textAlign: 'center' }}><h3>{stats.played}</h3><span style={{ opacity: 0.7, fontSize: '0.8rem' }}>Played</span></div>
-            <div style={{ textAlign: 'center' }}><h3>{stats.won}</h3><span style={{ opacity: 0.7, fontSize: '0.8rem' }}>Won</span></div>
-            <div style={{ textAlign: 'center' }}><h3>{winRate}%</h3><span style={{ opacity: 0.7, fontSize: '0.8rem' }}>Win Rate</span></div>
-            <div style={{ textAlign: 'center', color: '#ffeb3b' }}><h3>{stats.highestScore || 0}</h3><span style={{ opacity: 0.7, fontSize: '0.8rem' }}>Best Score</span></div>
+            <div style={{ textAlign: 'center' }}><h3>{fullHistoryLog.length}</h3><span style={{ opacity: 0.7, fontSize: '0.8rem' }}>Played</span></div>
+            <div style={{ textAlign: 'center' }}><h3>{fullHistoryLog.filter(m => m.won).length}</h3><span style={{ opacity: 0.7, fontSize: '0.8rem' }}>Won</span></div>
+            <div style={{ textAlign: 'center' }}><h3>{winRateHistory}%</h3><span style={{ opacity: 0.7, fontSize: '0.8rem' }}>Win Rate</span></div>
+            <div style={{ textAlign: 'center', color: '#ffeb3b' }}><h3>{highestScoreHistory}</h3><span style={{ opacity: 0.7, fontSize: '0.8rem' }}>Best Score</span></div>
           </div>
 
           {/* Sort controls */}
-          <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '1rem' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1rem', alignItems: 'center' }}>
             <span style={{ opacity: 0.7, fontSize: '0.85rem', marginRight: '0.3rem', alignSelf: 'center' }}>Sort:</span>
-            {[['date', '🕐 Time'], ['score', '⭐ Score'], ['level', '📚 Level']].map(([v, label]) => (
+            {[['date', 'Time 🕐'], ['score', 'Score ⭐'], ['level', 'Level 📚']].map(([v, label]) => (
               <button
                 key={v}
                 onClick={() => setSortField(v)}
@@ -347,10 +372,28 @@ export default function CompetitionPage() {
                 {label}
               </button>
             ))}
+            <div style={{ margin: '0 0.5rem', opacity: 0.5 }}>|</div>
+            <select
+                value={filterGame} 
+                onChange={(e) => setFilterGame(e.target.value)}
+                style={{
+                  background: 'rgba(255,255,255,0.1)',
+                  color: 'white',
+                  border: 'none',
+                  borderRadius: '6px',
+                  padding: '0.3rem 0.5rem',
+                  fontSize: '0.8rem'
+                }}
+              >
+                <option style={{color: '#000'}} value="All">All Games</option>
+                <option style={{color: '#000'}} value="Daily">Daily</option>
+                <option style={{color: '#000'}} value="Train">Train</option>
+                <option style={{color: '#000'}} value="Comp">Comp</option>
+              </select>
           </div>
 
           <div style={{ maxHeight: '380px', overflowY: 'auto' }}>
-            {sortedLog.map((m, i) => {
+            {displayLog.map((m, i) => {
               const d = new Date(m.date);
               return (
                 <div key={i} style={{
@@ -374,7 +417,7 @@ export default function CompetitionPage() {
                 </div>
               );
             })}
-            {stats.matchLog.length === 0 && <p style={{ opacity: 0.5, textAlign: 'center', padding: '1rem' }}>No matches yet.</p>}
+            {displayLog.length === 0 && <p style={{ opacity: 0.5, textAlign: 'center', padding: '1rem' }}>No history found.</p>}
           </div>
         </div>
       </div>
@@ -395,16 +438,24 @@ export default function CompetitionPage() {
         </div>
         <div className="comp-progress-pills">
           {Array.from({ length: TOTAL_DAILY }).map((_, i) => {
-            const log = stats.matchLog;
-            // Can't reliably map log to index since user might not start from 0, just color by position
             let status = 'upcoming';
-            if (i < repIndex) status = 'done';
+            if (i < repIndex) {
+              // Find result in matchLog by round and rep
+              const targetRound = Math.floor(i / REPS_PER_ROUND) + 1;
+              const targetRep = (i % REPS_PER_ROUND) + 1;
+              // We check the most recent 50 logs for efficiency, matching today's round/rep
+              const match = [...stats.matchLog].reverse().find(m => 
+                m.round === targetRound && m.rep === targetRep && 
+                new Date(m.date).toDateString() === new Date().toDateString()
+              );
+              status = match ? (match.won ? 'done' : 'fail') : 'done';
+            }
             else if (i === repIndex) status = 'current';
-            return <div key={i} className={`comp-pill comp-pill-${status}`} />;
+            return <div key={i} className={`comp-pill comp-pill-${status}`} title={i < repIndex ? `Pill ${i+1}` : ''} />;
           })}
         </div>
         <button className="modal-btn secondary" style={{ padding: '0.3rem 0.8rem', flex: 'none', margin: 0, fontSize: '0.8rem' }} onClick={() => setView('stats')}>
-          📊 Stats
+          📚 History
         </button>
       </div>
 
@@ -461,6 +512,12 @@ export default function CompetitionPage() {
         ))}
       </div>
 
+      <div className="hints-container" style={{ marginTop: '1.5rem' }}>
+        <button className="hint-btn trigger history-trigger" onClick={() => setView('stats')}>
+          History 📚
+        </button>
+      </div>
+
       {/* Modal */}
       {showModal && (
         <div className="modal-overlay" onClick={e => e.stopPropagation()}>
@@ -499,13 +556,13 @@ export default function CompetitionPage() {
             {repIndex + 1 >= TOTAL_DAILY ? (
               <div style={{ textAlign: 'center' }}>
                 <div style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>🏆 All 30 words done today!</div>
-                <button className="modal-btn secondary" onClick={() => setView('stats')}>View Stats</button>
+                <button className="modal-btn secondary" onClick={() => setView('stats')}>History 📚</button>
               </div>
             ) : (
               <div className="modal-actions">
-                <button className="modal-btn secondary" onClick={() => setView('stats')}>Stats</button>
+                <button className="modal-btn secondary" onClick={() => setView('stats')}>History 📚</button>
                 <button className="modal-btn primary" onClick={goNext}>
-                  ➡️ Next Word ({repIndex + 2}/{TOTAL_DAILY})
+                  Next Word ({repIndex + 2}/{TOTAL_DAILY}) ➡️
                 </button>
               </div>
             )}

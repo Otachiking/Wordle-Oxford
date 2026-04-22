@@ -1,14 +1,13 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import dictionaryData from '../DICTIONARY_nWord_5.json';
+import { pickPrioritizedWord } from '../utils/wordSelection';
+import { saveWordAttempt } from '../utils/historyManager';
+import HistoryModal from '../components/HistoryModal';
 
 const wordsData = dictionaryData.filter(w => w.level !== 'C2');
 
-function saveWordTick(word, won) {
-  try {
-    const existing = JSON.parse(localStorage.getItem('trainWordHistory') || '{}');
-    existing[word.toLowerCase()] = won ? 'correct' : 'wrong';
-    localStorage.setItem('trainWordHistory', JSON.stringify(existing));
-  } catch (e) {}
+function saveWordTick(word, secretEntry, won, guesses) {
+  saveWordAttempt({ word, level: secretEntry.level, won, guesses, timeMs: 0, score: 0, game: 'Daily' });
 }
 
 // ── Constants ──────────────────────────────────────────────────────────────
@@ -26,7 +25,7 @@ const VALID_WORDS = new Set(wordsData.map(w => w.word.toLowerCase()));
 
 function pickRandomWord() {
   const pool = wordsData.filter(w => w.word.length === 5);
-  return pool[Math.floor(Math.random() * pool.length)];
+  return pickPrioritizedWord(pool) || pool[0];
 }
 
 function evaluateGuess(guess, secret) {
@@ -101,12 +100,32 @@ export default function WordlePage() {
   const [showModal, setShowModal] = useState(false);
   const [modalDelay, setModalDelay] = useState(false);
   const [showHintModal, setShowHintModal] = useState(false);
+  const [showHistoryModal, setShowHistoryModal] = useState(false);
 
   useEffect(() => {
     localStorage.setItem('wordleState', JSON.stringify({
       secretEntry, board, currentRow, currentCol, letterStates, hints, gameStatus
     }));
   }, [secretEntry, board, currentRow, currentCol, letterStates, hints, gameStatus]);
+
+  useEffect(() => {
+    const onKeyDown = (e) => {
+      if (e.key !== 'Escape') return;
+      if (showHistoryModal) {
+        setShowHistoryModal(false);
+        return;
+      }
+      if (showHintModal) {
+        setShowHintModal(false);
+        return;
+      }
+      if (showModal) {
+        setShowModal(false);
+      }
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, [showModal, showHintModal, showHistoryModal]);
 
   // ── Handlers ──────────────────────────────────────────────────────────────
   const getCurrentGuess = useCallback(() => {
@@ -167,11 +186,11 @@ export default function WordlePage() {
     const won = evaluation.every(s => s === 'correct');
     if (won) {
       setGameStatus('won');
-      saveWordTick(secret, true);
+      saveWordTick(secret, secretEntry, true, currentRow + 1);
       setTimeout(() => { setShowModal(true); }, 1200);
     } else if (currentRow + 1 >= ROWS) {
       setGameStatus('lost');
-      saveWordTick(secret, false);
+      saveWordTick(secret, secretEntry, false, ROWS);
       setTimeout(() => { setShowModal(true); }, 1200);
     } else {
       setCurrentRow(r => r + 1);
@@ -181,6 +200,13 @@ export default function WordlePage() {
 
   const handleKey = useCallback((key) => {
     const k = key.toUpperCase();
+    if (showHintModal || showHistoryModal) {
+      if (k === 'ESCAPE') {
+        setShowHintModal(false);
+        setShowHistoryModal(false);
+      }
+      return;
+    }
     if (showModal) {
       if (k === 'ENTER' || key === ' ') {
         handleNewGame();
@@ -211,7 +237,7 @@ export default function WordlePage() {
       });
       setCurrentCol(c => c + 1);
     }
-  }, [gameStatus, currentRow, currentCol, submitGuess, showModal]);
+  }, [gameStatus, currentRow, currentCol, submitGuess, showModal, showHintModal, showHistoryModal]);
 
   // Physical keyboard listener
   useEffect(() => {
@@ -282,7 +308,8 @@ export default function WordlePage() {
 
       {/* Hint Trigger - Now below keyboard */}
       <div className="hints-container" style={{ marginTop: '1.5rem' }}>
-        <button className="hint-btn trigger" onClick={() => setShowHintModal(true)}>Give me a hint 💡</button>
+        <button className="hint-btn trigger" onClick={() => setShowHintModal(true)}>Give me a Hint 💡</button>
+        <button className="hint-btn trigger history-trigger" onClick={() => setShowHistoryModal(true)}>History 📚</button>
       </div>
 
       {/* Post-game Modal */}
@@ -314,7 +341,7 @@ export default function WordlePage() {
             <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Press Space or Enter for new game</p>
             <div className="modal-actions">
               <button className="modal-btn primary" onClick={handleNewGame}>
-                🔄 New Game
+                New Game 🔄
               </button>
             </div>
           </div>
@@ -344,6 +371,7 @@ export default function WordlePage() {
           </div>
         </div>
       )}
+      <HistoryModal open={showHistoryModal} onClose={() => setShowHistoryModal(false)} title="Game History" />
     </div>
   );
 }
