@@ -99,7 +99,7 @@ export default function HistoryModal({ open, onClose, title = 'Game History' }) 
           </select>
         </div>
 
-        <div style={{ maxHeight: '380px', overflowY: 'auto' }}>
+        <div style={{ maxHeight: '70vh', overflowY: 'auto', paddingRight: '0.4rem', scrollbarWidth: 'thin' }}>
           {displayLog.map((m, i) => {
             const d = new Date(m.date);
             return (
@@ -115,13 +115,19 @@ export default function HistoryModal({ open, onClose, title = 'Game History' }) 
                   marginBottom: '0.3rem',
                 }}
               >
-                <div>
-                  <strong>{(m.word || '').toUpperCase()}</strong>
-                  <span style={{ opacity: 0.7, fontSize: '0.8rem', marginLeft: '0.4rem' }}>({m.level || '-'})</span>
-                  <div style={{ opacity: 0.5, fontSize: '0.72rem', marginTop: '0.15rem' }}>
-                    {d.toLocaleDateString()} {d.toLocaleTimeString()} · {m.game || '-'}
+                  <div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                      <strong>{(m.word || '').toUpperCase()}</strong>
+                      <span style={{ opacity: 0.7, fontSize: '0.8rem' }}>({m.level || '-'})</span>
+                      <span style={{ fontSize: '0.85rem' }}>
+                        {m.game === 'Comp' ? '🏆' : m.game === 'Train' ? '💪🏻' : '🎮'}
+                      </span>
+                    </div>
+                    <div style={{ opacity: 0.5, fontSize: '0.72rem', marginTop: '0.15rem' }}>
+                      {d.toLocaleDateString()} {d.toLocaleTimeString()} · {m.game || '-'}
+                      {m.durationMs > 0 && ` · ⏱️ ${Math.floor(m.durationMs / 60000)}:${((m.durationMs % 60000) / 1000).toFixed(0).padStart(2, '0')}`}
+                    </div>
                   </div>
-                </div>
                 <div style={{ fontSize: '0.9rem', textAlign: 'right' }}>
                   <div style={{ color: m.won ? '#a8e6cf' : '#ff8b94', fontWeight: 'bold' }}>{m.score || 0} pts ⭐</div>
                   <div style={{ opacity: 0.7, fontSize: '0.8rem' }}>{m.won ? `${m.guesses}/6` : 'Failed'}</div>

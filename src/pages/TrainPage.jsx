@@ -139,7 +139,7 @@ export default function TrainPage() {
             setGameStatus('lost');
             setTimerActive(false);
             setFinalScore(0);
-            const attempt = saveWordAttempt({ word: secret, level: secretEntry.level, won: false, guesses: ROWS, timeMs: 0, score: 0, game: 'Train' });
+            const attempt = saveWordAttempt({ word: secret, level: secretEntry.level, won: false, guesses: ROWS, timeMs: 0, durationMs: timerDuration * 60 * 1000, score: 0, game: 'Train' });
             setStats(prev => {
               const ns = { ...prev, played: prev.played + 1, log: [...prev.log, attempt] };
               localStorage.setItem('trainStats', JSON.stringify(ns));
@@ -209,7 +209,7 @@ export default function TrainPage() {
       const guessesUsed = currentRow + 1;
       const score = calculateScore(guessesUsed, timeLeft * 1000);
       setFinalScore(score);
-      const attempt = saveWordAttempt({ word: secret, level: secretEntry.level, won: true, guesses: guessesUsed, timeMs: timeLeft * 1000, score, game: 'Train' });
+      const attempt = saveWordAttempt({ word: secret, level: secretEntry.level, won: true, guesses: guessesUsed, timeMs: timeLeft * 1000, durationMs: (timerDuration * 60 * 1000) - (timeLeft * 1000), score, game: 'Train' });
       setStats(prev => {
         const ns = { ...prev, played: prev.played + 1, won: prev.won + 1, log: [...prev.log, attempt] };
         localStorage.setItem('trainStats', JSON.stringify(ns));
@@ -219,7 +219,7 @@ export default function TrainPage() {
     } else if (currentRow + 1 >= ROWS) {
       setGameStatus('lost');
       setTimerActive(false);
-      const attempt = saveWordAttempt({ word: secret, level: secretEntry.level, won: false, guesses: ROWS, timeMs: timeLeft * 1000, score: 0, game: 'Train' });
+      const attempt = saveWordAttempt({ word: secret, level: secretEntry.level, won: false, guesses: ROWS, timeMs: timeLeft * 1000, durationMs: (timerDuration * 60 * 1000) - (timeLeft * 1000), score: 0, game: 'Train' });
       setStats(prev => {
         const ns = { ...prev, played: prev.played + 1, log: [...prev.log, attempt] };
         localStorage.setItem('trainStats', JSON.stringify(ns));
@@ -236,6 +236,7 @@ export default function TrainPage() {
     const k = key.toUpperCase();
     if (showModal) {
       if (k === 'ENTER' || key === ' ') { startNew(); }
+      if (k === 'ESCAPE') { setShowModal(false); }
       return;
     }
     if (gameStatus !== 'playing') return;
@@ -365,7 +366,7 @@ export default function TrainPage() {
             {row.map((cell, ci) => (
               <div
                 key={ci}
-                className={`wordle-tile state-${cell.state}${gameStatus === 'won' && ri === currentRow ? ' win-jump' : ''}`}
+                className={`wordle-tile state-${cell.state}${gameStatus === 'won' && ri === currentRow ? ' win-flip' : ''}`}
                 style={{ animationDelay: `${ci * 100}ms` }}
               >
                 {cell.letter}
@@ -406,6 +407,11 @@ export default function TrainPage() {
         <button className="hint-btn trigger history-trigger" onClick={() => setShowHistoryModal(true)}>
           History 📚
         </button>
+        {gameStatus !== 'playing' && !showModal && (
+          <button className="hint-btn trigger history-trigger" onClick={() => startNew()} style={{ background: 'rgba(59,130,246,0.2)', borderColor: 'rgba(59,130,246,0.4)', color: '#93c5fd' }}>
+            Next Word 💪🏻
+          </button>
+        )}
       </div>
 
       {/* Post-game Modal */}
@@ -417,15 +423,6 @@ export default function TrainPage() {
               {gameStatus === 'won' ? 'You Got It! 🎉' : 'Keep Training! 💪🏻'}
             </div>
 
-            <div style={{ margin: '0.5rem 0', background: 'rgba(0,0,0,0.2)', padding: '0.8rem 1.2rem', borderRadius: '12px', textAlign: 'center' }}>
-              <h3 style={{ margin: 0, color: '#a8e6cf' }}>+{finalScore} pts</h3>
-            </div>
-
-            <div className="modal-row-count">
-              {gameStatus === 'won'
-                ? `Solved in ${currentRow + 1} ${currentRow + 1 === 1 ? 'guess' : 'guesses'}!`
-                : `The word was: ${secretEntry.word.toUpperCase()}`}
-            </div>
             <div className="modal-word-card">
               <div className="modal-emoji">{secretEntry.emoji || '📘'}</div>
               <div className="modal-word-info">
@@ -437,7 +434,21 @@ export default function TrainPage() {
                 <div className="modal-definition">{secretEntry.definition || 'No definition yet.'}</div>
               </div>
             </div>
-            <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Press Space or Enter for next word</p>
+
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.8rem', margin: '0.5rem 0' }}>
+              <div style={{ background: 'rgba(0,0,0,0.2)', padding: '0.8rem', borderRadius: '12px', textAlign: 'center' }}>
+                <div style={{ fontSize: '0.75rem', opacity: 0.6, marginBottom: '0.2rem' }}>Total Score</div>
+                <div style={{ fontSize: '1.2rem', fontWeight: 'bold', color: '#a8e6cf' }}>+{finalScore} pts</div>
+              </div>
+              <div style={{ background: 'rgba(0,0,0,0.2)', padding: '0.8rem', borderRadius: '12px', textAlign: 'center' }}>
+                <div style={{ fontSize: '0.75rem', opacity: 0.6, marginBottom: '0.2rem' }}>Stats</div>
+                <div style={{ fontSize: '0.9rem', fontWeight: '600' }}>
+                  {gameStatus === 'won' ? `${currentRow + 1}/6 Row` : 'Failed'} · {(timerDuration * 60) - timeLeft}s
+                </div>
+              </div>
+            </div>
+
+            <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textAlign: 'center', marginTop: '1rem' }}>Press Space or Enter for next word</p>
             <div className="modal-actions">
               <button className="modal-btn primary" onClick={() => startNew()}>
                 Next Word 💪🏻

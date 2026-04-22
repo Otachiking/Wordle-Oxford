@@ -195,6 +195,7 @@ export default function CompetitionPage() {
       won,
       guesses: guessCount || ROWS,
       timeMs: timeMs,
+      durationMs: MAX_TIME_MS - timeMs,
       score: sc,
       game: 'Comp'
     });
@@ -213,6 +214,7 @@ export default function CompetitionPage() {
           won,
           guesses: guessCount || ROWS,
           timeLeftMs: timeMs,
+          durationMs: MAX_TIME_MS - timeMs,
           score: sc,
           round: currentRound,
           rep: repInRound,
@@ -276,7 +278,11 @@ export default function CompetitionPage() {
 
   const handleKey = useCallback((key) => {
     const k = key.toUpperCase();
-    if (showModal) return;
+    if (showModal) {
+      if (k === 'ENTER' || key === ' ') { goNext(); }
+      if (k === 'ESCAPE') { setShowModal(false); }
+      return;
+    }
 
     if (k === 'ENTER') { submitGuess(); }
     else if (k === '⌫' || k === 'BACKSPACE') {
@@ -454,19 +460,9 @@ export default function CompetitionPage() {
             return <div key={i} className={`comp-pill comp-pill-${status}`} title={i < repIndex ? `Pill ${i+1}` : ''} />;
           })}
         </div>
-        <button className="modal-btn secondary" style={{ padding: '0.3rem 0.8rem', flex: 'none', margin: 0, fontSize: '0.8rem' }} onClick={() => setView('stats')}>
-          📚 History
-        </button>
-      </div>
-
-      {/* Timer */}
-      <div className="glass-panel" style={{
-        padding: '0.5rem 1.5rem', marginBottom: '1rem', borderRadius: '50px',
-        background: timeMs <= 30000 ? 'rgba(255,50,50,0.2)' : '',
-      }}>
-        <div style={{ fontWeight: 'bold', fontSize: '1.2rem', color: timeMs <= 30000 ? '#ff8b94' : 'white', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-          ⏱ {formatTime(timeMs)}
-          {timerStatus === 'idle' && <span style={{ fontSize: '0.7rem', opacity: 0.7, fontWeight: 'normal' }}>(Starts on type)</span>}
+        
+        <div style={{ fontWeight: 'bold', fontSize: '1rem', color: timeMs <= 30000 ? '#ff8b94' : 'white', display: 'flex', alignItems: 'center', gap: '0.4rem', background: 'rgba(255,255,255,0.05)', padding: '0.2rem 0.6rem', borderRadius: '12px' }}>
+          ⏱️ {formatTime(timeMs)}
         </div>
       </div>
 
@@ -479,7 +475,7 @@ export default function CompetitionPage() {
             {row.map((cell, ci) => (
               <div
                 key={ci}
-                className={`wordle-tile state-${cell.state}${gameResult === 'won' && ri === currentRow - 1 ? ' win-flip' : ''}`}
+                className={`wordle-tile state-${cell.state}${gameResult === 'won' && ri === currentRow ? ' win-flip' : ''}`}
                 style={{ animationDelay: `${ci * 100}ms` }}
               >
                 {cell.letter}
@@ -512,10 +508,15 @@ export default function CompetitionPage() {
         ))}
       </div>
 
-      <div className="hints-container" style={{ marginTop: '1.5rem' }}>
+      <div className="hints-container" style={{ marginTop: '1.5rem', gap: '0.5rem' }}>
         <button className="hint-btn trigger history-trigger" onClick={() => setView('stats')}>
           History 📚
         </button>
+        {gameResult && !showModal && repIndex + 1 < TOTAL_DAILY && (
+          <button className="hint-btn trigger history-trigger" onClick={goNext} style={{ background: 'rgba(59,130,246,0.2)', borderColor: 'rgba(59,130,246,0.4)', color: '#93c5fd' }}>
+            Next Word 💪🏻
+          </button>
+        )}
       </div>
 
       {/* Modal */}
@@ -525,15 +526,6 @@ export default function CompetitionPage() {
             <div className="modal-status">
               {gameResult === 'won' ? 'Correct! 🎉' : 'Next Time! 😔'}
             </div>
-
-            {gameResult === 'won' && (
-              <div style={{ margin: '0.5rem 0', background: 'rgba(0,0,0,0.2)', padding: '0.8rem 1.2rem', borderRadius: '12px', textAlign: 'center' }}>
-                <h3 style={{ margin: 0, color: '#a8e6cf' }}>+{finalScore} pts</h3>
-                <p style={{ opacity: 0.7, fontSize: '0.8rem', marginTop: '0.3rem' }}>
-                  Round {currentRound} · Rep {repInRound}
-                </p>
-              </div>
-            )}
 
             <div className="modal-word-card">
               <div className="modal-emoji">{secretEntry?.emoji || '📘'}</div>
@@ -547,8 +539,21 @@ export default function CompetitionPage() {
               </div>
             </div>
 
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.8rem', margin: '0.5rem 0' }}>
+              <div style={{ background: 'rgba(0,0,0,0.2)', padding: '0.8rem', borderRadius: '12px', textAlign: 'center' }}>
+                <div style={{ fontSize: '0.75rem', opacity: 0.6, marginBottom: '0.2rem' }}>Total Score</div>
+                <div style={{ fontSize: '1.2rem', fontWeight: 'bold', color: '#a8e6cf' }}>+{finalScore} pts</div>
+              </div>
+              <div style={{ background: 'rgba(0,0,0,0.2)', padding: '0.8rem', borderRadius: '12px', textAlign: 'center' }}>
+                <div style={{ fontSize: '0.75rem', opacity: 0.6, marginBottom: '0.2rem' }}>Stats</div>
+                <div style={{ fontSize: '0.9rem', fontWeight: '600' }}>
+                  {gameResult === 'won' ? `${currentRow + 1}/6 Row` : 'Failed'} · {Math.floor((MAX_TIME_MS - timeMs)/1000)}s
+                </div>
+              </div>
+            </div>
+
             {roundDone && repIndex + 1 < TOTAL_DAILY && (
-              <div style={{ textAlign: 'center', padding: '0.5rem 1rem', background: 'rgba(124,58,237,0.15)', borderRadius: '10px', fontSize: '0.9rem', color: '#a78bfa' }}>
+              <div style={{ textAlign: 'center', padding: '0.5rem 1rem', background: 'rgba(124,58,237,0.15)', borderRadius: '10px', fontSize: '0.9rem', color: '#a78bfa', margin: '0.5rem 0' }}>
                 🏁 Round {currentRound} complete!
               </div>
             )}

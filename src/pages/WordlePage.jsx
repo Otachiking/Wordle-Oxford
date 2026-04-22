@@ -273,7 +273,7 @@ export default function WordlePage() {
             {row.map((cell, ci) => (
               <div
                 key={ci}
-                className={`wordle-tile state-${cell.state}${gameStatus === 'won' && ri === currentRow ? ' win-jump' : ''}`}
+                className={`wordle-tile state-${cell.state}${gameStatus === 'won' && ri === currentRow ? ' win-flip' : ''}`}
                 style={{ animationDelay: `${ci * 100}ms` }}
               >
                 {cell.letter}
@@ -307,7 +307,7 @@ export default function WordlePage() {
       </div>
 
       {/* Hint Trigger - Now below keyboard */}
-      <div className="hints-container" style={{ marginTop: '1.5rem' }}>
+      <div className="hints-container" style={{ marginTop: '1.5rem', gap: '0.8rem' }}>
         <button className="hint-btn trigger" onClick={() => setShowHintModal(true)}>Give me a Hint 💡</button>
         <button className="hint-btn trigger history-trigger" onClick={() => setShowHistoryModal(true)}>History 📚</button>
       </div>
@@ -319,11 +319,6 @@ export default function WordlePage() {
             <button className="close-btn modal-close-x" onClick={() => setShowModal(false)} aria-label="Close">×</button>
             <div className="modal-status">
               {gameStatus === 'won' ? 'You Won! 🎉' : 'Game Over 😔'}
-            </div>
-            <div className="modal-row-count">
-              {gameStatus === 'won'
-                ? `Solved in ${currentRow + 1} ${currentRow + 1 === 1 ? 'guess' : 'guesses'}!`
-                : `The answer was: ${secretEntry.word.toUpperCase()}`}
             </div>
             <div className="modal-word-card">
               <div className="modal-emoji">{secretEntry.emoji || '📘'}</div>
@@ -338,7 +333,23 @@ export default function WordlePage() {
                 </div>
               </div>
             </div>
-            <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>Press Space or Enter for new game</p>
+
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.8rem', margin: '0.5rem 0' }}>
+              <div style={{ background: 'rgba(0,0,0,0.2)', padding: '0.8rem', borderRadius: '12px', textAlign: 'center' }}>
+                <div style={{ fontSize: '0.75rem', opacity: 0.6, marginBottom: '0.2rem' }}>Game Result</div>
+                <div style={{ fontSize: '1.2rem', fontWeight: 'bold', color: gameStatus === 'won' ? '#a8e6cf' : '#ff8b94' }}>
+                  {gameStatus === 'won' ? 'WIN! 🎉' : 'LOST 😔'}
+                </div>
+              </div>
+              <div style={{ background: 'rgba(0,0,0,0.2)', padding: '0.8rem', borderRadius: '12px', textAlign: 'center' }}>
+                <div style={{ fontSize: '0.75rem', opacity: 0.6, marginBottom: '0.2rem' }}>Stats</div>
+                <div style={{ fontSize: '0.9rem', fontWeight: '600' }}>
+                  {gameStatus === 'won' ? `${currentRow + 1}` : '6'}/6 Rows
+                </div>
+              </div>
+            </div>
+
+            <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textAlign: 'center', marginTop: '1rem' }}>Press Space or Enter for new game</p>
             <div className="modal-actions">
               <button className="modal-btn primary" onClick={handleNewGame}>
                 New Game 🔄
