@@ -138,8 +138,8 @@ const DictionaryPage = () => {
       <header className="app-header">
         <h1 className="title-glow">Oxford Learner's Dictionary</h1>
         <p className="dict-subtitle">
-          Showing {processedData.length.toLocaleString()} words &nbsp;|&nbsp; 
-          Played: <strong style={{ color: '#a78bfa' }}>{playedCount.toLocaleString()}</strong> &nbsp;|&nbsp;
+          Showing {processedData.length.toLocaleString()} words &nbsp;|&nbsp;
+          Found: <strong style={{ color: '#a78bfa' }}>{playedCount.toLocaleString()}</strong> &nbsp;|&nbsp;
           Common Wordlist A1–C1
         </p>
       </header>

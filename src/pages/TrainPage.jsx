@@ -2,7 +2,9 @@ import React, { useState, useEffect, useCallback, useRef } from 'react';
 import dictionaryData from '../DICTIONARY_nWord_5.json';
 import { pickPrioritizedWord } from '../utils/wordSelection';
 import { saveWordAttempt } from '../utils/historyManager';
+import { calculateWordleScore } from '../utils/scoring';
 import HistoryModal from '../components/HistoryModal';
+import ScoringTable from '../components/ScoringTable';
 
 const ALL_WORDS_5 = dictionaryData.filter(w => w.level !== 'C2');
 const VALID_WORDS = new Set(dictionaryData.map(w => w.word.toLowerCase()));
@@ -51,13 +53,7 @@ function pickWord(level) {
   return pickPrioritizedWord(finalPool) || finalPool[0];
 }
 
-const calculateScore = (guessesUsed, timeRemainingMs) => {
-  const safeTime = Math.max(0, Math.min(timeRemainingMs, COMP_SCORE_MAX_TIME_MS));
-  const timeScore = Math.floor((safeTime / COMP_SCORE_MAX_TIME_MS) * 500);
-  const guessScoreArr = [0, 500, 400, 300, 200, 100, 50];
-  const guessScore = guessScoreArr[guessesUsed] || 0;
-  return 1000 + timeScore + guessScore;
-};
+// Removed local calculateScore logic, now using central utility
 
 // ── Persistence Logic ────────────────────────────────────────────────────────
 function getInitialState() {
@@ -91,6 +87,7 @@ export default function TrainPage() {
   const [finalScore, setFinalScore] = useState(0);
   const [showHintModal, setShowHintModal] = useState(false);
   const [showHistoryModal, setShowHistoryModal] = useState(false);
+  const [showRulesModal, setShowRulesModal] = useState(false);
   const [hintsRevealed, setHintsRevealed] = useState(init?.hintsRevealed || { level: false, emoji: false, def: false });
 
   // Timer states
@@ -123,6 +120,7 @@ export default function TrainPage() {
     setGameStatus('playing');
     setShowModal(false);
     setShowHintModal(false);
+    setShowRulesModal(false);
     setHintsRevealed({ level: false, emoji: false, def: false });
     setTimerActive(false);
     setTimeLeft(Math.floor(timerDuration * 60));
@@ -207,9 +205,16 @@ export default function TrainPage() {
       setGameStatus('won');
       setTimerActive(false);
       const guessesUsed = currentRow + 1;
-      const score = calculateScore(guessesUsed, timeLeft * 1000);
-      setFinalScore(score);
-      const attempt = saveWordAttempt({ word: secret, level: secretEntry.level, won: true, guesses: guessesUsed, timeMs: timeLeft * 1000, durationMs: (timerDuration * 60 * 1000) - (timeLeft * 1000), score, game: 'Train' });
+
+      // Calculate hints used count
+      const hintsUsedCount = Object.values(hintsRevealed).filter(v => v).length;
+      const totalTimeMs = timerDuration * 60 * 1000;
+      const timeTakenMs = totalTimeMs - (timeLeft * 1000);
+
+      const scoreObj = calculateWordleScore(guessesUsed, timeTakenMs, 120000, hintsUsedCount, true);
+      setFinalScore(scoreObj);
+
+      const attempt = saveWordAttempt({ word: secret, level: secretEntry.level, won: true, guesses: guessesUsed, timeMs: timeLeft * 1000, durationMs: timeTakenMs, score: scoreObj.total, game: 'Train' });
       setStats(prev => {
         const ns = { ...prev, played: prev.played + 1, won: prev.won + 1, log: [...prev.log, attempt] };
         localStorage.setItem('trainStats', JSON.stringify(ns));
@@ -259,6 +264,7 @@ export default function TrainPage() {
         setShowModal(false);
         setShowTimerModal(false);
         setShowHintModal(false);
+        setShowRulesModal(false);
         setShowHistoryModal(false);
       }
       handleKey(e.key);
@@ -401,8 +407,9 @@ export default function TrainPage() {
 
       {/* Hints & History Trigger - Now below keyboard */}
       <div className="hints-container" style={{ marginTop: '1.5rem', gap: '0.8rem' }}>
+        <button className="hint-btn trigger history-trigger" onClick={() => setShowRulesModal(true)} title="Scoring Rules" style={{ background: 'rgba(255,255,255,0.1)', borderColor: 'rgba(255,255,255,0.2)', color: 'rgba(255,255,255,0.7)', minWidth: '40px', padding: '0.5rem' }}>❔</button>
         <button className="hint-btn trigger" onClick={() => setShowHintModal(true)}>
-          Give me a hint 💡
+          Give me a Hint 💡
         </button>
         <button className="hint-btn trigger history-trigger" onClick={() => setShowHistoryModal(true)}>
           History 📚
@@ -438,15 +445,22 @@ export default function TrainPage() {
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.8rem', margin: '0.5rem 0' }}>
               <div style={{ background: 'rgba(0,0,0,0.2)', padding: '0.8rem', borderRadius: '12px', textAlign: 'center' }}>
                 <div style={{ fontSize: '0.75rem', opacity: 0.6, marginBottom: '0.2rem' }}>Total Score</div>
-                <div style={{ fontSize: '1.2rem', fontWeight: 'bold', color: '#a8e6cf' }}>+{finalScore} pts</div>
+                <div style={{ fontSize: '1.2rem', fontWeight: 'bold', color: '#a8e6cf' }}>+{finalScore?.total || 0} pts</div>
               </div>
               <div style={{ background: 'rgba(0,0,0,0.2)', padding: '0.8rem', borderRadius: '12px', textAlign: 'center' }}>
                 <div style={{ fontSize: '0.75rem', opacity: 0.6, marginBottom: '0.2rem' }}>Stats</div>
                 <div style={{ fontSize: '0.9rem', fontWeight: '600' }}>
                   {gameStatus === 'won' ? `${currentRow + 1}/6 Row` : 'Failed'} · {(timerDuration * 60) - timeLeft}s
                 </div>
+                {finalScore && gameStatus === 'won' && (
+                  <div style={{ fontSize: '0.7rem', opacity: 0.5, marginTop: '2px' }}>
+                    {finalScore.speed} + {finalScore.skill}{finalScore.deductions > 0 ? ` - ${finalScore.deductions}` : ''}
+                  </div>
+                )}
               </div>
             </div>
+
+
 
             <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textAlign: 'center', marginTop: '1rem' }}>Press Space or Enter for next word</p>
             <div className="modal-actions">
@@ -458,6 +472,14 @@ export default function TrainPage() {
         </div>
       )}
       <HistoryModal open={showHistoryModal} onClose={() => setShowHistoryModal(false)} title="Train History" />
+      {showRulesModal && (
+        <div className="modal-overlay" onClick={() => setShowRulesModal(false)}>
+          <div className="modal-card" onClick={e => e.stopPropagation()}>
+            <button className="close-btn" onClick={() => setShowRulesModal(false)}>×</button>
+            <ScoringTable />
+          </div>
+        </div>
+      )}
     </div>
   );
 }

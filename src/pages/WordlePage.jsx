@@ -2,7 +2,9 @@ import React, { useState, useEffect, useCallback } from 'react';
 import dictionaryData from '../DICTIONARY_nWord_5.json';
 import { pickPrioritizedWord } from '../utils/wordSelection';
 import { saveWordAttempt } from '../utils/historyManager';
+import { calculateWordleScore } from '../utils/scoring';
 import HistoryModal from '../components/HistoryModal';
+import ScoringTable from '../components/ScoringTable';
 
 const wordsData = dictionaryData.filter(w => w.level !== 'C2');
 
@@ -13,6 +15,7 @@ function saveWordTick(word, secretEntry, won, guesses) {
 // ── Constants ──────────────────────────────────────────────────────────────
 const ROWS = 6;
 const COLS = 5;
+const MAX_TIME_MS = 120000; // 2 min
 
 const KEYBOARD_ROWS = [
   ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'],
@@ -94,6 +97,9 @@ export default function WordlePage() {
   const [letterStates, setLetterStates] = useState(init ? init.letterStates : {});
   const [gameStatus, setGameStatus] = useState(init ? init.gameStatus : 'playing');
   const [hints, setHints] = useState(init ? init.hints : { level: false, emoji: false, def: false });
+  const [timeMs, setTimeMs] = useState(init?.timeMs || 0); // Time taken in Ms
+  const [timerActive, setTimerActive] = useState(false);
+  const [finalScore, setFinalScore] = useState(null);
 
   const [shake, setShake] = useState(false);
   const [invalidMsg, setInvalidMsg] = useState('');
@@ -101,12 +107,24 @@ export default function WordlePage() {
   const [modalDelay, setModalDelay] = useState(false);
   const [showHintModal, setShowHintModal] = useState(false);
   const [showHistoryModal, setShowHistoryModal] = useState(false);
+  const [showRulesModal, setShowRulesModal] = useState(false);
 
   useEffect(() => {
     localStorage.setItem('wordleState', JSON.stringify({
-      secretEntry, board, currentRow, currentCol, letterStates, hints, gameStatus
+      secretEntry, board, currentRow, currentCol, letterStates, hints, gameStatus, timeMs
     }));
-  }, [secretEntry, board, currentRow, currentCol, letterStates, hints, gameStatus]);
+  }, [secretEntry, board, currentRow, currentCol, letterStates, hints, gameStatus, timeMs]);
+
+  // Timer logic
+  useEffect(() => {
+    let interval = null;
+    if (timerActive && gameStatus === 'playing') {
+      interval = setInterval(() => {
+        setTimeMs(prev => prev + 100);
+      }, 100);
+    }
+    return () => clearInterval(interval);
+  }, [timerActive, gameStatus]);
 
   useEffect(() => {
     const onKeyDown = (e) => {
@@ -117,6 +135,10 @@ export default function WordlePage() {
       }
       if (showHintModal) {
         setShowHintModal(false);
+        return;
+      }
+      if (showRulesModal) {
+        setShowRulesModal(false);
         return;
       }
       if (showModal) {
@@ -186,24 +208,31 @@ export default function WordlePage() {
     const won = evaluation.every(s => s === 'correct');
     if (won) {
       setGameStatus('won');
-      saveWordTick(secret, secretEntry, true, currentRow + 1);
+      setTimerActive(false);
+      const hintsUsedCount = Object.values(hints).filter(v => v).length;
+      const scoreObj = calculateWordleScore(currentRow + 1, timeMs, MAX_TIME_MS, hintsUsedCount, true);
+      setFinalScore(scoreObj);
+      saveWordAttempt({ word: secret, level: secretEntry.level, won: true, guesses: currentRow + 1, timeMs: MAX_TIME_MS - timeMs, score: scoreObj.total, game: 'Daily' });
       setTimeout(() => { setShowModal(true); }, 1200);
     } else if (currentRow + 1 >= ROWS) {
       setGameStatus('lost');
-      saveWordTick(secret, secretEntry, false, ROWS);
+      setTimerActive(false);
+      setFinalScore({ total: 0, skill: 0, speed: 0, deductions: 0 });
+      saveWordAttempt({ word: secret, level: secretEntry.level, won: false, guesses: ROWS, timeMs: 0, score: 0, game: 'Daily' });
       setTimeout(() => { setShowModal(true); }, 1200);
     } else {
       setCurrentRow(r => r + 1);
       setCurrentCol(0);
     }
-  }, [getCurrentGuess, currentRow, secret, board]);
+  }, [getCurrentGuess, currentRow, secret, board, timeMs, hints, secretEntry]);
 
   const handleKey = useCallback((key) => {
     const k = key.toUpperCase();
-    if (showHintModal || showHistoryModal) {
+    if (showHintModal || showHistoryModal || showRulesModal) {
       if (k === 'ESCAPE') {
         setShowHintModal(false);
         setShowHistoryModal(false);
+        setShowRulesModal(false);
       }
       return;
     }
@@ -230,6 +259,7 @@ export default function WordlePage() {
       setCurrentCol(c => c - 1);
     } else if (/^[A-Z]$/.test(k) && k !== 'ENTER') {
       if (currentCol >= COLS) return;
+      if (!timerActive) setTimerActive(true);
       setBoard(prev => {
         const next = prev.map(r => r.map(c => ({ ...c })));
         next[currentRow][currentCol] = { letter: k, state: 'tbd' };
@@ -254,6 +284,9 @@ export default function WordlePage() {
     setLetterStates({});
     setHints({ level: false, emoji: false, def: false });
     setGameStatus('playing');
+    setTimeMs(0);
+    setTimerActive(false);
+    setFinalScore(null);
     setShowModal(false);
   };
 
@@ -308,6 +341,7 @@ export default function WordlePage() {
 
       {/* Hint Trigger - Now below keyboard */}
       <div className="hints-container" style={{ marginTop: '1.5rem', gap: '0.8rem' }}>
+        <button className="hint-btn trigger history-trigger" onClick={() => setShowRulesModal(true)} title="Scoring Rules" style={{ background: 'rgba(255,255,255,0.1)', borderColor: 'rgba(255,255,255,0.2)', color: 'rgba(255,255,255,0.7)', minWidth: '40px', padding: '0.5rem' }}>❔</button>
         <button className="hint-btn trigger" onClick={() => setShowHintModal(true)}>Give me a Hint 💡</button>
         <button className="hint-btn trigger history-trigger" onClick={() => setShowHistoryModal(true)}>History 📚</button>
       </div>
@@ -336,18 +370,23 @@ export default function WordlePage() {
 
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.8rem', margin: '0.5rem 0' }}>
               <div style={{ background: 'rgba(0,0,0,0.2)', padding: '0.8rem', borderRadius: '12px', textAlign: 'center' }}>
-                <div style={{ fontSize: '0.75rem', opacity: 0.6, marginBottom: '0.2rem' }}>Game Result</div>
-                <div style={{ fontSize: '1.2rem', fontWeight: 'bold', color: gameStatus === 'won' ? '#a8e6cf' : '#ff8b94' }}>
-                  {gameStatus === 'won' ? 'WIN! 🎉' : 'LOST 😔'}
-                </div>
+                <div style={{ fontSize: '0.75rem', opacity: 0.6, marginBottom: '0.2rem' }}>Total Score</div>
+                <div style={{ fontSize: '1.2rem', fontWeight: 'bold', color: '#a8e6cf' }}>+{finalScore?.total || 0} pts</div>
               </div>
               <div style={{ background: 'rgba(0,0,0,0.2)', padding: '0.8rem', borderRadius: '12px', textAlign: 'center' }}>
                 <div style={{ fontSize: '0.75rem', opacity: 0.6, marginBottom: '0.2rem' }}>Stats</div>
                 <div style={{ fontSize: '0.9rem', fontWeight: '600' }}>
-                  {gameStatus === 'won' ? `${currentRow + 1}` : '6'}/6 Rows
+                  {gameStatus === 'won' ? `${currentRow + 1}` : '6'}/6 Rows · {Math.floor(timeMs/1000)}s
                 </div>
+                {finalScore && gameStatus === 'won' && (
+                  <div style={{ fontSize: '0.7rem', opacity: 0.5, marginTop: '2px' }}>
+                    {finalScore.speed} + {finalScore.skill}{finalScore.deductions > 0 ? ` - ${finalScore.deductions}` : ''}
+                  </div>
+                )}
               </div>
             </div>
+
+
 
             <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textAlign: 'center', marginTop: '1rem' }}>Press Space or Enter for new game</p>
             <div className="modal-actions">
@@ -383,6 +422,14 @@ export default function WordlePage() {
         </div>
       )}
       <HistoryModal open={showHistoryModal} onClose={() => setShowHistoryModal(false)} title="Game History" />
+      {showRulesModal && (
+        <div className="modal-overlay" onClick={() => setShowRulesModal(false)}>
+          <div className="modal-card" onClick={e => e.stopPropagation()}>
+            <button className="close-btn" onClick={() => setShowRulesModal(false)}>×</button>
+            <ScoringTable />
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -1,12 +1,14 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import dictionaryData from '../DICTIONARY_nWord_5.json';
 import { saveWordAttempt, loadHistoryLog } from '../utils/historyManager';
+import { calculateWordleScore } from '../utils/scoring';
+import ScoringTable from '../components/ScoringTable';
 const WORDS_5 = dictionaryData.filter(w => w.level !== 'C2');
 const VALID_WORDS = new Set(dictionaryData.map(w => w.word.toLowerCase()));
 
 const ROWS = 6;
 const COLS = 5;
-const MAX_TIME_MS = 180000; // 3 min
+const MAX_TIME_MS = 120000; // 2 min (matches user's scoring quarters)
 const REPS_PER_ROUND = 10;
 const TOTAL_ROUNDS = 3;
 const TOTAL_DAILY = REPS_PER_ROUND * TOTAL_ROUNDS; // 30
@@ -125,6 +127,8 @@ export default function CompetitionPage() {
   const [letterStates, setLetterStates] = useState(init?.letterStates || {});
   const [timerStatus, setTimerStatus] = useState(init?.timerStatus || 'idle');
   const [timeMs, setTimeMs] = useState(init?.timeMs || MAX_TIME_MS);
+  const [hintsUsed, setHintsUsed] = useState(init?.hintsUsed || 0); // Count of hints used
+  const [showHintModal, setShowHintModal] = useState(false);
 
   // Persistence effects
   useEffect(() => {
@@ -133,16 +137,17 @@ export default function CompetitionPage() {
 
   useEffect(() => {
     localStorage.setItem('compGameState', JSON.stringify({
-      board, currentRow, currentCol, letterStates, timerStatus, timeMs
+      board, currentRow, currentCol, letterStates, timerStatus, timeMs, hintsUsed
     }));
-  }, [board, currentRow, currentCol, letterStates, timerStatus, timeMs]);
+  }, [board, currentRow, currentCol, letterStates, timerStatus, timeMs, hintsUsed]);
 
   const [shake, setShake] = useState(false);
   const [invalidMsg, setInvalidMsg] = useState('');
   const [showModal, setShowModal] = useState(false);
   const [gameResult, setGameResult] = useState('');
-  const [finalScore, setFinalScore] = useState(0);
+  const [finalScore, setFinalScore] = useState(null);
   const [roundDone, setRoundDone] = useState(false);
+  const [showRulesModal, setShowRulesModal] = useState(false);
 
   // Timer
   useEffect(() => {
@@ -175,18 +180,15 @@ export default function CompetitionPage() {
     return `${m}:${s}`;
   };
 
-  const calculateScore = (guessesUsed, timeRemainingMs) => {
-    const timeScore = Math.floor((timeRemainingMs / MAX_TIME_MS) * 500);
-    const guessScoreArr = [0, 500, 400, 300, 200, 100, 50];
-    const guessScore = guessScoreArr[guessesUsed] || 0;
-    return 1000 + timeScore + guessScore;
-  };
-
   const handleEndGame = useCallback((won, guessCount) => {
     setTimerStatus('stopped');
-    const sc = won ? calculateScore(guessCount, timeMs) : 0;
+    
+    // Calculate score using new utility
+    const timeTakenMs = MAX_TIME_MS - timeMs;
+    const scoreObj = won ? calculateWordleScore(guessCount, timeTakenMs, MAX_TIME_MS, hintsUsed, true) : { total: 0, skill: 0, speed: 0, deductions: 0 };
+    
     setGameResult(won ? 'won' : 'lost');
-    setFinalScore(sc);
+    setFinalScore(scoreObj);
 
     // Record to global history
     saveWordAttempt({
@@ -196,7 +198,7 @@ export default function CompetitionPage() {
       guesses: guessCount || ROWS,
       timeMs: timeMs,
       durationMs: MAX_TIME_MS - timeMs,
-      score: sc,
+      score: scoreObj.total,
       game: 'Comp'
     });
 
@@ -206,7 +208,7 @@ export default function CompetitionPage() {
         ...prev,
         played: prev.played + 1,
         won: prev.won + (won ? 1 : 0),
-        highestScore: Math.max(prev.highestScore || 0, sc),
+        highestScore: Math.max(prev.highestScore || 0, scoreObj.total),
         matchLog: [...prev.matchLog, {
           date: new Date().toISOString(),
           word: secretEntry.word,
@@ -215,7 +217,7 @@ export default function CompetitionPage() {
           guesses: guessCount || ROWS,
           timeLeftMs: timeMs,
           durationMs: MAX_TIME_MS - timeMs,
-          score: sc,
+          score: scoreObj.total,
           round: currentRound,
           rep: repInRound,
         }],
@@ -301,6 +303,7 @@ export default function CompetitionPage() {
     const handler = (e) => {
       if (e.key === 'Escape') {
         setShowModal(false);
+        setShowRulesModal(false);
         if (view === 'stats') setView('playing');
       }
       handleKey(e.key);
@@ -320,8 +323,9 @@ export default function CompetitionPage() {
     setTimerStatus('idle');
     setGameResult('');
     setShowModal(false);
-    setFinalScore(0);
+    setFinalScore(null);
     setRoundDone(false);
+    setHintsUsed(0);
   };
 
   // ── History View ────────────────────────────────────────────────────────────
@@ -509,15 +513,46 @@ export default function CompetitionPage() {
       </div>
 
       <div className="hints-container" style={{ marginTop: '1.5rem', gap: '0.5rem' }}>
+        <button className="hint-btn trigger history-trigger" onClick={() => setShowRulesModal(true)} title="Scoring Rules" style={{ background: 'rgba(255,255,255,0.1)', borderColor: 'rgba(255,255,255,0.2)', color: 'rgba(255,255,255,0.7)', minWidth: '40px', padding: '0.5rem' }}>❔</button>
         <button className="hint-btn trigger history-trigger" onClick={() => setView('stats')}>
           History 📚
         </button>
+        {timerStatus === 'running' && (
+          <button className="hint-btn trigger" onClick={() => setShowHintModal(true)}>
+            Hint 💡
+          </button>
+        )}
         {gameResult && !showModal && repIndex + 1 < TOTAL_DAILY && (
           <button className="hint-btn trigger history-trigger" onClick={goNext} style={{ background: 'rgba(59,130,246,0.2)', borderColor: 'rgba(59,130,246,0.4)', color: '#93c5fd' }}>
             Next Word 💪🏻
           </button>
         )}
       </div>
+
+      {/* Hint Modal for Competition */}
+      {showHintModal && (
+        <div className="modal-overlay" onClick={() => setShowHintModal(false)}>
+          <div className="modal-card hint-card" onClick={e => e.stopPropagation()}>
+            <button className="close-btn" onClick={() => setShowHintModal(false)}>×</button>
+            <div className="hint-header">
+              <h2>Competition Hint? 🧐</h2>
+              <p>Warning: Points are deducted for using hints!</p>
+            </div>
+            <div className="hint-grid">
+              <button 
+                className="hint-box full" 
+                onClick={() => {
+                  if (hintsUsed < 1) setHintsUsed(1);
+                  setShowHintModal(false);
+                }}
+                disabled={hintsUsed >= 1}
+              >
+                {hintsUsed >= 1 ? <span className="hint-revealed def">{secretEntry.definition || 'No definition'}</span> : 'Reveal Definition (-5 pts)'}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Modal */}
       {showModal && (
@@ -542,15 +577,22 @@ export default function CompetitionPage() {
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.8rem', margin: '0.5rem 0' }}>
               <div style={{ background: 'rgba(0,0,0,0.2)', padding: '0.8rem', borderRadius: '12px', textAlign: 'center' }}>
                 <div style={{ fontSize: '0.75rem', opacity: 0.6, marginBottom: '0.2rem' }}>Total Score</div>
-                <div style={{ fontSize: '1.2rem', fontWeight: 'bold', color: '#a8e6cf' }}>+{finalScore} pts</div>
+                <div style={{ fontSize: '1.2rem', fontWeight: 'bold', color: '#a8e6cf' }}>+{finalScore?.total || 0} pts</div>
               </div>
               <div style={{ background: 'rgba(0,0,0,0.2)', padding: '0.8rem', borderRadius: '12px', textAlign: 'center' }}>
                 <div style={{ fontSize: '0.75rem', opacity: 0.6, marginBottom: '0.2rem' }}>Stats</div>
                 <div style={{ fontSize: '0.9rem', fontWeight: '600' }}>
                   {gameResult === 'won' ? `${currentRow + 1}/6 Row` : 'Failed'} · {Math.floor((MAX_TIME_MS - timeMs)/1000)}s
                 </div>
+                {finalScore && gameResult === 'won' && (
+                  <div style={{ fontSize: '0.7rem', opacity: 0.5, marginTop: '2px' }}>
+                    {finalScore.speed} + {finalScore.skill}{finalScore.deductions > 0 ? ` - ${finalScore.deductions}` : ''}
+                  </div>
+                )}
               </div>
             </div>
+
+
 
             {roundDone && repIndex + 1 < TOTAL_DAILY && (
               <div style={{ textAlign: 'center', padding: '0.5rem 1rem', background: 'rgba(124,58,237,0.15)', borderRadius: '10px', fontSize: '0.9rem', color: '#a78bfa', margin: '0.5rem 0' }}>
@@ -571,6 +613,14 @@ export default function CompetitionPage() {
                 </button>
               </div>
             )}
+          </div>
+        </div>
+      )}
+      {showRulesModal && (
+        <div className="modal-overlay" onClick={() => setShowRulesModal(false)}>
+          <div className="modal-card" onClick={e => e.stopPropagation()}>
+            <button className="close-btn" onClick={() => setShowRulesModal(false)}>×</button>
+            <ScoringTable />
           </div>
         </div>
       )}
