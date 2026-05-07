@@ -85,6 +85,16 @@ const DictionaryPage = () => {
     return result;
   }, [searchTerm, filterLevel, filterLength, sortBy]);
 
+  // Calculate counts for each divider key
+  const keyCounts = useMemo(() => {
+    const counts = {};
+    for (const item of processedData) {
+      const key = getDividerKey(item, sortBy);
+      counts[key] = (counts[key] || 0) + 1;
+    }
+    return counts;
+  }, [processedData, sortBy]);
+
   // Group into sections with divider keys
   const sections = useMemo(() => {
     const groups = [];
@@ -93,13 +103,13 @@ const DictionaryPage = () => {
     for (const item of processedData) {
       const key = getDividerKey(item, sortBy);
       if (key !== lastKey) {
-        groups.push({ type: 'divider', key });
+        groups.push({ type: 'divider', key, count: keyCounts[key] });
         lastKey = key;
       }
       groups.push({ type: 'word', item });
     }
     return groups;
-  }, [processedData, sortBy]);
+  }, [processedData, sortBy, keyCounts]);
 
   const wordCount = processedData.length;
   const colSize = Math.ceil(wordCount / displayColCount);
@@ -139,7 +149,7 @@ const DictionaryPage = () => {
         <h1 className="title-glow">Oxford Learner's Dictionary</h1>
         <p className="dict-subtitle">
           Showing {processedData.length.toLocaleString()} words &nbsp;|&nbsp;
-          Found: <strong style={{ color: '#a78bfa' }}>{playedCount.toLocaleString()}</strong> &nbsp;|&nbsp;
+          Played: <strong style={{ color: '#a78bfa' }}>{playedCount.toLocaleString()}</strong> &nbsp;|&nbsp;
           Common Wordlist A1–C1
         </p>
       </header>
@@ -188,7 +198,9 @@ const DictionaryPage = () => {
             {col.map((row, ri) =>
               row.type === 'divider' ? (
                 <div key={`d-${row.key}-${ri}`} className="dict-divider">
-                  <span className="dict-divider-label">{row.key}</span>
+                  <span className="dict-divider-label">
+                    {row.key} <span className="divider-count">({row.count})</span>
+                  </span>
                 </div>
               ) : (
                 <div key={row.item.id} className="word-row">
